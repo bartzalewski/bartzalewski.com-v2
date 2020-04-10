@@ -7,9 +7,36 @@ import {
   faExternalLinkAlt,
 } from "@fortawesome/free-solid-svg-icons"
 
+import GrandHotel from "../fonts/GrandHotel/GrandHotel-Regular.ttf"
+import JetBrainsMonoRegular from "../fonts/JBMono/JetBrainsMono-Regular.ttf"
+import JetBrainsMonoMedium from "../fonts/JBMono/JetBrainsMono-Medium.ttf"
+import JetBrainsMonoBold from "../fonts/JBMono/JetBrainsMono-Bold.ttf"
+import JetBrainsMonoExtraBold from "../fonts/JBMono/JetBrainsMono-ExtraBold.ttf"
+
 library.add(fab, faEnvelope, faPaperclip, faExternalLinkAlt)
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: "JetBrains Mono Regular";
+    src: url(${JetBrainsMonoRegular});
+  }
+  @font-face {
+    font-family: "JetBrains Mono Medium";
+    src: url(${JetBrainsMonoMedium});
+  }
+  @font-face {
+    font-family: "JetBrains Mono Bold";
+    src: url(${JetBrainsMonoBold});
+  }
+  @font-face {
+    font-family: "JetBrains Mono Extra Bold";
+    src: url(${JetBrainsMonoExtraBold});
+  }
+  @font-face {
+    font-family: "Grand Hotel";
+    src: url(${GrandHotel});
+  }
+
   *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -21,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono Regular';
     margin: 0;
     overflow-x: hidden;
     color: white;
@@ -35,10 +62,12 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: 64px;
+    font-family: 'JetBrains Mono Bold'
   }
 
   h2 {
     font-size: 36px;
+    font-family: 'JetBrains Mono Bold'
   }
 
   .container {

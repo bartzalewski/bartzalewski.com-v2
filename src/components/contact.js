@@ -38,7 +38,7 @@ const StyledContact = styled.section`
         border: 2px solid #1a1a1a;
         height: 60px;
         width: 100%;
-        font-family: "JetBrains Mono";
+        font-family: "JetBrains Mono Regular";
         background: transparent;
         color: #02d463;
         transition: 0.2s;
