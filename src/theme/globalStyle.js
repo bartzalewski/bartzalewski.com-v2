@@ -1,12 +1,22 @@
 import { createGlobalStyle } from "styled-components"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import {
+  faEnvelope,
+  faPaperclip,
+  faExternalLinkAlt,
+} from "@fortawesome/free-solid-svg-icons"
+
+library.add(fab, faEnvelope, faPaperclip, faExternalLinkAlt)
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
+    margin: 0;
   }
 
   ::selection {
-    background: #0097A7;
+    background: #02D463;
     color: white;
   }
 
@@ -14,16 +24,17 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'JetBrains Mono';
     margin: 0;
     overflow-x: hidden;
+    color: white;
+    background: #1a1a1a;
   }
 
   a {
     text-decoration: none;
-    color: black;
+    color: inherit;
   }
 
   h1 {
-    font-size: 48px;
-    margin: 0;
+    font-size: 64px;
   }
 
   h2 {
@@ -45,6 +56,47 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .default-link {
+    &__link {
+      margin: 0 10px;
+      display: inline-flex;
+      overflow: hidden;
+      position: relative;
+      transition: 0.5s ease;
+
+      &:hover {
+        color: #02d463;
+        transition: 0.5s ease;
+      }
+
+      &:before {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: #02d463;
+        transform: translateX(-100%);
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        transition: transform 0.5s ease;
+      }
+
+      &:hover:before {
+        transform: translateX(0);
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        transition: transform 0.5s ease;
+      }
+    }
+  }
+
   .btn {
     padding: 10px 17.5px;
     border-radius: 4px;
@@ -57,29 +109,29 @@ const GlobalStyle = createGlobalStyle`
 
     &--primary {
       color: white;
-      background: #0097A7;
+      background: #02D463;
 
       &:hover {
-        background: white;
-        color: #0097A7;
-        border: 2px solid #0097A7;
+        background: transparent;
+        color: #02D463;
+        border: 2px solid #02D463;
       }
     }
 
     &--secondary {
-      color: #0097A7;
-      border: 2px solid #0097A7;
+      color: #02D463;
+      border: 2px solid #02D463;
 
       &:hover {
-        background: #0097A7;
+        background: #02D463;
         color: white;
-        border: 2px solid #0097A7;
+        border: 2px solid #02D463;
       }
     }
   }
 
   .colored {
-    color: #0097A7;
+    color: #02D463;
   }
 
 `

@@ -1,19 +1,19 @@
 import React from "react"
 import Layout from "../components/layout"
+import Head from "../components/head"
 import Hero from "../components/hero"
 import About from "../components/about"
-import Work from "../components/work"
-import Testimonials from "../components/testimonials"
+import Projects from "../components/projects"
+import Blog from "../components/blog"
 import Contact from "../components/contact"
-import Head from "../components/head"
 
 const IndexPage = () => (
   <Layout>
     <Head title="Home" />
     <Hero />
     <About />
-    <Work />
-    <Testimonials />
+    <Projects />
+    <Blog />
     <Contact />
   </Layout>
 )
