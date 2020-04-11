@@ -2,13 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import pagetify from "../images/projects/pagetify.png"
-import schoolify from "../images/projects/schoolify.png"
-import dojrzewaj from "../images/projects/dojrzewaj.png"
-import centrummoto from "../images/projects/centrummoto.png"
-import cz5p from "../images/projects/cz5p.png"
-import telean from "../images/projects/telean.png"
-import darkpaypal from "../images/projects/darkpaypal.png"
+import pagetify from "../images/projects/pagetify.gif"
+import schoolify from "../images/projects/schoolify.gif"
+import dojrzewaj from "../images/projects/dojrzewaj.gif"
+import centrummoto from "../images/projects/centrummoto.gif"
+import cz5p from "../images/projects/cz5p.gif"
+import telean from "../images/projects/telean.gif"
+import darkpaypal from "../images/projects/darkpaypal.gif"
 
 const StyledWork = styled.section`
   display: flex;
@@ -34,11 +34,7 @@ const StyledWork = styled.section`
         opacity: 0.4;
         transition: 0.5s;
         border-radius: 4px;
-
-        &:hover {
-          opacity: 1;
-          transition: 0.5s;
-        }
+        box-shadow: 0px 0px 10px black;
       }
 
       a {
@@ -49,6 +45,8 @@ const StyledWork = styled.section`
         width: 20px;
         height: 20px;
         transition: 0.2s;
+        filter: drop-shadow(0px 0px 3px black);
+        opacity: 0.4;
 
         &:hover {
           color: #02d463;
@@ -58,22 +56,34 @@ const StyledWork = styled.section`
 
       &:nth-of-type(2),
       &:nth-of-type(5) {
-        margin-top: 40px;
+        margin-top: 50px;
       }
 
       &:nth-of-type(3),
       &:nth-of-type(6) {
-        margin-top: 80px;
+        margin-top: 100px;
+      }
+
+      &:hover {
+        span,
+        svg,
+        img {
+          opacity: 1;
+          transition: 0.2s;
+        }
       }
     }
     &__links {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 10px;
+      padding-top: 10px;
 
       span {
         font-size: 14px;
+        text-shadow: 0px 0px 10px black;
+        opacity: 0.4;
+        transition: 0.2s;
       }
     }
     &__desc {
@@ -89,7 +99,7 @@ export default function Work() {
     <StyledWork id="projects">
       <div className="container container--primary">
         <h2>My projects</h2>
-        <p className="work__desc">Check out my portfolio!</p>
+        <p className="work__desc section__desc">Check out my portfolio!</p>
         <div className="work__wrapper">
           <div className="work__box">
             <img src={pagetify} alt="Pagetify" />
@@ -99,6 +109,7 @@ export default function Work() {
                   href="https://github.com/bartzalewski/pagetify"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="GitHub"
                 >
                   <FontAwesomeIcon
                     icon={["fab", "github"]}
@@ -109,6 +120,7 @@ export default function Work() {
                   href="https://pagetify.com/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="External"
                 >
                   <FontAwesomeIcon icon="external-link-alt" />
                 </a>
@@ -124,6 +136,7 @@ export default function Work() {
                   href="https://github.com/bartzalewski/schoolify"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="GitHub"
                 >
                   <FontAwesomeIcon
                     icon={["fab", "github"]}
@@ -134,6 +147,7 @@ export default function Work() {
                   href="https://schoolify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="External"
                 >
                   <FontAwesomeIcon icon="external-link-alt" />
                 </a>
@@ -145,7 +159,7 @@ export default function Work() {
             <img src={dojrzewaj} alt="dojrzewaj.pl" />
             <div className="work__links">
               <div>
-                <a href="#!">
+                <a href="#!" title="GitHub">
                   <FontAwesomeIcon
                     icon={["fab", "github"]}
                     className="about__icon"
@@ -155,6 +169,7 @@ export default function Work() {
                   href="https://dojrzewaj.pl/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="External"
                 >
                   <FontAwesomeIcon icon="external-link-alt" />
                 </a>
@@ -166,7 +181,7 @@ export default function Work() {
             <img src={centrummoto} alt="Centrum Moto" />
             <div className="work__links">
               <div>
-                <a href="#!">
+                <a href="#!" title="GitHub">
                   <FontAwesomeIcon
                     icon={["fab", "github"]}
                     className="about__icon"
@@ -176,6 +191,7 @@ export default function Work() {
                   href="https://centrummoto.pl/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="External"
                 >
                   <FontAwesomeIcon icon="external-link-alt" />
                 </a>
@@ -191,6 +207,7 @@ export default function Work() {
                   href="https://github.com/bartzalewski/coza500plus"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="GitHub"
                 >
                   <FontAwesomeIcon
                     icon={["fab", "github"]}
@@ -201,6 +218,7 @@ export default function Work() {
                   href="https://coza500plus.pl/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="External"
                 >
                   <FontAwesomeIcon icon="external-link-alt" />
                 </a>
@@ -216,6 +234,7 @@ export default function Work() {
                   href="https://github.com/bartzalewski/telean-website"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="GitHub"
                 >
                   <FontAwesomeIcon
                     icon={["fab", "github"]}
@@ -226,6 +245,7 @@ export default function Work() {
                   href="https://telean-website.herokuapp.com/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="External"
                 >
                   <FontAwesomeIcon icon="external-link-alt" />
                 </a>
@@ -241,6 +261,7 @@ export default function Work() {
                   href="https://github.com/bartzalewski/darkness"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="GitHub"
                 >
                   <FontAwesomeIcon
                     icon={["fab", "github"]}
@@ -251,6 +272,7 @@ export default function Work() {
                   href="https://darkness.app/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="External"
                 >
                   <FontAwesomeIcon icon="external-link-alt" />
                 </a>

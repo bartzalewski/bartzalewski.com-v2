@@ -21,6 +21,7 @@ const StyledHeader = styled.header`
       font-size: 36px;
       color: white;
       transition: 0.2s ease;
+      text-shadow: 0px 0px 10px black;
 
       &:hover {
         color: #02d463;
@@ -29,8 +30,9 @@ const StyledHeader = styled.header`
     }
 
     &__link {
-      margin: 0 10px;
+      margin-left: 20px;
       transition: 0.2s;
+      text-shadow: 0px 0px 10px black;
 
       &:hover:not(.navbar__resume) {
         color: #02d463;

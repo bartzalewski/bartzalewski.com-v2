@@ -50,6 +50,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="footer__link"
+            title="GitHub"
           >
             <FontAwesomeIcon icon={["fab", "github"]} className="about__icon" />
           </a>
@@ -58,13 +59,18 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="footer__link"
+            title="LinkedIn"
           >
             <FontAwesomeIcon
               icon={["fab", "linkedin"]}
               className="about__icon"
             />
           </a>
-          <a href="mailto:me@bartzalewski.com" className="footer__link">
+          <a
+            href="mailto:me@bartzalewski.com"
+            className="footer__link"
+            title="Email"
+          >
             <FontAwesomeIcon icon="envelope" />
           </a>
           <a
@@ -72,11 +78,12 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="footer__link"
+            title="Resume"
           >
             <FontAwesomeIcon icon="paperclip" />
           </a>
         </div>
-        <p className="footer__copy">
+        <p className="footer__copy section__desc">
           Copyright {new Date().getFullYear()} &copy; Bart Zalewski
         </p>
       </div>

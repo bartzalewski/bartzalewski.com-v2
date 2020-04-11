@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import bart from "../images/bart.png"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const StyledAbout = styled.section`
   display: flex;
@@ -16,6 +17,8 @@ const StyledAbout = styled.section`
         align-self: flex-end;
         opacity: 0.4;
         transition: 0.5s;
+        margin-top: 100px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
 
         &:hover {
           opacity: 1;
@@ -26,8 +29,51 @@ const StyledAbout = styled.section`
 
     &__desc {
       width: 40%;
-      margin: 50px 0;
+      margin-top: 50px;
       color: #bdbdbd;
+    }
+
+    &__skills {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(140px, 200px));
+      margin-top: 25px;
+    }
+
+    &__skill {
+      position: relative;
+      font-size: 14px;
+      color: #bdbdbd;
+      margin-bottom: 10px;
+    }
+  }
+
+  .about__skill:not(.skill__jquery) {
+    transition: 0.2s;
+    &:hover {
+      span {
+        color: #02d463;
+        transition: 0.2s;
+      }
+    }
+  }
+
+  .skill__icon {
+    margin-right: 15px;
+    color: #02d463;
+    width: 15px;
+    height: 15px;
+  }
+
+  .skill__jquery {
+    .skill__icon,
+    span {
+      color: #333;
+    }
+    span {
+      text-decoration: line-through;
     }
   }
 `
@@ -37,14 +83,69 @@ export default function About() {
     <StyledAbout id="about">
       <div className="container container--primary about__container">
         <h2>About me</h2>
-        <p className="about__desc">
-          I started coding in the December 2018 and I'm self-taught developer. I
-          have serious passion for modern looking websites with a little bit of
-          animations. I love what I'm doing and I'm highly motivated to
+        <p className="about__desc section__desc">
+          I started coding in the December 2018 and I am self-taught developer.
+          I have serious passion for modern looking websites with a little bit
+          of animations. I love what I am doing and I am highly motivated to
           collaborate with someone. If you are up into some projects, just let
           me know!
         </p>
-        <p className="about__desc">Technologies that I use:</p>
+        <p className="about__desc section__desc">Technologies that I use:</p>
+        <ul className="about__skills">
+          <li className="about__skill">
+            <FontAwesomeIcon icon={["fab", "react"]} className="skill__icon" />
+            <span>React</span>
+          </li>
+          <li className="about__skill">
+            <FontAwesomeIcon
+              icon={["fab", "node-js"]}
+              className="skill__icon"
+            />
+            <span>Node.js</span>
+          </li>
+          <li className="about__skill">
+            <FontAwesomeIcon
+              icon={["fab", "js-square"]}
+              className="skill__icon"
+            />
+            <span>JavaScript</span>
+          </li>
+          <li className="about__skill">
+            <FontAwesomeIcon icon={["fab", "php"]} className="skill__icon" />
+            <span>PHP</span>
+          </li>
+          <li className="about__skill">
+            <FontAwesomeIcon icon={["fab", "html5"]} className="skill__icon" />
+            <span>HTML</span>
+          </li>
+          <li className="about__skill">
+            <FontAwesomeIcon icon={["fab", "sass"]} className="skill__icon" />
+            <span>S(CSS)</span>
+          </li>
+          <li className="about__skill">
+            <FontAwesomeIcon icon="fire" className="skill__icon" />
+            <span>Firebase</span>
+          </li>
+          <li className="about__skill">
+            <FontAwesomeIcon
+              icon={["fab", "bootstrap"]}
+              className="skill__icon"
+            />
+            <span>Bootstrap</span>
+          </li>
+          <li className="about__skill">
+            <FontAwesomeIcon icon={["fab", "figma"]} className="skill__icon" />
+            <span>Figma</span>
+          </li>
+          <li className="about__skill">
+            <FontAwesomeIcon icon={["fab", "adobe"]} className="skill__icon" />
+            <span>Adobe Xd</span>
+          </li>
+          <li className="about__skill skill__jquery">
+            <FontAwesomeIcon icon="cross" className="skill__icon" />
+            <span>jQuery</span>
+          </li>
+        </ul>
         <img src={bart} alt="Bart Zalewski" />
       </div>
     </StyledAbout>

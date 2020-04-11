@@ -14,7 +14,7 @@ const StyledHero = styled.section`
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -23,15 +23,17 @@ const StyledHero = styled.section`
   .hero {
     &__container {
       justify-content: flex-start;
+      position: relative;
     }
 
     &__desc {
       width: 38%;
       margin: 50px 0;
+      color: #bdbdbd;
     }
 
     &__sub {
-      color: #aeaeae;
+      /* color: #aeaeae; */
     }
   }
 
@@ -39,7 +41,11 @@ const StyledHero = styled.section`
     border-left: 1px solid #212121;
     display: flex;
     justify-content: center;
-    margin-top: 5rem;
+    margin: 5rem 0;
+  }
+
+  .colored {
+    text-shadow: 0px 0px 10px black;
   }
 `
 
@@ -54,7 +60,7 @@ const StyledContainer = styled.div`
 
     &__cross {
       left: 50%;
-      top: 100px;
+      top: 0;
       transition: 0.2s;
       filter: drop-shadow(0px 0px 15px #ff5252);
       &:hover {
@@ -64,22 +70,23 @@ const StyledContainer = styled.div`
       }
     }
     &__tick {
-      left: 20%;
-      bottom: 20%;
+      left: 35%;
+      bottom: 10%;
       transition: 0.2s;
       filter: drop-shadow(0px 0px 15px #02d463);
       &:hover {
-        transform: scale(1.1);
+        transform: scale(0.9);
         transition: 0.2s;
         filter: none;
       }
     }
     &__circle {
-      left: 80%;
-      top: 40%;
+      left: 85%;
+      top: 30%;
       transition: 0.2s;
       filter: drop-shadow(0px 0px 15px #00cde2);
       &:hover {
+        transform: scale(1.1);
         transition: 0.2s;
         filter: none;
       }
@@ -96,8 +103,8 @@ export default function Hero() {
           <StyledContainer className="container--primary">
             <p className="colored">Hi, I am</p>
             <h1>Bart Zalewski</h1>
-            <h1 className="hero__sub">Front-End Developer</h1>
-            <p className="hero__desc">
+            <h2 className="hero__sub">Front-End Developer</h2>
+            <p className="hero__desc section__desc">
               I specialize in designing, building, shipping and scaling
               beautiful, usable products with blazing-fast efficiency.
             </p>

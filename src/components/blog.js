@@ -38,7 +38,7 @@ export default function Blog() {
     <StyledBlog id="blog">
       <div className="container container--primary blog__container">
         <h2>Blog</h2>
-        <p className="blog__desc">Check out my blog!</p>
+        <p className="blog__desc section__desc">Check out my blog!</p>
         <div className="blog__wrapper">
           <a href="#!" className="blog__box">
             <p className="blog__title">My setup</p>

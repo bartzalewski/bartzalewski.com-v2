@@ -5,6 +5,8 @@ import {
   faEnvelope,
   faPaperclip,
   faExternalLinkAlt,
+  faFire,
+  faCross,
 } from "@fortawesome/free-solid-svg-icons"
 
 import GrandHotel from "../fonts/GrandHotel/GrandHotel-Regular.ttf"
@@ -13,7 +15,7 @@ import JetBrainsMonoMedium from "../fonts/JBMono/JetBrainsMono-Medium.ttf"
 import JetBrainsMonoBold from "../fonts/JBMono/JetBrainsMono-Bold.ttf"
 import JetBrainsMonoExtraBold from "../fonts/JBMono/JetBrainsMono-ExtraBold.ttf"
 
-library.add(fab, faEnvelope, faPaperclip, faExternalLinkAlt)
+library.add(fab, faEnvelope, faPaperclip, faExternalLinkAlt, faFire, faCross)
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -68,6 +70,10 @@ const GlobalStyle = createGlobalStyle`
   h2 {
     font-size: 36px;
     font-family: 'JetBrains Mono Bold'
+  }
+
+  h1, h2 {
+    text-shadow: 0px 0px 10px black;
   }
 
   .container {
@@ -131,7 +137,8 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 4px;
     border: 2px solid transparent;
     transition: .2s ease;
-
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    
     &:hover {
       transition: .2s ease;
     }
@@ -161,6 +168,10 @@ const GlobalStyle = createGlobalStyle`
 
   .colored {
     color: #02D463;
+  }
+
+  .section__desc {
+    text-shadow: 0px 0px 10px black;
   }
 
 `

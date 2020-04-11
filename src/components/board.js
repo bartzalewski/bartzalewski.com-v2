@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import pagetify from "../images/projects/pagetify.png"
-import schoolify from "../images/projects/schoolify.png"
-import dojrzewaj from "../images/projects/dojrzewaj.png"
-import centrummoto from "../images/projects/centrummoto.png"
+import pagetify from "../images/projects/pagetify.gif"
+import schoolify from "../images/projects/schoolify.gif"
+import dojrzewaj from "../images/projects/dojrzewaj.gif"
+import centrummoto from "../images/projects/centrummoto.gif"
 
 import BoardBox from "./boardBox"
 
@@ -13,10 +13,9 @@ const StyledBoard = styled.div`
   background: #212121;
   border-radius: 10px;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
-  margin-top: 100px;
   position: absolute;
-  right: -100px;
-  bottom: -200px;
+  right: -175px;
+  bottom: -350px;
   padding: 25px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -33,21 +32,33 @@ const StyledBoard = styled.div`
   }
 
   .board {
+    &__wrapper {
+      width: 100%;
+      height: 100%;
+      background: #111;
+      border-radius: 4px;
+      position: relative;
+    }
+
     &__box {
       width: 100%;
       height: 100%;
-      position: relative;
+      position: absolute;
       outline: none;
+      top: -15px;
+      left: -15px;
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
     }
   }
 
   .back {
     background-size: cover;
+    background-position: center;
     border-radius: 4px;
   }
 
   .front {
-    background: #1a1a1a;
+    background: #222;
     width: 100%;
     height: 100%;
     border-radius: 4px;

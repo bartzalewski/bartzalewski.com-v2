@@ -9,38 +9,40 @@ const BoardBox = props => {
     config: { mass: 5, tension: 500, friction: 80 },
   })
   return (
-    <div
-      className="board__box"
-      onMouseEnter={() => set(state => !state)}
-      onMouseLeave={() => set(state => !state)}
-      role="button"
-      tabIndex="0"
-    >
-      <a.div
-        className="back"
-        style={{
-          backgroundImage: `url(${props.bg})`,
-          opacity: opacity.interpolate(o => 1 - o),
-          transform,
-        }}
-      ></a.div>
-      <a.div
-        className="front"
-        style={{
-          opacity,
-          transform: transform.interpolate(t => `${t} rotateX(180deg)`),
-        }}
+    <div className="board__wrapper">
+      <div
+        className="board__box"
+        onMouseEnter={() => set(state => !state)}
+        onMouseLeave={() => set(state => !state)}
+        role="button"
+        tabIndex="0"
       >
-        <p>{props.title}</p>
-        <a
-          className="btn btn--secondary"
-          href={props.url}
-          target="_blank"
-          rel="noopener noreferrer"
+        <a.div
+          className="back"
+          style={{
+            backgroundImage: `url(${props.bg})`,
+            opacity: opacity.interpolate(o => 1 - o),
+            transform,
+          }}
+        ></a.div>
+        <a.div
+          className="front"
+          style={{
+            opacity,
+            transform: transform.interpolate(t => `${t} rotateX(180deg)`),
+          }}
         >
-          View
-        </a>
-      </a.div>
+          <p>{props.title}</p>
+          <a
+            className="btn btn--secondary"
+            href={props.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View
+          </a>
+        </a.div>
+      </div>
     </div>
   )
 }

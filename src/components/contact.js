@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 
 const StyledContact = styled.section`
@@ -20,6 +20,12 @@ const StyledContact = styled.section`
         margin-top: 2rem;
       }
     }
+
+    &__desc {
+      text-align: center;
+      margin: 50px 0;
+      color: #bdbdbd;
+    }
   }
 
   .input {
@@ -28,8 +34,10 @@ const StyledContact = styled.section`
       flex-direction: column;
 
       span {
-        color: #d2d2d2;
+        color: #bdbdbd;
         margin-bottom: 0.5rem;
+        text-shadow: 0px 0px 10px black;
+        font-size: 14px;
       }
 
       input,
@@ -38,13 +46,13 @@ const StyledContact = styled.section`
         border: 2px solid #1a1a1a;
         height: 60px;
         width: 100%;
-        font-family: "JetBrains Mono Regular";
+        font-family: "JetBrains Mono Medium";
         background: transparent;
         color: #02d463;
         transition: 0.2s;
         outline: none;
         font-size: inherit;
-        padding: 10px;
+        padding: 15px;
 
         &:focus {
           border-color: #02d463;
@@ -62,6 +70,16 @@ const StyledContact = styled.section`
         grid-gap: 10px;
         width: 50%;
       }
+
+      &.focus input,
+      &.focus textarea {
+        border-color: #02d463;
+      }
+
+      &.focus span {
+        color: #02d463;
+        transition: 0.2s;
+      }
     }
 
     &__textarea {
@@ -69,32 +87,63 @@ const StyledContact = styled.section`
       width: 50%;
     }
   }
+
+  input[type="submit"] {
+    font-family: "JetBrains Mono Regular";
+    cursor: pointer;
+    font-size: inherit;
+    background: #02d463 !important;
+
+    &:hover {
+      color: #02d463;
+      background: transparent !important;
+    }
+  }
 `
 
 export default function Contact() {
+  useEffect(() => {
+    const inputs = document.querySelectorAll(".input__field-input")
+
+    function addcl() {
+      let parent = this.parentNode
+      parent.classList.add("focus")
+    }
+
+    function remcl() {
+      let parent = this.parentNode
+      if (this.value === "") {
+        parent.classList.remove("focus")
+      }
+    }
+
+    inputs.forEach(input => {
+      input.addEventListener("focus", addcl)
+      input.addEventListener("blur", remcl)
+    })
+  }, [])
   return (
     <StyledContact id="contact">
       <div className="container container--primary">
         <h2>Get in touch</h2>
-        <div className="contact__wrapper">
+        <div className="contact__desc section__desc">Contact me!</div>
+        <form className="contact__wrapper">
           <div className="input__field--grid">
             <div className="input__field">
               <span>Name</span>
-              <input type="text" />
+              <input required className="input__field-input" type="text" />
             </div>
             <div className="input__field">
               <span>Email</span>
-              <input type="text" />
+              <input required className="input__field-input" type="email" />
             </div>
           </div>
           <div className="input__field input__textarea">
             <span>Message</span>
-            <textarea></textarea>
+            <textarea required className="input__field-input"></textarea>
           </div>
-          <a href="#!" className="btn btn--secondary">
-            Submit
-          </a>
-        </div>
+          <input type="submit" value="Submit" className="btn btn--primary" />
+        </form>
       </div>
     </StyledContact>
   )
