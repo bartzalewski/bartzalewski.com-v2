@@ -6,6 +6,9 @@ import pagetify from "../images/projects/pagetify.png"
 import schoolify from "../images/projects/schoolify.png"
 import dojrzewaj from "../images/projects/dojrzewaj.png"
 import centrummoto from "../images/projects/centrummoto.png"
+import cz5p from "../images/projects/cz5p.png"
+import telean from "../images/projects/telean.png"
+import darkpaypal from "../images/projects/darkpaypal.png"
 
 const StyledWork = styled.section`
   display: flex;
@@ -52,11 +55,13 @@ const StyledWork = styled.section`
         }
       }
 
-      &:nth-of-type(2) {
+      &:nth-of-type(2),
+      &:nth-of-type(5) {
         margin-top: 40px;
       }
 
-      &:nth-of-type(3) {
+      &:nth-of-type(3),
+      &:nth-of-type(6) {
         margin-top: 80px;
       }
     }
@@ -175,6 +180,81 @@ export default function Work() {
                 </a>
               </div>
               <span>Centrum Moto</span>
+            </div>
+          </div>
+          <div className="work__box">
+            <img src={cz5p} alt="coza500plus.pl" />
+            <div className="work__links">
+              <div>
+                <a
+                  href="https://github.com/bartzalewski/coza500plus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={["fab", "github"]}
+                    className="about__icon"
+                  />
+                </a>
+                <a
+                  href="https://coza500plus.pl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon="external-link-alt" />
+                </a>
+              </div>
+              <span>coza500plus.pl</span>
+            </div>
+          </div>
+          <div className="work__box">
+            <img src={telean} alt="Telean" />
+            <div className="work__links">
+              <div>
+                <a
+                  href="https://github.com/bartzalewski/telean-website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={["fab", "github"]}
+                    className="about__icon"
+                  />
+                </a>
+                <a
+                  href="https://telean-website.herokuapp.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon="external-link-alt" />
+                </a>
+              </div>
+              <span>Telean</span>
+            </div>
+          </div>
+          <div className="work__box">
+            <img src={darkpaypal} alt="Dark PayPal" />
+            <div className="work__links">
+              <div>
+                <a
+                  href="https://github.com/bartzalewski/darkness"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={["fab", "github"]}
+                    className="about__icon"
+                  />
+                </a>
+                <a
+                  href="https://darkness.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon="external-link-alt" />
+                </a>
+              </div>
+              <span>Dark PayPal</span>
             </div>
           </div>
         </div>

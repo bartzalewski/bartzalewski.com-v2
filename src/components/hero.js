@@ -61,7 +61,7 @@ export default function Hero() {
               beautiful, usable products with blazing-fast efficiency.
             </p>
             <a href="#contact" className="btn btn--primary">
-              Get In Touch
+              Get in touch
             </a>
           </StyledContainer>
         </div>
