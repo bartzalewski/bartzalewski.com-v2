@@ -4,6 +4,10 @@ import bg from "../images/bg.png"
 import Header from "./header"
 import Board from "./board"
 
+import cross from "../images/decorations/cross.svg"
+import tick from "../images/decorations/tick.svg"
+import circle from "../images/decorations/circle.svg"
+
 const StyledHero = styled.section`
   background-image: url(${bg});
   background-size: cover;
@@ -44,6 +48,43 @@ const StyledContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+
+  .decoration {
+    position: absolute;
+
+    &__cross {
+      left: 50%;
+      top: 100px;
+      transition: 0.2s;
+      filter: drop-shadow(0px 0px 15px #ff5252);
+      &:hover {
+        transform: rotate(180deg);
+        transition: 0.2s;
+        filter: none;
+      }
+    }
+    &__tick {
+      left: 20%;
+      bottom: 20%;
+      transition: 0.2s;
+      filter: drop-shadow(0px 0px 15px #02d463);
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.2s;
+        filter: none;
+      }
+    }
+    &__circle {
+      left: 80%;
+      top: 40%;
+      transition: 0.2s;
+      filter: drop-shadow(0px 0px 15px #00cde2);
+      &:hover {
+        transition: 0.2s;
+        filter: none;
+      }
+    }
+  }
 `
 
 export default function Hero() {
@@ -63,6 +104,21 @@ export default function Hero() {
             <a href="#contact" className="btn btn--primary">
               Get in touch
             </a>
+            <img
+              className="decoration decoration__cross"
+              src={cross}
+              alt="cross"
+            />
+            <img
+              className="decoration decoration__tick"
+              src={tick}
+              alt="tick"
+            />
+            <img
+              className="decoration decoration__circle"
+              src={circle}
+              alt="circle"
+            />
           </StyledContainer>
         </div>
         <Board />

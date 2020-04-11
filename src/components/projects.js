@@ -33,6 +33,7 @@ const StyledWork = styled.section`
         height: 100%;
         opacity: 0.4;
         transition: 0.5s;
+        border-radius: 4px;
 
         &:hover {
           opacity: 1;

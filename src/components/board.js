@@ -1,10 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import pagetify from "../images/projects/pagetify.png"
 import schoolify from "../images/projects/schoolify.png"
 import dojrzewaj from "../images/projects/dojrzewaj.png"
 import centrummoto from "../images/projects/centrummoto.png"
-import { useSpring, animated as a } from "react-spring"
+
+import BoardBox from "./boardBox"
 
 const StyledBoard = styled.div`
   width: 900px;
@@ -36,12 +37,24 @@ const StyledBoard = styled.div`
       width: 100%;
       height: 100%;
       position: relative;
+      outline: none;
     }
   }
 
   .back {
-    background: red;
+    background-size: cover;
     border-radius: 4px;
+  }
+
+  .front {
+    background: #1a1a1a;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
   }
 
   img,
@@ -54,94 +67,20 @@ const StyledBoard = styled.div`
 `
 
 const Board = () => {
-  const [flipped, set] = useState(false)
-  const { transform, opacity } = useSpring({
-    opacity: flipped ? 1 : 0,
-    transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
-    config: { mass: 5, tension: 500, friction: 80 },
-  })
   return (
     <StyledBoard>
-      <div
-        className="board__box"
-        onMouseEnter={() => set(state => !state)}
-        onMouseLeave={() => set(state => !state)}
-      >
-        <a.div
-          className="back"
-          style={{
-            opacity,
-            transform: transform.interpolate(t => `${t} rotateX(180deg)`),
-          }}
-        >
-          aasd
-        </a.div>
-        <a.img
-          src={pagetify}
-          style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
-          alt="Pagetify"
-        />
-      </div>
-      <div
-        className="board__box"
-        onMouseEnter={() => set(state => !state)}
-        onMouseLeave={() => set(state => !state)}
-      >
-        <a.div
-          className="back"
-          style={{
-            opacity,
-            transform: transform.interpolate(t => `${t} rotateX(180deg)`),
-          }}
-        >
-          aasd
-        </a.div>
-        <a.img
-          src={schoolify}
-          style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
-          alt="Pagetify"
-        />
-      </div>
-      <div
-        className="board__box"
-        onMouseEnter={() => set(state => !state)}
-        onMouseLeave={() => set(state => !state)}
-      >
-        <a.div
-          className="back"
-          style={{
-            opacity,
-            transform: transform.interpolate(t => `${t} rotateX(180deg)`),
-          }}
-        >
-          aasd
-        </a.div>
-        <a.img
-          src={dojrzewaj}
-          style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
-          alt="Pagetify"
-        />
-      </div>
-      <div
-        className="board__box"
-        onMouseEnter={() => set(state => !state)}
-        onMouseLeave={() => set(state => !state)}
-      >
-        <a.div
-          className="back"
-          style={{
-            opacity,
-            transform: transform.interpolate(t => `${t} rotateX(180deg)`),
-          }}
-        >
-          aasd
-        </a.div>
-        <a.img
-          src={centrummoto}
-          style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
-          alt="Pagetify"
-        />
-      </div>
+      <BoardBox bg={pagetify} title="Pagetify" url="https://pagetify.com/" />
+      <BoardBox bg={schoolify} title="Schoolify" url="https://schoolify.app/" />
+      <BoardBox
+        bg={dojrzewaj}
+        title="dojrzewaj.pl"
+        url="https://dojrzewaj.pl/"
+      />
+      <BoardBox
+        bg={centrummoto}
+        title="Centrum Moto"
+        url="https://centrummoto.pl/"
+      />
     </StyledBoard>
   )
 }

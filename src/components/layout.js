@@ -4,6 +4,9 @@ import GlobalStyle from "../theme/globalStyle"
 import Footer from "./footer"
 
 const Layout = ({ children }) => {
+  if (typeof window !== "undefined") {
+    require("smooth-scroll")('a[href*="#"]')
+  }
   return (
     <>
       <GlobalStyle />
