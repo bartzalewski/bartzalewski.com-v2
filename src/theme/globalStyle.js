@@ -8,8 +8,6 @@ import {
   faFire,
   faCross,
 } from "@fortawesome/free-solid-svg-icons"
-import AOS from "aos"
-import "aos/dist/aos.css"
 
 import GrandHotel from "../fonts/GrandHotel/GrandHotel-Regular.ttf"
 import JetBrainsMonoRegular from "../fonts/JBMono/JetBrainsMono-Regular.ttf"
@@ -18,8 +16,6 @@ import JetBrainsMonoBold from "../fonts/JBMono/JetBrainsMono-Bold.ttf"
 import JetBrainsMonoExtraBold from "../fonts/JBMono/JetBrainsMono-ExtraBold.ttf"
 
 library.add(fab, faEnvelope, faPaperclip, faExternalLinkAlt, faFire, faCross)
-
-AOS.init()
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
