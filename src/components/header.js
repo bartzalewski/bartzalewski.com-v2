@@ -9,12 +9,15 @@ const StyledHeader = styled.header`
   align-items: center;
   background: transparent;
   width: 100%;
+  transition: 0.4s;
+  position: absolute;
 
   .navbar {
     &__container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      z-index: 10;
     }
 
     &__logo {
@@ -46,52 +49,70 @@ const StyledHeader = styled.header`
 const Header = () => {
   const [condition, setCondition] = useState(false)
   return (
-    <StyledHeader>
+    <StyledHeader id="nav">
       <div
         id="sidenav"
         className={condition ? "sidenav sidenav--open" : "sidenav"}
       >
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
+        <Link to="/#about" onClick={() => setCondition(!condition)}>
+          About
+        </Link>
+        <Link to="/#projects" onClick={() => setCondition(!condition)}>
+          Projects
+        </Link>
+        <Link to="/#blog" onClick={() => setCondition(!condition)}>
+          Blog
+        </Link>
+        <Link to="/#contact" onClick={() => setCondition(!condition)}>
+          Contact
+        </Link>
+        <a
+          href="resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="navbar__link navbar__resume btn btn--secondary"
+        >
+          Resume
+        </a>
       </div>
-      <nav className="navbar__container container--secondary">
-        <Link to="/" className="navbar__logo">
+      <nav id="navbar" className="navbar__container container--secondary">
+        <Link to="/#" className="navbar__logo">
           Bart
         </Link>
-        <div
-          className="hamburger"
-          onClick={() => setCondition(!condition)}
-          onKeyDown={() => setCondition(!condition)}
-          role="button"
-          tabIndex="0"
-        >
+        <div className="hamburger__container">
           <div
-            className={
-              condition
-                ? "hamburger__wrapper icon close"
-                : "hamburger__wrapper icon"
-            }
+            className="hamburger"
+            onClick={() => setCondition(!condition)}
+            onKeyDown={() => setCondition(!condition)}
+            role="button"
+            tabIndex="0"
           >
-            <span className="hamburger--line top"></span>
-            <span className="hamburger--line middle"></span>
-            <span className="hamburger--line bottom"></span>
+            <div
+              className={
+                condition
+                  ? "hamburger__wrapper icon close"
+                  : "hamburger__wrapper icon"
+              }
+            >
+              <span className="hamburger--line top"></span>
+              <span className="hamburger--line middle"></span>
+              <span className="hamburger--line bottom"></span>
+            </div>
           </div>
         </div>
         <div className="navbar__links">
-          <a href="#about" className="navbar__link">
+          <Link to="/#about" className="navbar__link">
             About
-          </a>
-          <a href="#projects" className="navbar__link">
+          </Link>
+          <Link to="/#projects" className="navbar__link">
             Projects
-          </a>
-          <a href="#blog" className="navbar__link">
+          </Link>
+          <Link to="/#blog" className="navbar__link">
             Blog
-          </a>
-          <a href="#contact" className="navbar__link">
+          </Link>
+          <Link to="/#contact" className="navbar__link">
             Contact
-          </a>
+          </Link>
           <a
             href="resume.pdf"
             target="_blank"

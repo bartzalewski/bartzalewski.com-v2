@@ -25,6 +25,7 @@ const StyledHero = styled.section`
       justify-content: flex-start;
       position: relative;
       width: 100%;
+      margin-top: 100px;
     }
 
     &__desc {

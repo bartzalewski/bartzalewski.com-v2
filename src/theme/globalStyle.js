@@ -197,6 +197,15 @@ const GlobalStyle = createGlobalStyle`
     text-shadow: 0px 0px 10px black;
   }
 
+  .scrolled {
+    position: fixed;
+    transition: .4s;
+    z-index: 5;
+    background: #1a1a1a;
+    box-shadow: 0px 0px 20px rgba(0,0,0,.5);
+    height: 60px;
+  }
+
   /* SIDENAV */
 
   .hamburger {
@@ -263,22 +272,27 @@ const GlobalStyle = createGlobalStyle`
   .sidenav--open {
     width: 40% !important;
     transition: 0.5s;
+    /* padding-top: 100px; */
   }
 
   .sidenav {
+    width: 0px;
     height: 100%;
-    width: 0;
     position: fixed;
-    top: 0;
-	  right: 0;
-    z-index: 4;
-    background-color: #1a1a1a;
+    top: 0px;
+	  right: 0px;
+    z-index: 3;
+    background-color: #111;
     transition: 0.2s ease-in-out;
-    padding-top: 100px;
     overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     a {
-      padding: 8px 8px 8px 32px;
+      margin: 30px 0;
       text-decoration: none;
       font-size: 16px;
       font-weight: 500;
@@ -286,8 +300,17 @@ const GlobalStyle = createGlobalStyle`
       transition: 0.2s ease-in-out;
       color: inherit;
 
-      :hover {
+      :hover:not(.navbar__resume) {
         color: #02D463;
+      }
+
+      &.navbar__resume {
+        margin-left: 0;
+        color: #02D463;
+
+        &:hover {
+          color: #fff;
+        }
       }
     }
 
