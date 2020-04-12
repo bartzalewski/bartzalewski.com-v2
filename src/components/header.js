@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
@@ -44,12 +44,41 @@ const StyledHeader = styled.header`
 `
 
 const Header = () => {
+  const [condition, setCondition] = useState(false)
   return (
     <StyledHeader>
+      <div
+        id="sidenav"
+        className={condition ? "sidenav sidenav--open" : "sidenav"}
+      >
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </div>
       <nav className="navbar__container container--secondary">
         <Link to="/" className="navbar__logo">
           Bart
         </Link>
+        <div
+          className="hamburger"
+          onClick={() => setCondition(!condition)}
+          onKeyDown={() => setCondition(!condition)}
+          role="button"
+          tabIndex="0"
+        >
+          <div
+            className={
+              condition
+                ? "hamburger__wrapper icon close"
+                : "hamburger__wrapper icon"
+            }
+          >
+            <span className="hamburger--line top"></span>
+            <span className="hamburger--line middle"></span>
+            <span className="hamburger--line bottom"></span>
+          </div>
+        </div>
         <div className="navbar__links">
           <a href="#about" className="navbar__link">
             About

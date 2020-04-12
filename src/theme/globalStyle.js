@@ -197,6 +197,123 @@ const GlobalStyle = createGlobalStyle`
     text-shadow: 0px 0px 10px black;
   }
 
+  /* SIDENAV */
+
+  .hamburger {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    z-index: 4;
+    outline: none;
+  }
+
+  .hamburger__wrapper {
+    width: 25px;
+    height: 20px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &:hover {
+      .hamburger--line {
+        background-color: #02D463;
+      }
+    }
+  }
+
+  .hamburger--line {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+    background-color: #fff;
+  }
+
+  .top {
+    top: 0%;
+    width: 75%;
+    left: 0%;
+  }
+
+  .middle {
+    top: 45%;
+    width: 75%;
+  }
+
+  .bottom {
+    top: 90%;
+    width: 75%;
+    left: 0%;
+  }
+
+  .icon.close .top {
+    transform: rotate(45deg);
+    top: 48%;
+    width: 100%;
+  }
+
+  .icon.close .middle,
+  .icon.close .bottom {
+    transform: rotate(-45deg);
+    top: 48%;
+    width: 100%;
+  }
+
+  .sidenav--open {
+    width: 40% !important;
+    transition: 0.5s;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+	  right: 0;
+    z-index: 4;
+    background-color: #1a1a1a;
+    transition: 0.2s ease-in-out;
+    padding-top: 100px;
+    overflow: hidden;
+
+    a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      display: block;
+      transition: 0.2s ease-in-out;
+      color: inherit;
+
+      :hover {
+        color: #02D463;
+      }
+    }
+
+    .active {
+      width: 100%;
+      height: fit-content;
+      font-weight: 500;
+      color: #49a9e0;
+    }
+
+    &__more {
+      transform: translateX(1rem);
+      
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .sidenav__content {
+    position: relative;
+    width: fit-content !important;
+  }
+
+  /* SIDENAV END */
+
   @media screen and (max-width: 1280px) {
     .board__container {
       width: 758px;
@@ -225,6 +342,9 @@ const GlobalStyle = createGlobalStyle`
     h2 {
       font-size: 24px;
     }
+    .hamburger {
+		  display: block;
+	  }
     .navbar__links {
       display: none;
     }
