@@ -14,9 +14,15 @@ const Head = ({ title }) => {
   `)
 
   return (
-    <div>
-      <Helmet title={`${title} - ${data.site.siteMetadata.title}`} />
-    </div>
+    <Helmet
+      title={
+        title
+          ? `${title} - ${data.site.siteMetadata.title}`
+          : `${data.site.siteMetadata.title}`
+      }
+    >
+      <meta name="description" content="Bart Zalewski | Front-End Developer" />
+    </Helmet>
   )
 }
 

@@ -80,12 +80,11 @@ const Header = () => {
           Bart
         </Link>
         <div className="hamburger__container">
-          <div
+          <button
+            aria-label="menu"
             className="hamburger"
             onClick={() => setCondition(!condition)}
             onKeyDown={() => setCondition(!condition)}
-            role="button"
-            tabIndex="0"
           >
             <div
               className={
@@ -98,7 +97,7 @@ const Header = () => {
               <span className="hamburger--line middle"></span>
               <span className="hamburger--line bottom"></span>
             </div>
-          </div>
+          </button>
         </div>
         <div className="navbar__links">
           <Link to="/#about" className="navbar__link">

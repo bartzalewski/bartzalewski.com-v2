@@ -1,4 +1,5 @@
 import React from "react"
+
 import Layout from "../components/layout"
 import Head from "../components/head"
 import Hero from "../components/hero"
@@ -9,7 +10,7 @@ import Contact from "../components/contact"
 
 const IndexPage = () => (
   <Layout>
-    <Head title="Home" />
+    <Head />
     <Hero />
     <About />
     <Projects />

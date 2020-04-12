@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
+import Head from "../components/head"
 import Layout from "../components/layout"
 import Header from "../components/header"
 
@@ -10,6 +11,7 @@ const StyledNotFoundPage = styled.div`
 
 const NotFoundPage = () => (
   <Layout>
+    <Head title="404 Not Found" />
     <Header />
     <StyledNotFoundPage className="container">
       <h1>NOT FOUND</h1>

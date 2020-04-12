@@ -214,6 +214,8 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     z-index: 4;
     outline: none;
+    background: none;
+    border: none;
   }
 
   .hamburger__wrapper {

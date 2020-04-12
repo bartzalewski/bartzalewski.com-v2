@@ -33,7 +33,7 @@ const StyledContact = styled.section`
       display: flex;
       flex-direction: column;
 
-      span {
+      label {
         color: #333;
         margin-bottom: 0.5rem;
         text-shadow: 0px 0px 10px black;
@@ -76,7 +76,7 @@ const StyledContact = styled.section`
         border-color: #02d463;
       }
 
-      &.focus span {
+      &.focus label {
         color: #02d463;
         transition: 0.2s;
       }
@@ -131,23 +131,34 @@ export default function Contact() {
           <form className="contact__wrapper">
             <div className="input__field--grid">
               <div className="input__field">
-                <span>Name</span>
-                <label>
-                  <input required className="input__field-input" type="text" />
-                </label>
+                <label htmlFor="name">Name</label>
+                <input
+                  required
+                  className="input__field-input"
+                  id="name"
+                  name="name"
+                  type="text"
+                />
               </div>
               <div className="input__field">
-                <span>Email</span>
-                <label>
-                  <input required className="input__field-input" type="email" />
-                </label>
+                <label htmlFor="email">Email</label>
+                <input
+                  required
+                  className="input__field-input"
+                  id="email"
+                  name="email"
+                  type="email"
+                />
               </div>
             </div>
             <div className="input__field input__textarea">
-              <span>Message</span>
-              <label>
-                <textarea required className="input__field-input"></textarea>
-              </label>
+              <label htmlFor="msg">Message</label>
+              <textarea
+                required
+                className="input__field-input"
+                id="msg"
+                name="msg"
+              ></textarea>
             </div>
             <input type="submit" value="Submit" className="btn btn--primary" />
           </form>
