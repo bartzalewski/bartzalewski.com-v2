@@ -9,6 +9,7 @@ import centrummoto from "../images/projects/centrummoto.webm"
 import cz5p from "../images/projects/cz5p.webm"
 import telean from "../images/projects/telean.webm"
 import darkpaypal from "../images/projects/darkpaypal.webm"
+import bartzalewskiV1 from "../images/projects/bartzalewski-v1.webm"
 
 const StyledWork = styled.section`
   display: flex;
@@ -54,7 +55,8 @@ const StyledWork = styled.section`
       }
 
       &:nth-of-type(2),
-      &:nth-of-type(5) {
+      &:nth-of-type(5),
+      &:nth-of-type(8) {
         margin-top: 50px;
       }
 
@@ -326,6 +328,40 @@ export default function Work() {
                 </a>
               </div>
               <span>Dark PayPal</span>
+            </div>
+          </div>
+          <div className="work__box">
+            <video
+              src={bartzalewskiV1}
+              alt="My first portfolio"
+              loop={true}
+              autoPlay={true}
+              muted={true}
+              playsInline={true}
+            ></video>
+            <div className="work__links">
+              <div>
+                <a
+                  href="https://github.com/bartzalewski/bartzalewski.github.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub"
+                >
+                  <FontAwesomeIcon
+                    icon={["fab", "github"]}
+                    className="about__icon"
+                  />
+                </a>
+                <a
+                  href="https://bartzalewski.github.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="External"
+                >
+                  <FontAwesomeIcon icon="external-link-alt" />
+                </a>
+              </div>
+              <span>My first portfolio</span>
             </div>
           </div>
         </div>

@@ -106,12 +106,12 @@ export default function Contact() {
     const inputs = document.querySelectorAll(".input__field-input")
 
     function addcl() {
-      let parent = this.parentNode
+      let parent = this.parentNode.parentNode
       parent.classList.add("focus")
     }
 
     function remcl() {
-      let parent = this.parentNode
+      let parent = this.parentNode.parentNode
       if (this.value === "") {
         parent.classList.remove("focus")
       }
@@ -131,16 +131,22 @@ export default function Contact() {
           <div className="input__field--grid">
             <div className="input__field">
               <span>Name</span>
-              <input required className="input__field-input" type="text" />
+              <label>
+                <input required className="input__field-input" type="text" />
+              </label>
             </div>
             <div className="input__field">
               <span>Email</span>
-              <input required className="input__field-input" type="email" />
+              <label>
+                <input required className="input__field-input" type="email" />
+              </label>
             </div>
           </div>
           <div className="input__field input__textarea">
             <span>Message</span>
-            <textarea required className="input__field-input"></textarea>
+            <label>
+              <textarea required className="input__field-input"></textarea>
+            </label>
           </div>
           <input type="submit" value="Submit" className="btn btn--primary" />
         </form>
