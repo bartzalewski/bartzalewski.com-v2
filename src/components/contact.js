@@ -124,32 +124,34 @@ export default function Contact() {
   }, [])
   return (
     <StyledContact id="contact">
-      <div className="container container--primary">
-        <h2>Get in touch</h2>
-        <div className="contact__desc section__desc">Contact me!</div>
-        <form className="contact__wrapper">
-          <div className="input__field--grid">
-            <div className="input__field">
-              <span>Name</span>
+      <div className="container container--secondary">
+        <div className="container container--primary">
+          <h2>Get in touch</h2>
+          <div className="contact__desc section__desc">Contact me!</div>
+          <form className="contact__wrapper">
+            <div className="input__field--grid">
+              <div className="input__field">
+                <span>Name</span>
+                <label>
+                  <input required className="input__field-input" type="text" />
+                </label>
+              </div>
+              <div className="input__field">
+                <span>Email</span>
+                <label>
+                  <input required className="input__field-input" type="email" />
+                </label>
+              </div>
+            </div>
+            <div className="input__field input__textarea">
+              <span>Message</span>
               <label>
-                <input required className="input__field-input" type="text" />
+                <textarea required className="input__field-input"></textarea>
               </label>
             </div>
-            <div className="input__field">
-              <span>Email</span>
-              <label>
-                <input required className="input__field-input" type="email" />
-              </label>
-            </div>
-          </div>
-          <div className="input__field input__textarea">
-            <span>Message</span>
-            <label>
-              <textarea required className="input__field-input"></textarea>
-            </label>
-          </div>
-          <input type="submit" value="Submit" className="btn btn--primary" />
-        </form>
+            <input type="submit" value="Submit" className="btn btn--primary" />
+          </form>
+        </div>
       </div>
     </StyledContact>
   )

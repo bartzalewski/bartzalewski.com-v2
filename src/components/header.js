@@ -8,6 +8,7 @@ const StyledHeader = styled.header`
   justify-content: center;
   align-items: center;
   background: transparent;
+  width: 100%;
 
   .navbar {
     &__container {

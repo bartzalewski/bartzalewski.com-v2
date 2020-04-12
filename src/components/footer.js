@@ -43,49 +43,54 @@ const StyledFooter = styled.footer`
 const Footer = () => {
   return (
     <StyledFooter>
-      <div className="footer__container container--primary">
-        <div className="footer__links">
-          <a
-            href="https://github.com/bartzalewski"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer__link"
-            title="GitHub"
-          >
-            <FontAwesomeIcon icon={["fab", "github"]} className="about__icon" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/bartzalewski/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer__link"
-            title="LinkedIn"
-          >
-            <FontAwesomeIcon
-              icon={["fab", "linkedin"]}
-              className="about__icon"
-            />
-          </a>
-          <a
-            href="mailto:me@bartzalewski.com"
-            className="footer__link"
-            title="Email"
-          >
-            <FontAwesomeIcon icon="envelope" />
-          </a>
-          <a
-            href="resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer__link"
-            title="Resume"
-          >
-            <FontAwesomeIcon icon="paperclip" />
-          </a>
+      <div className="container container--secondary">
+        <div className="footer__container container--primary">
+          <div className="footer__links">
+            <a
+              href="https://github.com/bartzalewski"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__link"
+              title="GitHub"
+            >
+              <FontAwesomeIcon
+                icon={["fab", "github"]}
+                className="about__icon"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/bartzalewski/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__link"
+              title="LinkedIn"
+            >
+              <FontAwesomeIcon
+                icon={["fab", "linkedin"]}
+                className="about__icon"
+              />
+            </a>
+            <a
+              href="mailto:me@bartzalewski.com"
+              className="footer__link"
+              title="Email"
+            >
+              <FontAwesomeIcon icon="envelope" />
+            </a>
+            <a
+              href="resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__link"
+              title="Resume"
+            >
+              <FontAwesomeIcon icon="paperclip" />
+            </a>
+          </div>
+          <p className="footer__copy section__desc">
+            Copyright {new Date().getFullYear()} &copy; Bart Zalewski
+          </p>
         </div>
-        <p className="footer__copy section__desc">
-          Copyright {new Date().getFullYear()} &copy; Bart Zalewski
-        </p>
       </div>
     </StyledFooter>
   )

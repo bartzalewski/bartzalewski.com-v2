@@ -49,6 +49,10 @@ const GlobalStyle = createGlobalStyle`
     color: white;
   }
 
+  html {
+    overflow-x: hidden;
+  }
+
   body {
     font-family: 'JetBrains Mono Regular';
     margin: 0;
@@ -102,11 +106,11 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
 
     &--primary {
-      width: 1200px;
+      width: 90%;
     }
 
     &--secondary {
-      width: 1400px;
+      width: 90%;
     }
   }
 
@@ -191,6 +195,96 @@ const GlobalStyle = createGlobalStyle`
 
   .section__desc {
     text-shadow: 0px 0px 10px black;
+  }
+
+  @media screen and (max-width: 1280px) {
+    .board__container {
+      width: 758px;
+      height: 450px;
+      bottom: -200px;
+      right: -100px;
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    .board__container {
+      width: 506px;
+      height: 300px;
+      bottom: -50px;
+      padding: 10px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+    h1 {
+      font-size: 48px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    .navbar__links {
+      display: none;
+    }
+    .board__container {
+      display: none;
+    }
+
+    .decoration__tick {
+      left: 65% !important;
+    }
+
+    .container__hero--secondary {
+      margin: 2rem 0 !important;
+    }
+
+    .about__container {
+      flex-direction: column-reverse !important;
+      img {
+        align-self: flex-start !important;
+        margin-bottom: 50px;
+        width: 100% !important;
+      }
+    }
+
+    .about__wrapper {
+      width: 100%;
+    }
+
+    .about__desc, .hero__desc {
+      width: 100% !important;
+      text-align: justify;
+    }
+
+    .work__wrapper, .blog__wrapper {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .work__box {
+      margin: 0 !important;
+    }
+
+    .input__field--grid, .input__textarea {
+      width: 100% !important;
+    }
+
+    .input__field--grid {
+      grid-template-columns: repeat(1,1fr) !important;
+    }
+
+    .footer__container {
+      flex-direction: column;
+    }
+
+    .footer__copy {
+      margin-top: 25px;
+    }
+
+    .footer__link {
+      margin: 0 20px !important;
+    }
   }
 
 `

@@ -69,7 +69,7 @@ const StyledBoard = styled.div`
 
 const Board = () => {
   return (
-    <StyledBoard>
+    <StyledBoard className="board__container">
       <BoardBox bg={pagetify} title="Pagetify" url="https://pagetify.com/" />
       <BoardBox bg={schoolify} title="Schoolify" url="https://schoolify.app/" />
       <BoardBox
