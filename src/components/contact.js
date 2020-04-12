@@ -106,12 +106,12 @@ export default function Contact() {
     const inputs = document.querySelectorAll(".input__field-input")
 
     function addcl() {
-      let parent = this.parentNode.parentNode
+      let parent = this.parentNode
       parent.classList.add("focus")
     }
 
     function remcl() {
-      let parent = this.parentNode.parentNode
+      let parent = this.parentNode
       if (this.value === "") {
         parent.classList.remove("focus")
       }
@@ -138,6 +138,7 @@ export default function Contact() {
                   id="name"
                   name="name"
                   type="text"
+                  autoComplete="off"
                 />
               </div>
               <div className="input__field">
@@ -148,6 +149,7 @@ export default function Contact() {
                   id="email"
                   name="email"
                   type="email"
+                  autoComplete="off"
                 />
               </div>
             </div>
