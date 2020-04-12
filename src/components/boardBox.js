@@ -17,14 +17,18 @@ const BoardBox = props => {
         role="button"
         tabIndex="0"
       >
-        <a.div
+        <a.video
           className="back"
+          src={props.bg}
+          loop={true}
+          autoPlay={true}
+          muted={true}
+          playsInline={true}
           style={{
-            backgroundImage: `url(${props.bg})`,
             opacity: opacity.interpolate(o => 1 - o),
             transform,
           }}
-        ></a.div>
+        ></a.video>
         <a.div
           className="front"
           style={{

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import bart from "../images/bart.png"
+import bart from "../images/bart.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const StyledAbout = styled.section`
@@ -17,8 +17,8 @@ const StyledAbout = styled.section`
         align-self: flex-end;
         opacity: 0.4;
         transition: 0.5s;
-        margin-top: 100px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+        border-radius: 4px;
 
         &:hover {
           opacity: 1;

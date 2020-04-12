@@ -1,35 +1,25 @@
 import React from "react"
 import styled from "styled-components"
-import pagetify from "../images/projects/pagetify.gif"
-import schoolify from "../images/projects/schoolify.gif"
-import dojrzewaj from "../images/projects/dojrzewaj.gif"
-import centrummoto from "../images/projects/centrummoto.gif"
+import pagetify from "../images/projects/pagetify.webm"
+import schoolify from "../images/projects/schoolify.webm"
+import dojrzewaj from "../images/projects/dojrzewaj.webm"
+import centrummoto from "../images/projects/centrummoto.webm"
 
 import BoardBox from "./boardBox"
 
 const StyledBoard = styled.div`
-  width: 900px;
+  width: 1010px;
   height: 600px;
   background: #212121;
   border-radius: 10px;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
   position: absolute;
-  right: -175px;
+  right: -250px;
   bottom: -350px;
   padding: 25px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 25px;
-
-  img {
-    opacity: 0.4;
-    /* transition: 0.5s; */
-
-    &:hover {
-      opacity: 1;
-      /* transition: 0.5s; */
-    }
-  }
 
   .board {
     &__wrapper {
@@ -68,7 +58,7 @@ const StyledBoard = styled.div`
     flex-direction: column;
   }
 
-  img,
+  video,
   .back {
     position: absolute;
     width: 100%;

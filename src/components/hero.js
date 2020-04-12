@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import bg from "../images/bg.png"
+import bg from "../images/bg.jpg"
 import Header from "./header"
 import Board from "./board"
 

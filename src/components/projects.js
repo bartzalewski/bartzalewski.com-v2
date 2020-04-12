@@ -2,13 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import pagetify from "../images/projects/pagetify.gif"
-import schoolify from "../images/projects/schoolify.gif"
-import dojrzewaj from "../images/projects/dojrzewaj.gif"
-import centrummoto from "../images/projects/centrummoto.gif"
-import cz5p from "../images/projects/cz5p.gif"
-import telean from "../images/projects/telean.gif"
-import darkpaypal from "../images/projects/darkpaypal.gif"
+import pagetify from "../images/projects/pagetify.webm"
+import schoolify from "../images/projects/schoolify.webm"
+import dojrzewaj from "../images/projects/dojrzewaj.webm"
+import centrummoto from "../images/projects/centrummoto.webm"
+import cz5p from "../images/projects/cz5p.webm"
+import telean from "../images/projects/telean.webm"
+import darkpaypal from "../images/projects/darkpaypal.webm"
 
 const StyledWork = styled.section`
   display: flex;
@@ -28,8 +28,7 @@ const StyledWork = styled.section`
       height: 225px;
       background: #1a1a1a;
 
-      img {
-        width: 100%;
+      video {
         height: 100%;
         opacity: 0.4;
         transition: 0.5s;
@@ -67,7 +66,7 @@ const StyledWork = styled.section`
       &:hover {
         span,
         svg,
-        img {
+        video {
           opacity: 1;
           transition: 0.2s;
         }
@@ -102,7 +101,14 @@ export default function Work() {
         <p className="work__desc section__desc">Check out my portfolio!</p>
         <div className="work__wrapper">
           <div className="work__box">
-            <img src={pagetify} alt="Pagetify" />
+            <video
+              src={pagetify}
+              alt="Pagetify"
+              loop={true}
+              autoPlay={true}
+              muted={true}
+              playsInline={true}
+            ></video>
             <div className="work__links">
               <div>
                 <a
@@ -129,7 +135,14 @@ export default function Work() {
             </div>
           </div>
           <div className="work__box">
-            <img src={schoolify} alt="Schoolify" />
+            <video
+              src={schoolify}
+              alt="Schoolify"
+              loop={true}
+              autoPlay={true}
+              muted={true}
+              playsInline={true}
+            />
             <div className="work__links">
               <div>
                 <a
@@ -156,7 +169,14 @@ export default function Work() {
             </div>
           </div>
           <div className="work__box">
-            <img src={dojrzewaj} alt="dojrzewaj.pl" />
+            <video
+              src={dojrzewaj}
+              alt="dojrzewaj.pl"
+              loop={true}
+              autoPlay={true}
+              muted={true}
+              playsInline={true}
+            />
             <div className="work__links">
               <div>
                 <a href="#!" title="GitHub">
@@ -178,7 +198,14 @@ export default function Work() {
             </div>
           </div>
           <div className="work__box">
-            <img src={centrummoto} alt="Centrum Moto" />
+            <video
+              src={centrummoto}
+              alt="Centrum Moto"
+              loop={true}
+              autoPlay={true}
+              muted={true}
+              playsInline={true}
+            />
             <div className="work__links">
               <div>
                 <a href="#!" title="GitHub">
@@ -200,7 +227,14 @@ export default function Work() {
             </div>
           </div>
           <div className="work__box">
-            <img src={cz5p} alt="coza500plus.pl" />
+            <video
+              src={cz5p}
+              alt="coza500plus.pl"
+              loop={true}
+              autoPlay={true}
+              muted={true}
+              playsInline={true}
+            />
             <div className="work__links">
               <div>
                 <a
@@ -227,7 +261,14 @@ export default function Work() {
             </div>
           </div>
           <div className="work__box">
-            <img src={telean} alt="Telean" />
+            <video
+              src={telean}
+              alt="Telean"
+              loop={true}
+              autoPlay={true}
+              muted={true}
+              playsInline={true}
+            />
             <div className="work__links">
               <div>
                 <a
@@ -254,7 +295,14 @@ export default function Work() {
             </div>
           </div>
           <div className="work__box">
-            <img src={darkpaypal} alt="Dark PayPal" />
+            <video
+              src={darkpaypal}
+              alt="Dark PayPal"
+              loop={true}
+              autoPlay={true}
+              muted={true}
+              playsInline={true}
+            ></video>
             <div className="work__links">
               <div>
                 <a

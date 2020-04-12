@@ -8,6 +8,8 @@ import {
   faFire,
   faCross,
 } from "@fortawesome/free-solid-svg-icons"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 import GrandHotel from "../fonts/GrandHotel/GrandHotel-Regular.ttf"
 import JetBrainsMonoRegular from "../fonts/JBMono/JetBrainsMono-Regular.ttf"
@@ -16,6 +18,8 @@ import JetBrainsMonoBold from "../fonts/JBMono/JetBrainsMono-Bold.ttf"
 import JetBrainsMonoExtraBold from "../fonts/JBMono/JetBrainsMono-ExtraBold.ttf"
 
 library.add(fab, faEnvelope, faPaperclip, faExternalLinkAlt, faFire, faCross)
+
+AOS.init()
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -55,6 +59,25 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     color: white;
     background: #1a1a1a;
+  }
+
+  body::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: #333;
+    outline: 1px solid white;
+    border-radius: 4px;
+
+    &:hover {
+      background: #02D463;
+    }
   }
 
   a {

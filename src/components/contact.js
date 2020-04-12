@@ -34,7 +34,7 @@ const StyledContact = styled.section`
       flex-direction: column;
 
       span {
-        color: #bdbdbd;
+        color: #333;
         margin-bottom: 0.5rem;
         text-shadow: 0px 0px 10px black;
         font-size: 14px;
