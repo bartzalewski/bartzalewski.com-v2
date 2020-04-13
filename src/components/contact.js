@@ -53,6 +53,8 @@ const StyledContact = styled.section`
         outline: none;
         font-size: inherit;
         padding: 15px;
+        background: #1a1a1a;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
         &:focus {
           border-color: #02d463;
@@ -62,6 +64,7 @@ const StyledContact = styled.section`
 
       textarea {
         height: 200px;
+        resize: none;
       }
 
       &--grid {

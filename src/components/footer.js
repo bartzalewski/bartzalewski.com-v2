@@ -31,6 +31,7 @@ const StyledFooter = styled.footer`
       svg {
         width: 20px;
         height: 20px;
+        filter: drop-shadow(0px 0px 3px black);
       }
     }
 

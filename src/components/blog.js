@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 const StyledBlog = styled.section`
   display: flex;
@@ -23,37 +24,90 @@ const StyledBlog = styled.section`
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 20px;
       width: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      text-align: left;
     }
 
     &__box {
       background: #111;
       border-radius: 4px;
-      height: 200px;
+      padding: 15px;
+      transition: 0.4s;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      opacity: 0.4;
+
+      &:hover {
+        transform: translateY(-10px);
+        transition: 0.4s;
+        opacity: 1;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 150px;
+      margin-bottom: 25px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    &__title {
+      font-family: "JetBrains Mono Medium";
+    }
+
+    &__time {
+      font-size: 14px;
+      color: #bdbdbd;
+      direction: ltr;
     }
   }
 `
 
 export default function Blog() {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+        edges {
+          node {
+            id
+            title
+            slug
+            publishedDate(formatString: "MMMM Do, YYYY")
+            background {
+              file {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  const output = data.allContentfulBlogPost.edges.map(element => {
+    return (
+      <li key={element.node.id} className="blog__box">
+        <Link to={`/blog/${element.node.slug}`}>
+          <img
+            className="blog__img"
+            src={element.node.background.file.url}
+            alt={element.node.title}
+          />
+          <p className="blog__title">{element.node.title}</p>
+          <p className="blog__time">{element.node.publishedDate}</p>
+        </Link>
+      </li>
+    )
+  })
   return (
     <StyledBlog id="blog">
       <div className="container container--secondary">
         <div className="container container--primary blog__container">
           <h2>Blog</h2>
           <p className="blog__desc section__desc">Check out my blog!</p>
-          <div className="blog__wrapper">
-            <a href="#!" className="blog__box">
-              <p className="blog__title">My setup</p>
-            </a>
-            <a href="#!" className="blog__box">
-              Schoolify
-            </a>
-            <a href="#!" className="blog__box">
-              dojrzewaj.pl
-            </a>
-            <a href="#!" className="blog__box">
-              dojrzewaj.pl
-            </a>
-          </div>
+          <ul className="blog__wrapper">{output}</ul>
         </div>
       </div>
     </StyledBlog>

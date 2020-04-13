@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import bg from "../images/bg.jpg"
 import Header from "./header"
@@ -32,10 +33,6 @@ const StyledHero = styled.section`
       width: 38%;
       margin: 50px 0;
       color: #bdbdbd;
-    }
-
-    &__sub {
-      /* color: #aeaeae; */
     }
   }
 
@@ -97,6 +94,17 @@ const StyledContainer = styled.div`
 `
 
 export default function Hero() {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          author
+          role
+        }
+      }
+    }
+  `)
+  const { author, role } = data.site.siteMetadata
   return (
     <StyledHero>
       <Header />
@@ -104,8 +112,8 @@ export default function Hero() {
         <div className="container__hero--secondary container--secondary">
           <StyledContainer className="container--primary">
             <p className="colored">Hi, I am</p>
-            <h1>Bart Zalewski</h1>
-            <h2 className="hero__sub">Front-End Developer</h2>
+            <h1>{author}</h1>
+            <h2 className="hero__sub">{role}</h2>
             <p className="hero__desc section__desc">
               I specialize in designing, building, shipping and scaling
               beautiful, usable products with blazing-fast efficiency.
