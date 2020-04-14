@@ -84,18 +84,35 @@ export default function About() {
       <div className="container--secondary container">
         <div className="container container--primary about__container">
           <div className="about__wrapper">
-            <h2>About me</h2>
-            <p className="about__desc section__desc">
+            <h2 data-sal="slide-up" data-sal-delay="700" data-sal-easing="ease">
+              About me
+            </h2>
+            <p
+              data-sal="slide-up"
+              data-sal-delay="800"
+              data-sal-easing="ease"
+              className="about__desc section__desc"
+            >
               I started coding in the December 2018 and I am self-taught
               developer. I have serious passion for modern looking websites with
               a little bit of animations. I love what I am doing and I am highly
               motivated to collaborate with someone. If you are up into some
               projects, just let me know!
             </p>
-            <p className="about__desc section__desc">
+            <p
+              data-sal="slide-up"
+              data-sal-delay="200"
+              data-sal-easing="ease"
+              className="about__desc section__desc"
+            >
               Technologies that I use:
             </p>
-            <ul className="about__skills">
+            <ul
+              data-sal="slide-up"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+              className="about__skills"
+            >
               <li className="about__skill">
                 <FontAwesomeIcon
                   icon={["fab", "react"]}
@@ -169,7 +186,13 @@ export default function About() {
               </li>
             </ul>
           </div>
-          <img src={bart} alt="Bart Zalewski" />
+          <img
+            data-sal="zoom-in"
+            data-sal-delay="400"
+            data-sal-easing="ease"
+            src={bart}
+            alt="Bart Zalewski"
+          />
         </div>
       </div>
     </StyledAbout>

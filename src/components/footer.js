@@ -55,6 +55,9 @@ const Footer = () => {
               title="GitHub"
             >
               <FontAwesomeIcon
+                data-sal="fade"
+                data-sal-delay="200"
+                data-sal-easing="ease"
                 icon={["fab", "github"]}
                 className="about__icon"
               />
@@ -67,6 +70,9 @@ const Footer = () => {
               title="LinkedIn"
             >
               <FontAwesomeIcon
+                data-sal="fade"
+                data-sal-delay="300"
+                data-sal-easing="ease"
                 icon={["fab", "linkedin"]}
                 className="about__icon"
               />
@@ -76,7 +82,12 @@ const Footer = () => {
               className="footer__link"
               title="Email"
             >
-              <FontAwesomeIcon icon="envelope" />
+              <FontAwesomeIcon
+                data-sal="fade"
+                data-sal-delay="400"
+                data-sal-easing="ease"
+                icon="envelope"
+              />
             </a>
             <a
               href="resume.pdf"
@@ -85,10 +96,20 @@ const Footer = () => {
               className="footer__link"
               title="Resume"
             >
-              <FontAwesomeIcon icon="paperclip" />
+              <FontAwesomeIcon
+                data-sal="fade"
+                data-sal-delay="500"
+                data-sal-easing="ease"
+                icon="paperclip"
+              />
             </a>
           </div>
-          <p className="footer__copy section__desc">
+          <p
+            data-sal="fade"
+            data-sal-delay="600"
+            data-sal-easing="ease"
+            className="footer__copy section__desc"
+          >
             Copyright {new Date().getFullYear()} &copy; Bart Zalewski
           </p>
         </div>

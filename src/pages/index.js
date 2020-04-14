@@ -8,15 +8,17 @@ import Projects from "../components/projects"
 import Blog from "../components/blog"
 import Contact from "../components/contact"
 
-const IndexPage = () => (
-  <Layout>
-    <Head />
-    <Hero />
-    <About />
-    <Projects />
-    <Blog />
-    <Contact />
-  </Layout>
-)
+const IndexPage = () => {
+  return (
+    <Layout>
+      <Head />
+      <Hero />
+      <About />
+      <Projects />
+      <Blog />
+      <Contact />
+    </Layout>
+  )
+}
 
 export default IndexPage

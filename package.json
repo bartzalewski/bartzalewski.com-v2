@@ -16,6 +16,7 @@
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-offline": "^3.0.41",
     "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-plugin-scroll-reveal": "0.0.6",
     "gatsby-plugin-sharp": "^2.4.13",
     "gatsby-plugin-styled-components": "^3.2.1",
     "gatsby-source-contentful": "^2.2.7",

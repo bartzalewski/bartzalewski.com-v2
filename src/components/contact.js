@@ -129,11 +129,25 @@ export default function Contact() {
     <StyledContact id="contact">
       <div className="container container--secondary">
         <div className="container container--primary">
-          <h2>Get in touch</h2>
-          <div className="contact__desc section__desc">Contact me!</div>
+          <h2 data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">
+            Get in touch
+          </h2>
+          <div
+            data-sal="slide-up"
+            data-sal-delay="300"
+            data-sal-easing="ease"
+            className="contact__desc section__desc"
+          >
+            Contact me!
+          </div>
           <form className="contact__wrapper">
             <div className="input__field--grid">
-              <div className="input__field">
+              <div
+                data-sal="slide-up"
+                data-sal-delay="200"
+                data-sal-easing="ease"
+                className="input__field"
+              >
                 <label htmlFor="name">Name</label>
                 <input
                   required
@@ -144,7 +158,12 @@ export default function Contact() {
                   autoComplete="off"
                 />
               </div>
-              <div className="input__field">
+              <div
+                data-sal="slide-up"
+                data-sal-delay="300"
+                data-sal-easing="ease"
+                className="input__field"
+              >
                 <label htmlFor="email">Email</label>
                 <input
                   required
@@ -156,7 +175,12 @@ export default function Contact() {
                 />
               </div>
             </div>
-            <div className="input__field input__textarea">
+            <div
+              data-sal="slide-up"
+              data-sal-delay="400"
+              data-sal-easing="ease"
+              className="input__field input__textarea"
+            >
               <label htmlFor="msg">Message</label>
               <textarea
                 required
@@ -165,7 +189,7 @@ export default function Contact() {
                 name="msg"
               ></textarea>
             </div>
-            <input type="submit" value="Submit" className="btn btn--primary" />
+            <input data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease" type="submit" value="Submit" className="btn btn--primary" />
           </form>
         </div>
       </div>

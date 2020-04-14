@@ -111,14 +111,41 @@ export default function Hero() {
       <div className="container hero__container">
         <div className="container__hero--secondary container--secondary">
           <StyledContainer className="container--primary">
-            <p className="colored">Hi, I am</p>
-            <h1>{author}</h1>
-            <h2 className="hero__sub">{role}</h2>
-            <p className="hero__desc section__desc">
+            <p
+              className="colored"
+              data-sal="slide-up"
+              data-sal-delay="200"
+              data-sal-easing="ease"
+            >
+              Hi, I am
+            </p>
+            <h1 data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
+              {author}
+            </h1>
+            <h2
+              data-sal="slide-up"
+              data-sal-delay="400"
+              data-sal-easing="ease"
+              className="hero__sub"
+            >
+              {role}
+            </h2>
+            <p
+              data-sal="slide-up"
+              data-sal-delay="500"
+              data-sal-easing="ease"
+              className="hero__desc section__desc"
+            >
               I specialize in designing, building, shipping and scaling
               beautiful, usable products with blazing-fast efficiency.
             </p>
-            <a href="#contact" className="btn btn--primary">
+            <a
+              data-sal="slide-up"
+              data-sal-delay="600"
+              data-sal-easing="ease"
+              href="#contact"
+              className="btn btn--primary"
+            >
               Get in touch
             </a>
             <img

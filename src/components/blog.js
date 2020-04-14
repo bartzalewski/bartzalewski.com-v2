@@ -88,7 +88,13 @@ export default function Blog() {
   `)
   const output = data.allContentfulBlogPost.edges.map(element => {
     return (
-      <li key={element.node.id} className="blog__box">
+      <li
+        key={element.node.id}
+        className="blog__box"
+        data-sal="zoom-in"
+        data-sal-delay="400"
+        data-sal-easing="ease"
+      >
         <Link to={`/blog/${element.node.slug}`}>
           <img
             className="blog__img"
@@ -105,8 +111,17 @@ export default function Blog() {
     <StyledBlog id="blog">
       <div className="container container--secondary">
         <div className="container container--primary blog__container">
-          <h2>Blog</h2>
-          <p className="blog__desc section__desc">Check out my blog!</p>
+          <h2 data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">
+            Blog
+          </h2>
+          <p
+            data-sal="slide-up"
+            data-sal-delay="300"
+            data-sal-easing="ease"
+            className="blog__desc section__desc"
+          >
+            Check out my blog!
+          </p>
           <ul className="blog__wrapper">{output}</ul>
         </div>
       </div>

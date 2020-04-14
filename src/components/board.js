@@ -70,18 +70,50 @@ const StyledBoard = styled.div`
 const Board = () => {
   return (
     <StyledBoard className="board__container">
-      <BoardBox bg={pagetify} title="Pagetify" url="https://pagetify.com/" />
-      <BoardBox bg={schoolify} title="Schoolify" url="https://schoolify.app/" />
-      <BoardBox
-        bg={dojrzewaj}
-        title="dojrzewaj.pl"
-        url="https://dojrzewaj.pl/"
-      />
-      <BoardBox
-        bg={centrummoto}
-        title="Centrum Moto"
-        url="https://centrummoto.pl/"
-      />
+      <div
+        data-sal="zoom-in"
+        data-sal-delay="700"
+        data-sal-easing="ease"
+        data-sal-duration="1500"
+      >
+        <BoardBox bg={pagetify} title="Pagetify" url="https://pagetify.com/" />
+      </div>
+      <div
+        data-sal="zoom-in"
+        data-sal-delay="800"
+        data-sal-easing="ease"
+        data-sal-duration="1500"
+      >
+        <BoardBox
+          bg={schoolify}
+          title="Schoolify"
+          url="https://schoolify.app/"
+        />
+      </div>
+      <div
+        data-sal="zoom-in"
+        data-sal-delay="900"
+        data-sal-easing="ease"
+        data-sal-duration="1500"
+      >
+        <BoardBox
+          bg={dojrzewaj}
+          title="dojrzewaj.pl"
+          url="https://dojrzewaj.pl/"
+        />
+      </div>
+      <div
+        data-sal="zoom-in"
+        data-sal-delay="1000"
+        data-sal-easing="ease"
+        data-sal-duration="1500"
+      >
+        <BoardBox
+          bg={centrummoto}
+          title="Centrum Moto"
+          url="https://centrummoto.pl/"
+        />
+      </div>
     </StyledBoard>
   )
 }

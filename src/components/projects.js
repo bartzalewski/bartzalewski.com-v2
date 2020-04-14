@@ -97,10 +97,24 @@ export default function Work() {
     <StyledWork id="projects">
       <div className="container container--secondary">
         <div className="container container--primary">
-          <h2>My projects</h2>
-          <p className="work__desc section__desc">Check out my portfolio!</p>
+          <h2 data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">
+            My projects
+          </h2>
+          <p
+            data-sal="slide-up"
+            data-sal-delay="300"
+            data-sal-easing="ease"
+            className="work__desc section__desc"
+          >
+            Check out my portfolio!
+          </p>
           <div className="work__wrapper">
-            <div className="work__box">
+            <div
+              data-sal="slide-up"
+              data-sal-delay="100"
+              data-sal-easing="ease"
+              className="work__box"
+            >
               <video
                 src={pagetify}
                 alt="Pagetify"
@@ -134,7 +148,12 @@ export default function Work() {
                 <span>Pagetify</span>
               </div>
             </div>
-            <div className="work__box">
+            <div
+              data-sal="slide-up"
+              data-sal-delay="200"
+              data-sal-easing="ease"
+              className="work__box"
+            >
               <video
                 src={schoolify}
                 alt="Schoolify"
@@ -168,7 +187,12 @@ export default function Work() {
                 <span>Schoolify</span>
               </div>
             </div>
-            <div className="work__box">
+            <div
+              data-sal="slide-up"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+              className="work__box"
+            >
               <video
                 src={dojrzewaj}
                 alt="dojrzewaj.pl"
@@ -197,7 +221,12 @@ export default function Work() {
                 <span>dojrzewaj.pl</span>
               </div>
             </div>
-            <div className="work__box">
+            <div
+              data-sal="slide-up"
+              data-sal-delay="100"
+              data-sal-easing="ease"
+              className="work__box"
+            >
               <video
                 src={centrummoto}
                 alt="Centrum Moto"
@@ -226,7 +255,12 @@ export default function Work() {
                 <span>Centrum Moto</span>
               </div>
             </div>
-            <div className="work__box">
+            <div
+              data-sal="slide-up"
+              data-sal-delay="200"
+              data-sal-easing="ease"
+              className="work__box"
+            >
               <video
                 src={cz5p}
                 alt="coza500plus.pl"
@@ -260,7 +294,12 @@ export default function Work() {
                 <span>coza500plus.pl</span>
               </div>
             </div>
-            <div className="work__box">
+            <div
+              data-sal="slide-up"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+              className="work__box"
+            >
               <video
                 src={telean}
                 alt="Telean"
@@ -294,7 +333,12 @@ export default function Work() {
                 <span>Telean</span>
               </div>
             </div>
-            <div className="work__box">
+            <div
+              data-sal="slide-up"
+              data-sal-delay="100"
+              data-sal-easing="ease"
+              className="work__box"
+            >
               <video
                 src={darkpaypal}
                 alt="Dark PayPal"
@@ -328,7 +372,12 @@ export default function Work() {
                 <span>Dark PayPal</span>
               </div>
             </div>
-            <div className="work__box">
+            <div
+              data-sal="slide-up"
+              data-sal-delay="200"
+              data-sal-easing="ease"
+              className="work__box"
+            >
               <video
                 src={bartzalewskiV1}
                 alt="My first portfolio"
