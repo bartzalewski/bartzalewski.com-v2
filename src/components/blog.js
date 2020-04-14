@@ -100,6 +100,7 @@ export default function Blog() {
             className="blog__img"
             src={element.node.background.file.url}
             alt={element.node.title}
+            loading="lazy"
           />
           <p className="blog__title">{element.node.title}</p>
           <p className="blog__time">{element.node.publishedDate}</p>

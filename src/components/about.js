@@ -192,6 +192,7 @@ export default function About() {
             data-sal-easing="ease"
             src={bart}
             alt="Bart Zalewski"
+            loading="lazy"
           />
         </div>
       </div>

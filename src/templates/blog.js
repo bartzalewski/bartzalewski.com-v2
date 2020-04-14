@@ -75,7 +75,7 @@ const Blog = props => {
       "embedded-asset-block": node => {
         const alt = node.data.target.fields.title["en-US"]
         const url = node.data.target.fields.file["en-US"].url
-        return <img alt={alt} src={url} />
+        return <img alt={alt} src={url} loading="lazy" />
       },
     },
   }
@@ -91,6 +91,7 @@ const Blog = props => {
             className="blog__img"
             src={props.data.contentfulBlogPost.background.file.url}
             alt={props.data.contentfulBlogPost.title}
+            loading="lazy"
           />
           <div className="blog__content">
             {documentToReactComponents(

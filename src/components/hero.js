@@ -152,16 +152,19 @@ export default function Hero() {
               className="decoration decoration__cross"
               src={cross}
               alt="cross"
+              loading="lazy"
             />
             <img
               className="decoration decoration__tick"
               src={tick}
               alt="tick"
+              loading="lazy"
             />
             <img
               className="decoration decoration__circle"
               src={circle}
               alt="circle"
+              loading="lazy"
             />
           </StyledContainer>
         </div>
