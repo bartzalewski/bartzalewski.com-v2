@@ -106,7 +106,7 @@ export default function Hero() {
   `)
   const { author, role } = data.site.siteMetadata
   return (
-    <StyledHero>
+    <StyledHero id="home">
       <Header />
       <div className="container hero__container">
         <div className="container__hero--secondary container--secondary">

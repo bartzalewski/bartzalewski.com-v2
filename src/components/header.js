@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import Scrollspy from "react-scrollspy"
 
 const StyledHeader = styled.header`
   height: 100px;
@@ -50,10 +51,16 @@ const Header = () => {
   const [condition, setCondition] = useState(false)
   return (
     <StyledHeader id="nav">
-      <div
+      <Scrollspy
         id="sidenav"
         className={condition ? "sidenav sidenav--open" : "sidenav"}
+        style={{ padding: 0 }}
+        items={["home", "about", "projects", "blog", "contact"]}
+        currentClassName="colored"
       >
+        <Link to="/#home" className="navbar__link" style={{ display: "none" }}>
+          Home
+        </Link>
         <Link to="/#about" onClick={() => setCondition(!condition)}>
           About
         </Link>
@@ -67,14 +74,14 @@ const Header = () => {
           Contact
         </Link>
         <a
-          href="resume.pdf"
+          href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="navbar__link navbar__resume btn btn--secondary"
         >
           Resume
         </a>
-      </div>
+      </Scrollspy>
       <nav id="navbar" className="navbar__container container--secondary">
         <Link to="/#" className="navbar__logo">
           Bart
@@ -99,7 +106,18 @@ const Header = () => {
             </div>
           </button>
         </div>
-        <div className="navbar__links">
+        <Scrollspy
+          className="navbar__links"
+          items={["home", "about", "projects", "blog", "contact"]}
+          currentClassName="colored"
+        >
+          <Link
+            to="/#home"
+            className="navbar__link"
+            style={{ display: "none" }}
+          >
+            Home
+          </Link>
           <Link to="/#about" className="navbar__link">
             About
           </Link>
@@ -113,14 +131,14 @@ const Header = () => {
             Contact
           </Link>
           <a
-            href="resume.pdf"
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="navbar__link navbar__resume btn btn--secondary"
           >
             Resume
           </a>
-        </div>
+        </Scrollspy>
       </nav>
     </StyledHeader>
   )

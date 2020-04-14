@@ -190,7 +190,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .colored {
-    color: #02D463;
+    color: #02D463 !important;
   }
 
   .section__desc {
