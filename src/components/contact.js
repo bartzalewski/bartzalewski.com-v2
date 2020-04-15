@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import styled from "styled-components"
+import axios from "axios"
 
 const StyledContact = styled.section`
   display: flex;
@@ -105,6 +106,34 @@ const StyledContact = styled.section`
 `
 
 export default function Contact() {
+  const resetForm = () => {
+    document.getElementById("contact-form").reset()
+  }
+  const handleSubmit = e => {
+    e.preventDefault()
+    const name = document.getElementById("name").value
+    const email = document.getElementById("email").value
+    const message = document.getElementById("message").value
+    const success = document.getElementById("success")
+    const failure = document.getElementById("failure")
+    axios({
+      method: "POST",
+      url: "https://bartzalewski-v2-api.herokuapp.com/send",
+      data: {
+        name: name,
+        email: email,
+        message: message,
+      },
+    }).then(response => {
+      if (response.data.msg === "success") {
+        success.style.display = "block"
+        resetForm()
+      } else if (response.data.msg === "fail") {
+        failure.style.display = "block"
+      }
+    })
+  }
+
   useEffect(() => {
     const inputs = document.querySelectorAll(".input__field-input")
 
@@ -140,7 +169,18 @@ export default function Contact() {
           >
             Contact me!
           </div>
-          <form className="contact__wrapper">
+          <span id="success" className="colored" style={{ display: "none" }}>
+            Message sent!
+          </span>
+          <span id="failure" style={{ color: "#FF5252", display: "none" }}>
+            Message failed to sent!
+          </span>
+          <form
+            onSubmit={handleSubmit}
+            method="POST"
+            className="contact__wrapper"
+            id="contact-form"
+          >
             <div className="input__field--grid">
               <div
                 data-sal="slide-up"
@@ -181,15 +221,22 @@ export default function Contact() {
               data-sal-easing="ease"
               className="input__field input__textarea"
             >
-              <label htmlFor="msg">Message</label>
+              <label htmlFor="message">Message</label>
               <textarea
                 required
                 className="input__field-input"
-                id="msg"
-                name="msg"
+                id="message"
+                name="message"
               ></textarea>
             </div>
-            <input data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease" type="submit" value="Submit" className="btn btn--primary" />
+            <input
+              data-sal="slide-up"
+              data-sal-delay="200"
+              data-sal-easing="ease"
+              type="submit"
+              value="Submit"
+              className="btn btn--primary"
+            />
           </form>
         </div>
       </div>

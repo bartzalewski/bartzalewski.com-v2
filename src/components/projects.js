@@ -389,7 +389,7 @@ export default function Work() {
               <div className="work__links">
                 <div>
                   <a
-                    href="https://github.com/bartzalewski/bartzalewski.github.io"
+                    href="https://github.com/bartzalewski/bartzalewski.com-v1"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="GitHub"
@@ -400,7 +400,7 @@ export default function Work() {
                     />
                   </a>
                   <a
-                    href="https://bartzalewski.github.io/"
+                    href="https://bartzalewski-v1.herokuapp.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="External"
