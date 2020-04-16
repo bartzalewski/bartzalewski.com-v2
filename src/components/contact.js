@@ -229,14 +229,17 @@ export default function Contact() {
                 name="message"
               ></textarea>
             </div>
-            <input
+            <div
               data-sal="slide-up"
               data-sal-delay="200"
               data-sal-easing="ease"
-              type="submit"
-              value="Submit"
-              className="btn btn--primary"
-            />
+            >
+              <input
+                type="submit"
+                value="Submit"
+                className="btn btn--primary"
+              />
+            </div>
           </form>
         </div>
       </div>

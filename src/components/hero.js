@@ -4,6 +4,7 @@ import styled from "styled-components"
 import bg from "../images/bg.jpg"
 import Header from "./header"
 import Board from "./board"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 import cross from "../images/decorations/cross.svg"
 import tick from "../images/decorations/tick.svg"
@@ -139,15 +140,26 @@ export default function Hero() {
               I specialize in designing, building, shipping and scaling
               beautiful, usable products with blazing-fast efficiency.
             </p>
-            <a
+            <div
               data-sal="slide-up"
               data-sal-delay="600"
               data-sal-easing="ease"
-              href="#contact"
-              className="btn btn--primary"
             >
-              Get in touch
-            </a>
+              <a
+                href="#contact"
+                className="btn btn--primary"
+                onClick={e => {
+                  e.preventDefault()
+                  trackCustomEvent({
+                    category: "Get in touch Button",
+                    action: "Click",
+                    label: "Gatsby Google Analytics Get in touch Button",
+                  })
+                }}
+              >
+                Get in touch
+              </a>
+            </div>
             <img
               className="decoration decoration__cross"
               src={cross}

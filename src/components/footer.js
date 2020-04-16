@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const StyledFooter = styled.footer`
   height: 100px;
@@ -47,7 +48,7 @@ const Footer = () => {
       <div className="container container--secondary">
         <div className="footer__container container--primary">
           <div className="footer__links">
-            <a
+            <OutboundLink
               href="https://github.com/bartzalewski"
               target="_blank"
               rel="noopener noreferrer"
@@ -61,8 +62,8 @@ const Footer = () => {
                 icon={["fab", "github"]}
                 className="about__icon"
               />
-            </a>
-            <a
+            </OutboundLink>
+            <OutboundLink
               href="https://www.linkedin.com/in/bartzalewski/"
               target="_blank"
               rel="noopener noreferrer"
@@ -76,7 +77,7 @@ const Footer = () => {
                 icon={["fab", "linkedin"]}
                 className="about__icon"
               />
-            </a>
+            </OutboundLink>
             <a
               href="mailto:me@bartzalewski.com"
               className="footer__link"
@@ -89,7 +90,7 @@ const Footer = () => {
                 icon="envelope"
               />
             </a>
-            <a
+            <OutboundLink
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -102,7 +103,7 @@ const Footer = () => {
                 data-sal-easing="ease"
                 icon="paperclip"
               />
-            </a>
+            </OutboundLink>
           </div>
           <p
             data-sal="fade"

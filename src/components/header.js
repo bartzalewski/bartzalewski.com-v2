@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import Scrollspy from "react-scrollspy"
+import Resume from "./resume"
 
 const StyledHeader = styled.header`
   height: 100px;
@@ -73,14 +74,7 @@ const Header = () => {
         <Link to="/#contact" onClick={() => setCondition(!condition)}>
           Contact
         </Link>
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="navbar__link navbar__resume btn btn--secondary"
-        >
-          Resume
-        </a>
+        <Resume />
       </Scrollspy>
       <nav id="navbar" className="navbar__container container--secondary">
         <Link to="/#" className="navbar__logo">
@@ -130,14 +124,7 @@ const Header = () => {
           <Link to="/#contact" className="navbar__link">
             Contact
           </Link>
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="navbar__link navbar__resume btn btn--secondary"
-          >
-            Resume
-          </a>
+          <Resume />
         </Scrollspy>
       </nav>
     </StyledHeader>
