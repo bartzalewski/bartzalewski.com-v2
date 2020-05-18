@@ -49,6 +49,21 @@ const Footer = () => {
         <div className="footer__container container--primary">
           <div className="footer__links">
             <OutboundLink
+              href="https://www.instagram.com/bart.code/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__link"
+              title="Instagram"
+            >
+              <FontAwesomeIcon
+                data-sal="fade"
+                data-sal-delay="200"
+                data-sal-easing="ease"
+                icon={["fab", "instagram"]}
+                className="about__icon"
+              />
+            </OutboundLink>
+            <OutboundLink
               href="https://github.com/bartzalewski"
               target="_blank"
               rel="noopener noreferrer"
@@ -57,7 +72,7 @@ const Footer = () => {
             >
               <FontAwesomeIcon
                 data-sal="fade"
-                data-sal-delay="200"
+                data-sal-delay="300"
                 data-sal-easing="ease"
                 icon={["fab", "github"]}
                 className="about__icon"
@@ -72,7 +87,7 @@ const Footer = () => {
             >
               <FontAwesomeIcon
                 data-sal="fade"
-                data-sal-delay="300"
+                data-sal-delay="400"
                 data-sal-easing="ease"
                 icon={["fab", "linkedin"]}
                 className="about__icon"
@@ -85,7 +100,7 @@ const Footer = () => {
             >
               <FontAwesomeIcon
                 data-sal="fade"
-                data-sal-delay="400"
+                data-sal-delay="500"
                 data-sal-easing="ease"
                 icon="envelope"
               />
@@ -99,7 +114,7 @@ const Footer = () => {
             >
               <FontAwesomeIcon
                 data-sal="fade"
-                data-sal-delay="500"
+                data-sal-delay="600"
                 data-sal-easing="ease"
                 icon="paperclip"
               />
@@ -107,7 +122,7 @@ const Footer = () => {
           </div>
           <p
             data-sal="fade"
-            data-sal-delay="600"
+            data-sal-delay="700"
             data-sal-easing="ease"
             className="footer__copy section__desc"
           >

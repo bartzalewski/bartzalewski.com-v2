@@ -275,7 +275,6 @@ const GlobalStyle = createGlobalStyle`
   .sidenav--open {
     width: 40% !important;
     transition: 0.5s;
-    /* padding-top: 100px; */
   }
 
   .sidenav {
@@ -430,6 +429,28 @@ const GlobalStyle = createGlobalStyle`
 
     .footer__link {
       margin: 0 20px !important;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .footer__links {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer__link {
+      margin: 0 !important;
+    }
+
+    .footer__copy {
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 310px) {
+    footer {
+      height: 120px !important;
     }
   }
 
