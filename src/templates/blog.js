@@ -27,8 +27,14 @@ export const query = graphql`
 const StyledBlog = styled.div`
   margin: 100px auto auto;
 
-  h2 {
+  h2,
+  h3 {
     margin-top: 50px;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-family: "JetBrains Mono Bold";
   }
 
   p {

@@ -367,6 +367,9 @@ const GlobalStyle = createGlobalStyle`
     h2 {
       font-size: 24px;
     }
+    h3 {
+      font-size: 20px !important;
+    }
     .hamburger {
 		  display: block;
 	  }

@@ -56,6 +56,7 @@ const StyledBlog = styled.section`
 
     &__title {
       font-family: "JetBrains Mono Medium";
+      direction: ltr;
     }
 
     &__time {
