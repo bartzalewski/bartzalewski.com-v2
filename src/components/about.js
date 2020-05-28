@@ -31,6 +31,7 @@ const StyledAbout = styled.section`
       width: 40%;
       margin-top: 50px;
       color: #bdbdbd;
+      text-align: justify;
     }
 
     &__skills {

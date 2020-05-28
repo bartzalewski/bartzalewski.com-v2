@@ -34,6 +34,7 @@ const StyledHero = styled.section`
       width: 38%;
       margin: 50px 0;
       color: #bdbdbd;
+      text-align: justify;
     }
   }
 
@@ -137,7 +138,7 @@ export default function Hero() {
               data-sal-easing="ease"
               className="hero__desc section__desc"
             >
-              I specialize in designing, building, shipping and scaling
+              I specialize in designing, building, shipping, and scaling
               beautiful, usable products with blazing-fast efficiency.
             </p>
             <div

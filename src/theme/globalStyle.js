@@ -403,7 +403,6 @@ const GlobalStyle = createGlobalStyle`
 
     .about__desc, .hero__desc {
       width: 100% !important;
-      text-align: justify;
     }
 
     .work__wrapper, .blog__wrapper {
