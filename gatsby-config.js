@@ -13,7 +13,6 @@ module.exports = {
         anonymize: true,
       },
     },
-    `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-scroll-reveal`,

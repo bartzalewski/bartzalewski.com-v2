@@ -190,6 +190,7 @@ export default function Contact() {
               >
                 <label htmlFor="name">Name</label>
                 <input
+                  aria-label="Name"
                   required
                   className="input__field-input"
                   id="name"
@@ -206,6 +207,7 @@ export default function Contact() {
               >
                 <label htmlFor="email">Email</label>
                 <input
+                  aria-label="Email"
                   required
                   className="input__field-input"
                   id="email"
@@ -223,6 +225,7 @@ export default function Contact() {
             >
               <label htmlFor="message">Message</label>
               <textarea
+                aria-label="Message"
                 required
                 className="input__field-input"
                 id="message"
@@ -235,6 +238,7 @@ export default function Contact() {
               data-sal-easing="ease"
             >
               <input
+                aria-label="Submit"
                 type="submit"
                 value="Submit"
                 className="btn btn--primary"
