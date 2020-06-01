@@ -39,6 +39,11 @@ const StyledFooter = styled.footer`
     &__copy {
       font-size: 14px;
     }
+
+    &__credit {
+      font-size: 12px;
+      color: #333;
+    }
   }
 `
 
@@ -120,14 +125,32 @@ const Footer = () => {
               />
             </OutboundLink>
           </div>
-          <p
-            data-sal="fade"
-            data-sal-delay="700"
-            data-sal-easing="ease"
-            className="footer__copy section__desc"
-          >
-            Copyright {new Date().getFullYear()} &copy; Bart Zalewski
-          </p>
+          <div className="footer__desc section__desc">
+            <p
+              data-sal="fade"
+              data-sal-delay="700"
+              data-sal-easing="ease"
+              className="footer__copy"
+            >
+              Copyright {new Date().getFullYear()} &copy; Bart Zalewski
+            </p>
+            <p
+              data-sal="fade"
+              data-sal-delay="800"
+              data-sal-easing="ease"
+              className="footer__credit"
+            >
+              Created by{" "}
+              <a
+                href="https://github.com/bartzalewski/bartzalewski.com-v2"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Bart Zalewski | Front-End Developer"
+              >
+                Bart Zalewski
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </StyledFooter>

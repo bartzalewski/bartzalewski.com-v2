@@ -370,6 +370,9 @@ const GlobalStyle = createGlobalStyle`
     h3 {
       font-size: 20px !important;
     }
+    footer {
+      height: 120px !important;
+    }
     .hamburger {
 		  display: block;
 	  }
@@ -425,6 +428,10 @@ const GlobalStyle = createGlobalStyle`
       flex-direction: column;
     }
 
+    .footer__desc {
+      text-align: center;
+    }
+
     .footer__copy {
       margin-top: 25px;
     }
@@ -444,18 +451,7 @@ const GlobalStyle = createGlobalStyle`
     .footer__link {
       margin: 0 !important;
     }
-
-    .footer__copy {
-      text-align: center;
-    }
   }
-
-  @media screen and (max-width: 310px) {
-    footer {
-      height: 120px !important;
-    }
-  }
-
 `
 
 export default GlobalStyle
