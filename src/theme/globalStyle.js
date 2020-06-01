@@ -408,7 +408,7 @@ const GlobalStyle = createGlobalStyle`
       width: 100% !important;
     }
 
-    .work__wrapper, .blog__wrapper {
+    .work__wrapper {
       grid-template-columns: repeat(1, 1fr) !important;
     }
 

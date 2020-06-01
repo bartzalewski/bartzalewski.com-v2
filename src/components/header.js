@@ -56,7 +56,7 @@ const Header = () => {
         id="sidenav"
         className={condition ? "sidenav sidenav--open" : "sidenav"}
         style={{ padding: 0 }}
-        items={["home", "about", "projects", "blog", "contact"]}
+        items={["home", "about", "projects", "contact"]}
         currentClassName="colored"
       >
         <Link to="/#home" className="navbar__link" style={{ display: "none" }}>
@@ -67,9 +67,6 @@ const Header = () => {
         </Link>
         <Link to="/#projects" onClick={() => setCondition(!condition)}>
           Projects
-        </Link>
-        <Link to="/#blog" onClick={() => setCondition(!condition)}>
-          Blog
         </Link>
         <Link to="/#contact" onClick={() => setCondition(!condition)}>
           Contact
@@ -102,7 +99,7 @@ const Header = () => {
         </div>
         <Scrollspy
           className="navbar__links"
-          items={["home", "about", "projects", "blog", "contact"]}
+          items={["home", "about", "projects", "contact"]}
           currentClassName="colored"
         >
           <Link
@@ -117,9 +114,6 @@ const Header = () => {
           </Link>
           <Link to="/#projects" className="navbar__link">
             Projects
-          </Link>
-          <Link to="/#blog" className="navbar__link">
-            Blog
           </Link>
           <Link to="/#contact" className="navbar__link">
             Contact
