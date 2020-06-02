@@ -17,17 +17,10 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-scroll-reveal`,
     {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -42,6 +35,23 @@ module.exports = {
         theme_color: `#02D463`,
         display: `minimal-ui`,
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          "gatsby-remark-relative-images",
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              linkImagesToOriginal: false,
+              loading: `lazy`,
+              wrapperStyle: `max-width: 100%; height: 200px`,
+              maxWidth: 5000,
+            },
+          },
+        ],
       },
     },
     `gatsby-plugin-offline`,

@@ -70,41 +70,33 @@ const StyledBlog = styled.section`
 export default function Blog() {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+      allMarkdownRemark {
         edges {
           node {
-            id
-            title
-            slug
-            publishedDate(formatString: "MMMM Do, YYYY")
-            background {
-              file {
-                url
-              }
+            frontmatter {
+              title
+              date
+            }
+            fields {
+              slug
             }
           }
         }
       }
     }
   `)
-  const output = data.allContentfulBlogPost.edges.map(element => {
+  const output = data.allMarkdownRemark.edges.map(element => {
     return (
       <li
-        key={element.node.id}
+        key={element.node.frontmatter.title}
         className="blog__box"
         data-sal="zoom-in"
         data-sal-delay="400"
         data-sal-easing="ease"
       >
-        <Link to={`/blog/${element.node.slug}`}>
-          <img
-            className="blog__img"
-            src={element.node.background.file.url}
-            alt={element.node.title}
-            loading="lazy"
-          />
-          <p className="blog__title">{element.node.title}</p>
-          <p className="blog__time">{element.node.publishedDate}</p>
+        <Link to={`/blog/${element.node.fields.slug}`}>
+          <p className="blog__title">{element.node.frontmatter.title}</p>
+          <p className="blog__time">{element.node.frontmatter.date}</p>
         </Link>
       </li>
     )
