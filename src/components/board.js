@@ -1,11 +1,15 @@
 import React from "react"
 import styled from "styled-components"
-import pagetify from "../images/projects/pagetify.mp4"
-import schoolify from "../images/projects/schoolify.mp4"
-import dojrzewaj from "../images/projects/dojrzewaj.mp4"
-import centrummoto from "../images/projects/centrummoto.mp4"
-
 import BoardBox from "./boardBox"
+
+import pagetifyWebM from "../images/projects/pagetify.webm"
+import pagetifyMP4 from "../images/projects/pagetify.mp4"
+import schoolifyWebM from "../images/projects/schoolify.webm"
+import schoolifyMP4 from "../images/projects/schoolify.mp4"
+import dojrzewajWebM from "../images/projects/dojrzewaj.webm"
+import dojrzewajMP4 from "../images/projects/dojrzewaj.mp4"
+import centrummotoWebM from "../images/projects/centrummoto.webm"
+import centrummotoMP4 from "../images/projects/centrummoto.mp4"
 
 const StyledBoard = styled.div`
   width: 1010px;
@@ -72,44 +76,52 @@ const Board = () => {
     <StyledBoard className="board__container">
       <div
         data-sal="zoom-in"
-        data-sal-delay="700"
+        data-sal-delay="400"
         data-sal-easing="ease"
-        data-sal-duration="1500"
+        data-sal-duration="500"
       >
-        <BoardBox bg={pagetify} title="Pagetify" url="https://pagetify.com/" />
+        <BoardBox
+          bgwebm={pagetifyWebM}
+          bgmp4={pagetifyMP4}
+          title="Pagetify"
+          url="https://pagetify.com/"
+        />
       </div>
       <div
         data-sal="zoom-in"
-        data-sal-delay="800"
+        data-sal-delay="500"
         data-sal-easing="ease"
-        data-sal-duration="1500"
+        data-sal-duration="500"
       >
         <BoardBox
-          bg={schoolify}
+          bgwebm={schoolifyWebM}
+          bgmp4={schoolifyMP4}
           title="Schoolify"
           url="https://schoolify.app/"
         />
       </div>
       <div
         data-sal="zoom-in"
-        data-sal-delay="900"
+        data-sal-delay="600"
         data-sal-easing="ease"
-        data-sal-duration="1500"
+        data-sal-duration="500"
       >
         <BoardBox
-          bg={dojrzewaj}
+          bgwebm={dojrzewajWebM}
+          bgmp4={dojrzewajMP4}
           title="dojrzewaj.pl"
           url="https://dojrzewaj.pl/"
         />
       </div>
       <div
         data-sal="zoom-in"
-        data-sal-delay="1000"
+        data-sal-delay="700"
         data-sal-easing="ease"
-        data-sal-duration="1500"
+        data-sal-duration="500"
       >
         <BoardBox
-          bg={centrummoto}
+          bgwebm={centrummotoWebM}
+          bgmp4={centrummotoMP4}
           title="Centrum Moto"
           url="https://centrummoto.pl/"
         />

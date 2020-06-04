@@ -113,20 +113,15 @@ export default function Hero() {
       <div className="container hero__container">
         <div className="container__hero--secondary container--secondary">
           <StyledContainer className="container--primary">
-            <p
-              className="colored"
-              data-sal="slide-up"
-              data-sal-delay="200"
-              data-sal-easing="ease"
-            >
+            <p className="colored" data-sal="slide-up" data-sal-easing="ease">
               Hi, I am
             </p>
-            <h1 data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
+            <h1 data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease">
               {author}
             </h1>
             <h2
               data-sal="slide-up"
-              data-sal-delay="400"
+              data-sal-delay="200"
               data-sal-easing="ease"
               className="hero__sub"
             >
@@ -134,7 +129,7 @@ export default function Hero() {
             </h2>
             <p
               data-sal="slide-up"
-              data-sal-delay="500"
+              data-sal-delay="300"
               data-sal-easing="ease"
               className="hero__desc section__desc"
             >
@@ -143,7 +138,7 @@ export default function Hero() {
             </p>
             <div
               data-sal="slide-up"
-              data-sal-delay="600"
+              data-sal-delay="400"
               data-sal-easing="ease"
             >
               <a

@@ -19,7 +19,6 @@ const BoardBox = props => {
       >
         <a.video
           className="back"
-          src={props.bg}
           loop={true}
           autoPlay={true}
           muted={true}
@@ -28,7 +27,10 @@ const BoardBox = props => {
             opacity: opacity.interpolate(o => 1 - o),
             transform,
           }}
-        ></a.video>
+        >
+          <source src={props.bgwebm} type="video/webm" />
+          <source src={props.bgmp4} type="video/mp4" />
+        </a.video>
         <a.div
           className="front"
           style={{
