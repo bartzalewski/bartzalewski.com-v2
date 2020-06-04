@@ -2,14 +2,14 @@ import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import pagetify from "../images/projects/pagetify.webm"
-import schoolify from "../images/projects/schoolify.webm"
-import dojrzewaj from "../images/projects/dojrzewaj.webm"
-import centrummoto from "../images/projects/centrummoto.webm"
-import cz5p from "../images/projects/cz5p.webm"
-import telean from "../images/projects/telean.webm"
-import darkpaypal from "../images/projects/darkpaypal.webm"
-import bartzalewskiV1 from "../images/projects/bartzalewski-v1.webm"
+import pagetify from "../images/projects/pagetify.mp4"
+import schoolify from "../images/projects/schoolify.mp4"
+import dojrzewaj from "../images/projects/dojrzewaj.mp4"
+import centrummoto from "../images/projects/centrummoto.mp4"
+import cz5p from "../images/projects/cz5p.mp4"
+import telean from "../images/projects/telean.mp4"
+import darkpaypal from "../images/projects/darkpaypal.mp4"
+import bartzalewskiV1 from "../images/projects/bartzalewski-v1.mp4"
 
 const StyledWork = styled.section`
   display: flex;

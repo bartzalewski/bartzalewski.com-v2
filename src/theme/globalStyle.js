@@ -162,6 +162,7 @@ const GlobalStyle = createGlobalStyle`
     transition: .2s ease;
     box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
     outline: none;
+    -webkit-appearance: none;
     
     &:hover {
       transition: .2s ease;
@@ -372,6 +373,9 @@ const GlobalStyle = createGlobalStyle`
     }
     footer {
       height: 120px !important;
+    }
+    #home {
+      background-attachment: scroll;
     }
     .hamburger {
 		  display: block;

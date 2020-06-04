@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import pagetify from "../images/projects/pagetify.webm"
-import schoolify from "../images/projects/schoolify.webm"
-import dojrzewaj from "../images/projects/dojrzewaj.webm"
-import centrummoto from "../images/projects/centrummoto.webm"
+import pagetify from "../images/projects/pagetify.mp4"
+import schoolify from "../images/projects/schoolify.mp4"
+import dojrzewaj from "../images/projects/dojrzewaj.mp4"
+import centrummoto from "../images/projects/centrummoto.mp4"
 
 import BoardBox from "./boardBox"
 
