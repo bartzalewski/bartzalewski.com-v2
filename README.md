@@ -24,11 +24,36 @@ To be able to use this properly, you need to choose between the three versions o
 
 ### Choose your version:
 
-* [Contentful blog](https://github.com/bartzalewski/bartzalewski.com-v2)
+* <a href="#contentful">Contentful blog</a>
 
-* [Markdown blog](https://github.com/bartzalewski/bartzalewski.com-v2)
+* [Markdown blog](https://github.com/bartzalewski/bartzalewski.com-v2/tree/md-blog)
 
-* [No blog](https://github.com/bartzalewski/bartzalewski.com-v2)
+* [No blog](https://github.com/bartzalewski/bartzalewski.com-v2/tree/no-blog)
+
+<h2 id="contentful">
+  1️⃣ Contentful Blog Installation
+</h2>
+
+1. Create [Contentful](http://contentful.com) account.
+
+2. Create New Content Model with fields:
+
+- title (Short Text)
+- slug (Short Text)
+- publishedDate (Date & time)
+- background (Media)
+- Body (Rich text)
+
+3. Add a new post and publish it.
+
+4. In the portfolio root directory, create a file ".env", and paste the following code to it:
+
+   ```
+   CONTENTFUL_SPACE_ID=YOUR_CONTENTFUL_SPACE_ID
+   CONTENTFUL_ACCESS_TOKEN=YOUR_CONTENTFUL_ACCESS_TOKEN
+   ```
+   
+5. Paste your IDs and re-run the development server.
 
 ### Installation and set up:
 
