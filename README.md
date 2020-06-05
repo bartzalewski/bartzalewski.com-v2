@@ -89,7 +89,7 @@ No configuration at all. Just install.
    npm start
    ```
    
-## How to make the Contact Form work?
+## 📝 How to make the Contact Form work?
 
 [Click here](https://github.com/bartzalewski/bartzalewski.com-v2-mail)
 
