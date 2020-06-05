@@ -62,7 +62,6 @@ const Footer = () => {
             >
               <FontAwesomeIcon
                 data-sal="fade"
-                data-sal-delay="200"
                 data-sal-easing="ease"
                 icon={["fab", "instagram"]}
                 className="about__icon"
@@ -77,7 +76,7 @@ const Footer = () => {
             >
               <FontAwesomeIcon
                 data-sal="fade"
-                data-sal-delay="300"
+                data-sal-delay="100"
                 data-sal-easing="ease"
                 icon={["fab", "github"]}
                 className="about__icon"
@@ -92,7 +91,7 @@ const Footer = () => {
             >
               <FontAwesomeIcon
                 data-sal="fade"
-                data-sal-delay="400"
+                data-sal-delay="200"
                 data-sal-easing="ease"
                 icon={["fab", "linkedin"]}
                 className="about__icon"
@@ -105,7 +104,7 @@ const Footer = () => {
             >
               <FontAwesomeIcon
                 data-sal="fade"
-                data-sal-delay="500"
+                data-sal-delay="300"
                 data-sal-easing="ease"
                 icon="envelope"
               />
@@ -119,7 +118,7 @@ const Footer = () => {
             >
               <FontAwesomeIcon
                 data-sal="fade"
-                data-sal-delay="600"
+                data-sal-delay="400"
                 data-sal-easing="ease"
                 icon="paperclip"
               />
@@ -128,7 +127,7 @@ const Footer = () => {
           <div className="footer__desc section__desc">
             <p
               data-sal="fade"
-              data-sal-delay="700"
+              data-sal-delay="500"
               data-sal-easing="ease"
               className="footer__copy"
             >
@@ -136,7 +135,7 @@ const Footer = () => {
             </p>
             <p
               data-sal="fade"
-              data-sal-delay="800"
+              data-sal-delay="600"
               data-sal-easing="ease"
               className="footer__credit"
             >
