@@ -156,7 +156,7 @@ export default function Work() {
                 title="dojrzewaj.pl"
                 bgwebm={dojrzewajWebM}
                 bgmp4={dojrzewajMP4}
-                github=""
+                github="#!"
                 external="https://dojrzewaj.pl/"
               />
             </div>
@@ -169,7 +169,7 @@ export default function Work() {
                 title="Centrum Moto"
                 bgwebm={centrummotoWebM}
                 bgmp4={centrummotoMP4}
-                github=""
+                github="#!"
                 external="https://centrummoto.pl/"
               />
             </div>
@@ -211,7 +211,7 @@ export default function Work() {
                 bgwebm={darkpaypalWebM}
                 bgmp4={darkpaypalMP4}
                 github="https://github.com/bartzalewski/darkness"
-                external="https://darkness.app/"
+                external="#!"
               />
             </div>
             <div
