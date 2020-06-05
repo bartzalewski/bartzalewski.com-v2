@@ -55,6 +55,12 @@ To be able to use this properly, you need to choose between the three versions o
    
 5. Paste your IDs and re-run the development server.
 
+<h2 id="markdown">
+  2️⃣ Markdown blog/No blog Installation
+</h2>
+
+No configuration at all. Just install.
+
 ### Installation and set up:
 
 1. Install [Node.js](https://nodejs.org)
@@ -82,6 +88,10 @@ To be able to use this properly, you need to choose between the three versions o
    ```
    npm start
    ```
+   
+## How to make the Contact Form work?
+
+[Click here](https://github.com/bartzalewski/bartzalewski.com-v2-mail)
 
 ## ⚠️ Using it as Your Portfolio
 
