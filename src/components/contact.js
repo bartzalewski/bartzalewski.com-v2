@@ -158,12 +158,12 @@ export default function Contact() {
     <StyledContact id="contact">
       <div className="container container--secondary">
         <div className="container container--primary">
-          <h2 data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">
+          <h2 data-sal="slide-up" data-sal-easing="ease">
             Get in touch
           </h2>
           <div
             data-sal="slide-up"
-            data-sal-delay="300"
+            data-sal-delay="100"
             data-sal-easing="ease"
             className="contact__desc section__desc"
           >
@@ -183,10 +183,10 @@ export default function Contact() {
           >
             <div className="input__field--grid">
               <div
+                className="input__field"
                 data-sal="slide-up"
                 data-sal-delay="200"
                 data-sal-easing="ease"
-                className="input__field"
               >
                 <label htmlFor="name">Name</label>
                 <input
@@ -200,10 +200,10 @@ export default function Contact() {
                 />
               </div>
               <div
+                className="input__field"
                 data-sal="slide-up"
                 data-sal-delay="300"
                 data-sal-easing="ease"
-                className="input__field"
               >
                 <label htmlFor="email">Email</label>
                 <input
@@ -218,10 +218,10 @@ export default function Contact() {
               </div>
             </div>
             <div
+              className="input__field input__textarea"
               data-sal="slide-up"
               data-sal-delay="400"
               data-sal-easing="ease"
-              className="input__field input__textarea"
             >
               <label htmlFor="message">Message</label>
               <textarea
@@ -234,7 +234,7 @@ export default function Contact() {
             </div>
             <div
               data-sal="slide-up"
-              data-sal-delay="200"
+              data-sal-delay="500"
               data-sal-easing="ease"
             >
               <input

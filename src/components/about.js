@@ -85,12 +85,12 @@ export default function About() {
       <div className="container--secondary container">
         <div className="container container--primary about__container">
           <div className="about__wrapper">
-            <h2 data-sal="slide-up" data-sal-delay="700" data-sal-easing="ease">
+            <h2 data-sal="slide-up" data-sal-easing="ease">
               About me
             </h2>
             <p
               data-sal="slide-up"
-              data-sal-delay="800"
+              data-sal-delay="100"
               data-sal-easing="ease"
               className="about__desc section__desc"
             >

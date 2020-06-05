@@ -1,15 +1,24 @@
 import React from "react"
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Project from "./project"
 
-import pagetify from "../images/projects/pagetify.webm"
-import schoolify from "../images/projects/schoolify.webm"
-import dojrzewaj from "../images/projects/dojrzewaj.webm"
-import centrummoto from "../images/projects/centrummoto.webm"
-import cz5p from "../images/projects/cz5p.webm"
-import telean from "../images/projects/telean.webm"
-import darkpaypal from "../images/projects/darkpaypal.webm"
-import bartzalewskiV1 from "../images/projects/bartzalewski-v1.webm"
+import pagetifyWebM from "../images/projects/pagetify.webm"
+import schoolifyWebM from "../images/projects/schoolify.webm"
+import dojrzewajWebM from "../images/projects/dojrzewaj.webm"
+import centrummotoWebM from "../images/projects/centrummoto.webm"
+import cz5pWebM from "../images/projects/cz5p.webm"
+import teleanWebM from "../images/projects/telean.webm"
+import darkpaypalWebM from "../images/projects/darkpaypal.webm"
+import bartzalewskiV1WebM from "../images/projects/bartzalewski-v1.webm"
+
+import pagetifyMP4 from "../images/projects/pagetify.mp4"
+import schoolifyMP4 from "../images/projects/schoolify.mp4"
+import dojrzewajMP4 from "../images/projects/dojrzewaj.mp4"
+import centrummotoMP4 from "../images/projects/centrummoto.mp4"
+import cz5pMP4 from "../images/projects/cz5p.mp4"
+import teleanMP4 from "../images/projects/telean.mp4"
+import darkpaypalMP4 from "../images/projects/darkpaypal.mp4"
+import bartzalewskiV1MP4 from "../images/projects/bartzalewski-v1.mp4"
 
 const StyledWork = styled.section`
   display: flex;
@@ -51,17 +60,6 @@ const StyledWork = styled.section`
         }
       }
 
-      &:nth-of-type(2),
-      &:nth-of-type(5),
-      &:nth-of-type(8) {
-        margin-top: 50px;
-      }
-
-      &:nth-of-type(3),
-      &:nth-of-type(6) {
-        margin-top: 100px;
-      }
-
       &:hover {
         span,
         svg,
@@ -89,6 +87,18 @@ const StyledWork = styled.section`
       margin: 50px 0;
       color: #bdbdbd;
     }
+    &--animation {
+      &:nth-of-type(2),
+      &:nth-of-type(5),
+      &:nth-of-type(8) {
+        margin-top: 50px;
+      }
+
+      &:nth-of-type(3),
+      &:nth-of-type(6) {
+        margin-top: 100px;
+      }
+    }
   }
 `
 
@@ -97,12 +107,12 @@ export default function Work() {
     <StyledWork id="projects">
       <div className="container container--secondary">
         <div className="container container--primary">
-          <h2 data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">
+          <h2 data-sal="slide-up" data-sal-easing="ease">
             My projects
           </h2>
           <p
             data-sal="slide-up"
-            data-sal-delay="300"
+            data-sal-delay="100"
             data-sal-easing="ease"
             className="work__desc section__desc"
           >
@@ -110,306 +120,113 @@ export default function Work() {
           </p>
           <div className="work__wrapper">
             <div
+              className="work--animation"
+              data-sal="slide-up"
+              data-sal-easing="ease"
+            >
+              <Project
+                title="Pagetify"
+                bgwebm={pagetifyWebM}
+                bgmp4={pagetifyMP4}
+                github="https://github.com/bartzalewski/pagetify"
+                external="https://pagetify.com/"
+              />
+            </div>
+            <div
+              className="work--animation"
               data-sal="slide-up"
               data-sal-delay="100"
               data-sal-easing="ease"
-              className="work__box"
             >
-              <video
-                src={pagetify}
-                alt="Pagetify"
-                loop={true}
-                autoPlay={true}
-                muted={true}
-                playsInline={true}
-              ></video>
-              <div className="work__links">
-                <div>
-                  <a
-                    href="https://github.com/bartzalewski/pagetify"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="GitHub"
-                  >
-                    <FontAwesomeIcon
-                      icon={["fab", "github"]}
-                      className="about__icon"
-                    />
-                  </a>
-                  <a
-                    href="https://pagetify.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="External"
-                  >
-                    <FontAwesomeIcon icon="external-link-alt" />
-                  </a>
-                </div>
-                <span>Pagetify</span>
-              </div>
+              <Project
+                title="Schoolify"
+                bgwebm={schoolifyWebM}
+                bgmp4={schoolifyMP4}
+                github="https://github.com/bartzalewski/schoolify"
+                external="https://schoolify.app/"
+              />
             </div>
             <div
+              className="work--animation"
               data-sal="slide-up"
               data-sal-delay="200"
               data-sal-easing="ease"
-              className="work__box"
             >
-              <video
-                src={schoolify}
-                alt="Schoolify"
-                loop={true}
-                autoPlay={true}
-                muted={true}
-                playsInline={true}
+              <Project
+                title="dojrzewaj.pl"
+                bgwebm={dojrzewajWebM}
+                bgmp4={dojrzewajMP4}
+                github="#!"
+                external="https://dojrzewaj.pl/"
               />
-              <div className="work__links">
-                <div>
-                  <a
-                    href="https://github.com/bartzalewski/schoolify"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="GitHub"
-                  >
-                    <FontAwesomeIcon
-                      icon={["fab", "github"]}
-                      className="about__icon"
-                    />
-                  </a>
-                  <a
-                    href="https://schoolify.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="External"
-                  >
-                    <FontAwesomeIcon icon="external-link-alt" />
-                  </a>
-                </div>
-                <span>Schoolify</span>
-              </div>
             </div>
             <div
+              className="work--animation"
               data-sal="slide-up"
-              data-sal-delay="300"
               data-sal-easing="ease"
-              className="work__box"
             >
-              <video
-                src={dojrzewaj}
-                alt="dojrzewaj.pl"
-                loop={true}
-                autoPlay={true}
-                muted={true}
-                playsInline={true}
+              <Project
+                title="Centrum Moto"
+                bgwebm={centrummotoWebM}
+                bgmp4={centrummotoMP4}
+                github="#!"
+                external="https://centrummoto.pl/"
               />
-              <div className="work__links">
-                <div>
-                  <a href="#!" title="GitHub">
-                    <FontAwesomeIcon
-                      icon={["fab", "github"]}
-                      className="about__icon"
-                    />
-                  </a>
-                  <a
-                    href="https://dojrzewaj.pl/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="External"
-                  >
-                    <FontAwesomeIcon icon="external-link-alt" />
-                  </a>
-                </div>
-                <span>dojrzewaj.pl</span>
-              </div>
             </div>
             <div
+              className="work--animation"
               data-sal="slide-up"
               data-sal-delay="100"
               data-sal-easing="ease"
-              className="work__box"
             >
-              <video
-                src={centrummoto}
-                alt="Centrum Moto"
-                loop={true}
-                autoPlay={true}
-                muted={true}
-                playsInline={true}
+              <Project
+                title="coza500plus.pl"
+                bgwebm={cz5pWebM}
+                bgmp4={cz5pMP4}
+                github="https://github.com/bartzalewski/coza500plus"
+                external="https://coza500plus.pl/"
               />
-              <div className="work__links">
-                <div>
-                  <a href="#!" title="GitHub">
-                    <FontAwesomeIcon
-                      icon={["fab", "github"]}
-                      className="about__icon"
-                    />
-                  </a>
-                  <a
-                    href="https://centrummoto.pl/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="External"
-                  >
-                    <FontAwesomeIcon icon="external-link-alt" />
-                  </a>
-                </div>
-                <span>Centrum Moto</span>
-              </div>
             </div>
             <div
+              className="work--animation"
               data-sal="slide-up"
               data-sal-delay="200"
               data-sal-easing="ease"
-              className="work__box"
             >
-              <video
-                src={cz5p}
-                alt="coza500plus.pl"
-                loop={true}
-                autoPlay={true}
-                muted={true}
-                playsInline={true}
+              <Project
+                title="Telean"
+                bgwebm={teleanWebM}
+                bgmp4={teleanMP4}
+                github="https://github.com/bartzalewski/telean-website"
+                external="https://telean-website.herokuapp.com/"
               />
-              <div className="work__links">
-                <div>
-                  <a
-                    href="https://github.com/bartzalewski/coza500plus"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="GitHub"
-                  >
-                    <FontAwesomeIcon
-                      icon={["fab", "github"]}
-                      className="about__icon"
-                    />
-                  </a>
-                  <a
-                    href="https://coza500plus.pl/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="External"
-                  >
-                    <FontAwesomeIcon icon="external-link-alt" />
-                  </a>
-                </div>
-                <span>coza500plus.pl</span>
-              </div>
             </div>
             <div
+              className="work--animation"
               data-sal="slide-up"
-              data-sal-delay="300"
               data-sal-easing="ease"
-              className="work__box"
             >
-              <video
-                src={telean}
-                alt="Telean"
-                loop={true}
-                autoPlay={true}
-                muted={true}
-                playsInline={true}
+              <Project
+                title="Dark PayPal"
+                bgwebm={darkpaypalWebM}
+                bgmp4={darkpaypalMP4}
+                github="https://github.com/bartzalewski/darkness"
+                external="#!"
               />
-              <div className="work__links">
-                <div>
-                  <a
-                    href="https://github.com/bartzalewski/telean-website"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="GitHub"
-                  >
-                    <FontAwesomeIcon
-                      icon={["fab", "github"]}
-                      className="about__icon"
-                    />
-                  </a>
-                  <a
-                    href="https://telean-website.herokuapp.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="External"
-                  >
-                    <FontAwesomeIcon icon="external-link-alt" />
-                  </a>
-                </div>
-                <span>Telean</span>
-              </div>
             </div>
             <div
+              className="work--animation"
               data-sal="slide-up"
               data-sal-delay="100"
               data-sal-easing="ease"
-              className="work__box"
             >
-              <video
-                src={darkpaypal}
-                alt="Dark PayPal"
-                loop={true}
-                autoPlay={true}
-                muted={true}
-                playsInline={true}
-              ></video>
-              <div className="work__links">
-                <div>
-                  <a
-                    href="https://github.com/bartzalewski/darkness"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="GitHub"
-                  >
-                    <FontAwesomeIcon
-                      icon={["fab", "github"]}
-                      className="about__icon"
-                    />
-                  </a>
-                  <a
-                    href="https://darkness.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="External"
-                  >
-                    <FontAwesomeIcon icon="external-link-alt" />
-                  </a>
-                </div>
-                <span>Dark PayPal</span>
-              </div>
-            </div>
-            <div
-              data-sal="slide-up"
-              data-sal-delay="200"
-              data-sal-easing="ease"
-              className="work__box"
-            >
-              <video
-                src={bartzalewskiV1}
-                alt="My first portfolio"
-                loop={true}
-                autoPlay={true}
-                muted={true}
-                playsInline={true}
-              ></video>
-              <div className="work__links">
-                <div>
-                  <a
-                    href="https://github.com/bartzalewski/bartzalewski.com-v1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="GitHub"
-                  >
-                    <FontAwesomeIcon
-                      icon={["fab", "github"]}
-                      className="about__icon"
-                    />
-                  </a>
-                  <a
-                    href="https://bartzalewski-v1.herokuapp.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="External"
-                  >
-                    <FontAwesomeIcon icon="external-link-alt" />
-                  </a>
-                </div>
-                <span>My first portfolio</span>
-              </div>
+              <Project
+                title="My first portfolio"
+                bgwebm={bartzalewskiV1WebM}
+                bgmp4={bartzalewskiV1MP4}
+                github="https://github.com/bartzalewski/bartzalewski.com-v1"
+                external="https://bartzalewski-v1.herokuapp.com/"
+              />
             </div>
           </div>
         </div>
