@@ -71,7 +71,13 @@ To be able to use this properly, you need to choose between the three versions o
    cd bartzalewski.com-v2
    ```
 
-4. Start the development server
+4. Install the packages
+
+   ```
+   npm install
+   ```
+   
+5. Start the development server
 
    ```
    npm start
