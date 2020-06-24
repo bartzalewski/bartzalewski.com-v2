@@ -94,11 +94,11 @@ export default function About() {
               data-sal-easing="ease"
               className="about__desc section__desc"
             >
-              I started coding in the December 2018 and I am self-taught
-              developer. I have serious passion for modern looking websites with
-              a little bit of animations. I love what I am doing and I am highly
-              motivated to collaborate with someone. If you are up into some
-              projects, just let me know!
+              I started coding in December 2018, and I am a self-taught
+              developer. I have a passion for modern looking websites with a few
+              animations. I love what I am doing, and I am highly motivated to
+              collaborate with someone. If you are up into some projects, just
+              let me know!
             </p>
             <p
               data-sal="slide-up"
