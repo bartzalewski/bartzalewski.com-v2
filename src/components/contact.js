@@ -21,26 +21,22 @@ const StyledContact = styled.section`
         margin-top: 2rem;
       }
     }
-
     &__desc {
       text-align: center;
       margin: 50px 0;
       color: #bdbdbd;
     }
   }
-
   .input {
     &__field {
       display: flex;
       flex-direction: column;
-
       label {
         color: #333;
         margin-bottom: 0.5rem;
         text-shadow: 0px 0px 10px black;
         font-size: 14px;
       }
-
       input,
       textarea {
         border-radius: 4px;
@@ -56,30 +52,25 @@ const StyledContact = styled.section`
         padding: 15px;
         background: #1a1a1a;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-
         &:focus {
           border-color: #02d463;
           transition: 0.2s;
         }
       }
-
       textarea {
         height: 200px;
         resize: none;
       }
-
       &--grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
         width: 50%;
       }
-
       &.focus input,
       &.focus textarea {
         border-color: #02d463;
       }
-
       &.focus label {
         color: #02d463;
         transition: 0.2s;
@@ -97,7 +88,6 @@ const StyledContact = styled.section`
     cursor: pointer;
     font-size: inherit;
     background: #02d463 !important;
-
     &:hover {
       color: #02d463;
       background: transparent !important;
@@ -106,9 +96,7 @@ const StyledContact = styled.section`
 `
 
 export default function Contact() {
-  const resetForm = () => {
-    document.getElementById("contact-form").reset()
-  }
+  const resetForm = () => document.getElementById("contact-form").reset()
   const handleSubmit = e => {
     e.preventDefault()
     const name = document.getElementById("name").value
@@ -133,22 +121,18 @@ export default function Contact() {
       }
     })
   }
-
   useEffect(() => {
     const inputs = document.querySelectorAll(".input__field-input")
-
     function addcl() {
       let parent = this.parentNode
       parent.classList.add("focus")
     }
-
     function remcl() {
       let parent = this.parentNode
       if (this.value === "") {
         parent.classList.remove("focus")
       }
     }
-
     inputs.forEach(input => {
       input.addEventListener("focus", addcl)
       input.addEventListener("blur", remcl)

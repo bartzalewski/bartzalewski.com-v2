@@ -11,14 +11,12 @@ const StyledFooter = styled.footer`
   background: #111;
   color: white;
   border-top: 1px solid #212121;
-
   .footer {
     &__container {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-
     &__link {
       color: white;
       margin-right: 20px;
@@ -35,11 +33,9 @@ const StyledFooter = styled.footer`
         filter: drop-shadow(0px 0px 3px black);
       }
     }
-
     &__copy {
       font-size: 14px;
     }
-
     &__credit {
       font-size: 12px;
       color: #333;

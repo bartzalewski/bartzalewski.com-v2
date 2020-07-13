@@ -29,7 +29,6 @@ const BoardBox = props => {
           }}
         >
           <source src={props.bgwebm} type="video/webm" />
-          <source src={props.bgmp4} type="video/mp4" />
         </a.video>
         <a.div
           className="front"

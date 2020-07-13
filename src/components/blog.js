@@ -12,13 +12,11 @@ const StyledBlog = styled.section`
     &__container {
       align-items: flex-end;
     }
-
     &__desc {
       text-align: center;
       margin: 50px 0;
       color: #bdbdbd;
     }
-
     &__wrapper {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -30,7 +28,6 @@ const StyledBlog = styled.section`
       direction: rtl;
       text-align: left;
     }
-
     &__box {
       background: #111;
       border-radius: 4px;
@@ -45,7 +42,6 @@ const StyledBlog = styled.section`
         opacity: 1;
       }
     }
-
     &__img {
       width: 100%;
       height: 150px;
@@ -53,12 +49,10 @@ const StyledBlog = styled.section`
       border-radius: 4px;
       object-fit: cover;
     }
-
     &__title {
       font-family: "JetBrains Mono Medium";
       direction: ltr;
     }
-
     &__time {
       font-size: 14px;
       color: #bdbdbd;

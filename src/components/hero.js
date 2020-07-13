@@ -21,7 +21,6 @@ const StyledHero = styled.section`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-
   .hero {
     &__container {
       justify-content: flex-start;
@@ -29,22 +28,27 @@ const StyledHero = styled.section`
       width: 100%;
       margin-top: 100px;
     }
-
     &__desc {
-      width: 38%;
+      width: 80%;
       margin: 50px 0;
       color: #bdbdbd;
       text-align: justify;
     }
+    &__left,
+    &__right {
+      width: 50%;
+      z-index: 1;
+    }
+    &__right {
+      position: relative;
+      perspective: 700px;
+    }
   }
-
   .container__hero--secondary {
-    border-left: 1px solid #212121;
     display: flex;
     justify-content: center;
     margin: 5rem 0;
   }
-
   .colored {
     text-shadow: 0px 0px 10px black;
   }
@@ -52,13 +56,12 @@ const StyledHero = styled.section`
 
 const StyledContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
   .decoration {
     position: absolute;
-
+    z-index: 0;
     &__cross {
       left: 50%;
       top: 0;
@@ -82,8 +85,8 @@ const StyledContainer = styled.div`
       }
     }
     &__circle {
-      left: 85%;
-      top: 30%;
+      left: 75%;
+      top: 20%;
       transition: 0.2s;
       filter: drop-shadow(0px 0px 15px #00cde2);
       &:hover {
@@ -92,6 +95,11 @@ const StyledContainer = styled.div`
         filter: none;
       }
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column !important;
+    align-items: flex-start !important;
   }
 `
 
@@ -113,48 +121,57 @@ export default function Hero() {
       <div className="container hero__container">
         <div className="container__hero--secondary container--secondary">
           <StyledContainer className="container--primary">
-            <p className="colored" data-sal="slide-up" data-sal-easing="ease">
-              Hi, I am
-            </p>
-            <h1 data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease">
-              {author}
-            </h1>
-            <h2
-              data-sal="slide-up"
-              data-sal-delay="200"
-              data-sal-easing="ease"
-              className="hero__sub"
-            >
-              {role}
-            </h2>
-            <p
-              data-sal="slide-up"
-              data-sal-delay="300"
-              data-sal-easing="ease"
-              className="hero__desc section__desc"
-            >
-              I specialize in designing, building, shipping, and scaling
-              beautiful, usable products with blazing-fast efficiency.
-            </p>
-            <div
-              data-sal="slide-up"
-              data-sal-delay="400"
-              data-sal-easing="ease"
-            >
-              <a
-                href="#contact"
-                className="btn btn--primary"
-                onClick={e => {
-                  e.preventDefault()
-                  trackCustomEvent({
-                    category: "Get in touch Button",
-                    action: "Click",
-                    label: "Gatsby Google Analytics Get in touch Button",
-                  })
-                }}
+            <div className="hero__left">
+              <p className="colored" data-sal="slide-up" data-sal-easing="ease">
+                Hi, I am
+              </p>
+              <h1
+                data-sal="slide-up"
+                data-sal-delay="100"
+                data-sal-easing="ease"
               >
-                Get in touch
-              </a>
+                {author}
+              </h1>
+              <h2
+                data-sal="slide-up"
+                data-sal-delay="200"
+                data-sal-easing="ease"
+                className="hero__sub"
+              >
+                {role}
+              </h2>
+              <p
+                data-sal="slide-up"
+                data-sal-delay="300"
+                data-sal-easing="ease"
+                className="hero__desc section__desc"
+              >
+                I specialize in designing, building, shipping, and scaling
+                beautiful, usable products with blazing-fast efficiency.
+              </p>
+              <div
+                data-sal="slide-up"
+                data-sal-delay="400"
+                data-sal-easing="ease"
+              >
+                <a
+                  href="#projects"
+                  className="btn btn--primary"
+                  onClick={e => {
+                    e.preventDefault()
+                    trackCustomEvent({
+                      category: "See my work Button",
+                      action: "Click",
+                      label: "Gatsby Google Analytics See my work Button",
+                    })
+                  }}
+                >
+                  See my work
+                </a>
+              </div>
+            </div>
+            <div className="hero__right">
+              <Board />
             </div>
             <img
               className="decoration decoration__cross"
@@ -176,7 +193,6 @@ export default function Hero() {
             />
           </StyledContainer>
         </div>
-        <Board />
       </div>
     </StyledHero>
   )

@@ -13,7 +13,6 @@ const StyledHeader = styled.header`
   width: 100%;
   transition: 0.4s;
   position: absolute;
-
   .navbar {
     &__container {
       display: flex;
@@ -21,25 +20,21 @@ const StyledHeader = styled.header`
       align-items: center;
       z-index: 10;
     }
-
     &__logo {
       font-family: "Grand Hotel";
       font-size: 36px;
       color: white;
       transition: 0.2s ease;
       text-shadow: 0px 0px 10px black;
-
       &:hover {
         color: #02d463;
         transition: 0.2s ease;
       }
     }
-
     &__link {
       margin-left: 20px;
       transition: 0.2s;
       text-shadow: 0px 0px 10px black;
-
       &:hover:not(.navbar__resume) {
         color: #02d463;
         transition: 0.2s;

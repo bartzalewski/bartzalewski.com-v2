@@ -11,10 +11,11 @@ const StyledAbout = styled.section`
 
   .about {
     &__container {
-      align-items: flex-start;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
 
       img {
-        align-self: flex-end;
         opacity: 0.4;
         transition: 0.5s;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
@@ -26,14 +27,15 @@ const StyledAbout = styled.section`
         }
       }
     }
-
+    &__wrapper {
+      width: 50%;
+    }
     &__desc {
-      width: 40%;
+      width: 80%;
       margin-top: 50px;
       color: #bdbdbd;
       text-align: justify;
     }
-
     &__skills {
       list-style: none;
       margin: 0;
@@ -42,7 +44,6 @@ const StyledAbout = styled.section`
       grid-template-columns: repeat(2, minmax(140px, 200px));
       margin-top: 25px;
     }
-
     &__skill {
       position: relative;
       font-size: 14px;
@@ -50,7 +51,6 @@ const StyledAbout = styled.section`
       margin-bottom: 10px;
     }
   }
-
   .about__skill:not(.skill__jquery) {
     transition: 0.2s;
     &:hover {
@@ -60,14 +60,12 @@ const StyledAbout = styled.section`
       }
     }
   }
-
   .skill__icon {
     margin-right: 15px;
     color: #02d463;
     width: 15px;
     height: 15px;
   }
-
   .skill__jquery {
     .skill__icon,
     span {

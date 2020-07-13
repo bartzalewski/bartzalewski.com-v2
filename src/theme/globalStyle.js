@@ -36,7 +36,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: "JetBrains Mono ExtraBold";
     src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff/JetBrainsMono-ExtraBold.woff")
   }
-
   *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -46,32 +45,26 @@ const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     font-family: 'JetBrains Mono Regular';
   }
-
   ::selection {
     background: #02D463;
     color: white;
   }
-
   html {
     overflow-x: hidden;
   }
-
   body {
     margin: 0;
     overflow-x: hidden;
     color: white;
     background: #1a1a1a;
   }
-
   body::-webkit-scrollbar {
     width: 0.5em;
   }
-
   body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
   }
-
   body::-webkit-scrollbar-thumb {
     background: #333;
     outline: 1px solid white;
@@ -81,26 +74,21 @@ const GlobalStyle = createGlobalStyle`
       background: #02D463;
     }
   }
-
   a {
     text-decoration: none;
     color: inherit;
   }
-
   h1 {
     font-size: 64px;
     font-family: 'JetBrains Mono Bold'
   }
-
   h2 {
     font-size: 36px;
     font-family: 'JetBrains Mono Bold'
   }
-
   h1, h2 {
     text-shadow: 0px 0px 10px black;
   }
-
   .container {
     display: flex;
     justify-content: center;
@@ -113,9 +101,9 @@ const GlobalStyle = createGlobalStyle`
 
     &--secondary {
       width: 90%;
+      max-width: 1400px;
     }
   }
-
   .default-link {
     &__link {
       margin: 0 10px;
@@ -156,7 +144,6 @@ const GlobalStyle = createGlobalStyle`
       }
     }
   }
-
   .btn {
     padding: 10px 17.5px;
     border-radius: 4px;
@@ -192,15 +179,12 @@ const GlobalStyle = createGlobalStyle`
       }
     }
   }
-
   .colored {
     color: #02D463 !important;
   }
-
   .section__desc {
     text-shadow: 0px 0px 10px black;
   }
-
   .scrolled {
     position: fixed;
     transition: .4s;
@@ -221,7 +205,6 @@ const GlobalStyle = createGlobalStyle`
     background: none;
     border: none;
   }
-
   .hamburger__wrapper {
     width: 25px;
     height: 20px;
@@ -236,7 +219,6 @@ const GlobalStyle = createGlobalStyle`
       }
     }
   }
-
   .hamburger--line {
     position: absolute;
     height: 3px;
@@ -244,42 +226,35 @@ const GlobalStyle = createGlobalStyle`
     transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
     background-color: #fff;
   }
-
   .top {
     top: 0%;
     width: 75%;
     left: 0%;
   }
-
   .middle {
     top: 45%;
     width: 75%;
   }
-
   .bottom {
     top: 90%;
     width: 75%;
     left: 0%;
   }
-
   .icon.close .top {
     transform: rotate(45deg);
     top: 48%;
     width: 100%;
   }
-
   .icon.close .middle,
   .icon.close .bottom {
     transform: rotate(-45deg);
     top: 48%;
     width: 100%;
   }
-
   .sidenav--open {
     width: 40% !important;
     transition: 0.5s;
   }
-
   .sidenav {
     width: 0px;
     height: 100%;
@@ -318,14 +293,12 @@ const GlobalStyle = createGlobalStyle`
         }
       }
     }
-
     .active {
       width: 100%;
       height: fit-content;
       font-weight: 500;
       color: #49a9e0;
     }
-
     &__more {
       transform: translateX(1rem);
       
@@ -344,22 +317,15 @@ const GlobalStyle = createGlobalStyle`
 
   @media screen and (max-width: 1280px) {
     .board__container {
-      width: 758px;
-      height: 450px;
       bottom: -200px;
       right: -100px;
     }
   }
-
   @media screen and (max-width: 1080px) {
     .board__container {
-      width: 506px;
-      height: 300px;
       bottom: -50px;
-      padding: 10px;
     }
   }
-
   @media screen and (max-width: 768px) {
     body {
       font-size: 14px;
@@ -386,17 +352,34 @@ const GlobalStyle = createGlobalStyle`
       display: none;
     }
     .board__container {
-      display: none;
+      position: relative !important;
+      top: auto !important;
+      left: 0 !important;
+      transform: none !important;
+      border: 5px solid #222 !important;
+      border-radius: 5px !important;
     }
-
+    .board__grid {
+      outline: 0 !important;
+      grid-gap: 5px !important;
+    }
+    .board__box {
+      left: -5px !important;
+      top: -5px !important;
+    }
+    .decoration {
+      opacity: .5;
+    }
     .decoration__tick {
       left: 65% !important;
+      top: 50% !important;
     }
-
     .container__hero--secondary {
       margin: 2rem 0 !important;
     }
-
+    .hero__left, .hero__right {
+      width: 100% !important;
+    }
     .about__container {
       flex-direction: column-reverse !important;
       img {
@@ -405,55 +388,43 @@ const GlobalStyle = createGlobalStyle`
         width: 100% !important;
       }
     }
-
     .about__wrapper {
-      width: 100%;
+      width: 100% !important;
     }
-
     .about__desc, .hero__desc {
       width: 100% !important;
     }
-
     .work__wrapper, .blog__wrapper {
       grid-template-columns: repeat(1, 1fr) !important;
     }
-
     .work--animation {
       margin: 0 !important;
     }
-
     .input__field--grid, .input__textarea {
       width: 100% !important;
     }
-
     .input__field--grid {
       grid-template-columns: repeat(1,1fr) !important;
     }
-
     .footer__container {
       flex-direction: column;
     }
-
     .footer__desc {
       text-align: center;
     }
-
     .footer__copy {
       margin-top: 25px;
     }
-
     .footer__link {
       margin: 0 20px !important;
     }
   }
-
   @media screen and (max-width: 400px) {
     .footer__links {
       width: 100%;
       display: flex;
       justify-content: space-between;
     }
-
     .footer__link {
       margin: 0 !important;
     }

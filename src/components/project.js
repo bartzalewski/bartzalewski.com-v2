@@ -12,7 +12,6 @@ const Project = props => {
         playsInline={true}
       >
         <source src={props.bgwebm} type="video/webm" />
-        <source src={props.bgmp4} type="video/mp4" />
       </video>
       <div className="work__links">
         <div>
