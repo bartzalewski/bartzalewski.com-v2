@@ -39,11 +39,6 @@ const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
-    font-feature-settings: "liga" on, "calt" on;
-    -webkit-font-feature-settings: "liga" on, "calt" on;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    font-family: 'JetBrains Mono Regular';
   }
   ::selection {
     background: #02D463;
@@ -57,6 +52,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     color: white;
     background: #1a1a1a;
+    font-family: 'JetBrains Mono Regular';
   }
   body::-webkit-scrollbar {
     width: 0.5em;
