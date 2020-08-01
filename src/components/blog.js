@@ -25,7 +25,6 @@ const StyledBlog = styled.section`
       list-style: none;
       margin: 0;
       padding: 0;
-      direction: rtl;
       text-align: left;
     }
     &__box {
