@@ -347,6 +347,19 @@ const GlobalStyle = createGlobalStyle`
     .navbar__links {
       display: none;
     }
+    .container__blog {
+      width: auto !important;
+    }
+    .post__title {
+      font-size: 30px !important;
+    }
+    .blog__content {
+      font-size: 18px !important;
+
+      h3 {
+        font-size: 26px !important;
+      }
+    }
     .board__container {
       position: relative !important;
       top: auto !important;

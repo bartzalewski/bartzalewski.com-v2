@@ -32,30 +32,39 @@ const StyledBlog = styled.div`
     margin-top: 50px;
   }
 
+  h2 {
+    font-size: 40px;
+  }
+
   h3 {
-    font-size: 24px;
+    font-size: 32px;
     font-family: "JetBrains Mono Bold";
   }
 
   p {
     margin-top: 25px;
-    text-align: justify;
     color: #bdbdbd;
     text-shadow: 0px 0px 10px black;
   }
 
   span {
     text-shadow: 0px 0px 10px black;
+    color: #bdbdbd;
+    margin-top: 25px;
   }
 
   .container--primary {
     align-items: flex-start;
   }
 
+  .container__blog {
+    width: 680px;
+  }
+
   .blog__content {
     margin-bottom: 50px;
     margin-top: 25px;
-    font-size: 16px;
+    font-size: 21px;
   }
 
   .blog__img {
@@ -90,8 +99,8 @@ const Blog = props => {
       <Head title={props.data.contentfulBlogPost.title} />
       <Header />
       <StyledBlog className="container container--secondary">
-        <div className="container container--primary">
-          <h2>{props.data.contentfulBlogPost.title}</h2>
+        <div className="container container--primary container__blog">
+          <h2 className="post__title">{props.data.contentfulBlogPost.title}</h2>
           <span>{props.data.contentfulBlogPost.publishedDate}</span>
           <img
             className="blog__img"
