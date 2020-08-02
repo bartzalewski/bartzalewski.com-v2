@@ -359,6 +359,10 @@ const GlobalStyle = createGlobalStyle`
       h3 {
         font-size: 26px !important;
       }
+
+      h4 {
+        font-size: 21px !important;
+      }
     }
     .board__container {
       position: relative !important;

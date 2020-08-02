@@ -28,7 +28,8 @@ const StyledBlog = styled.div`
   margin: 100px auto auto;
 
   h2,
-  h3 {
+  h3,
+  h4 {
     margin-top: 50px;
   }
 
@@ -39,6 +40,11 @@ const StyledBlog = styled.div`
   h3 {
     font-size: 32px;
     font-family: "JetBrains Mono Bold";
+  }
+
+  h4 {
+    font-family: "JetBrains Mono Bold";
+    font-size: 26px;
   }
 
   p {
