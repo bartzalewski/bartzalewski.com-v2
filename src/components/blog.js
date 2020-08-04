@@ -44,13 +44,13 @@ const StyledBlog = styled.section`
     &__img {
       width: 100%;
       height: 150px;
-      margin-bottom: 25px;
       border-radius: 4px;
       object-fit: cover;
     }
     &__title {
       font-family: "JetBrains Mono Medium";
       direction: ltr;
+      margin: 10px 0 5px;
     }
     &__time {
       font-size: 14px;
