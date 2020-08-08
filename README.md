@@ -103,7 +103,7 @@ In the beginning, I created this website only for myself, for portfolio purposes
 
 You can fork this repository, but please give me proper credit by linking back to my website - [bartzalewski.com](https://bartzalewski.com).
 
-Thank you! ❤️
+Thank you! 💚
 
 ## ✨ What kind of technologies did I use?
 
