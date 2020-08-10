@@ -59,6 +59,20 @@ const StyledBlog = styled.div`
     margin-top: 25px;
   }
 
+  img {
+    margin-top: 25px;
+    width: 100%;
+    opacity: 0.4;
+    transition: 0.4s;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      opacity: 1;
+      transition: 0.4s;
+    }
+  }
+
   .container--primary {
     align-items: flex-start;
   }
@@ -74,14 +88,9 @@ const StyledBlog = styled.div`
   }
 
   .blog__img {
-    width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 4px;
-    opacity: 0.4;
-    transition: 0.4s;
     margin-top: 50px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
     &:hover {
       opacity: 1;
