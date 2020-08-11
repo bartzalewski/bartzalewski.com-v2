@@ -81,23 +81,24 @@ export default function Blog() {
     }
   `)
   const output = data.allContentfulBlogPost.edges.map(element => {
+    const { id, slug, background, title, publishedDate } = element.node
     return (
       <li
-        key={element.node.id}
+        key={id}
         className="blog__box"
         data-sal="zoom-in"
         data-sal-delay="200"
         data-sal-easing="ease"
       >
-        <Link to={`/blog/${element.node.slug}`}>
+        <Link to={`/blog/${slug}`}>
           <img
             className="blog__img"
-            src={element.node.background.file.url}
-            alt={element.node.title}
+            src={background.file.url}
+            alt={title}
             loading="lazy"
           />
-          <p className="blog__title">{element.node.title}</p>
-          <p className="blog__time">{element.node.publishedDate}</p>
+          <p className="blog__title">{title}</p>
+          <p className="blog__time">{publishedDate}</p>
         </Link>
       </li>
     )

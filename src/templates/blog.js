@@ -109,25 +109,28 @@ const Blog = props => {
       },
     },
   }
+  const {
+    title,
+    publishedDate,
+    background,
+    body,
+  } = props.data.contentfulBlogPost
   return (
     <Layout>
-      <Head title={props.data.contentfulBlogPost.title} />
+      <Head title={title} />
       <Header />
       <StyledBlog className="container container--secondary">
         <div className="container container--primary container__blog">
-          <h2 className="post__title">{props.data.contentfulBlogPost.title}</h2>
-          <span>{props.data.contentfulBlogPost.publishedDate}</span>
+          <h2 className="post__title">{title}</h2>
+          <span>{publishedDate}</span>
           <img
             className="blog__img"
-            src={props.data.contentfulBlogPost.background.file.url}
-            alt={props.data.contentfulBlogPost.title}
+            src={background.file.url}
+            alt={title}
             loading="lazy"
           />
           <div className="blog__content">
-            {documentToReactComponents(
-              props.data.contentfulBlogPost.body.json,
-              options
-            )}
+            {documentToReactComponents(body.json, options)}
           </div>
         </div>
       </StyledBlog>
