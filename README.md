@@ -31,7 +31,7 @@ To be able to use this properly, you need to choose between the three versions o
 - [No blog](https://github.com/bartzalewski/bartzalewski.com-v2/tree/no-blog)
 
 <h2 id="contentful">
-  1️⃣ Contentful blog Installation
+  1️⃣ Contentful Blog Installation
 </h2>
 
 1. Create [Contentful](http://contentful.com) account.
