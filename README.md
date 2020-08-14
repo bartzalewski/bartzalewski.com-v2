@@ -24,14 +24,14 @@ To be able to use this properly, you need to choose between the three versions o
 
 ### Choose your version:
 
-* <a href="#contentful">Contentful blog</a>
+- <a href="#contentful">Contentful blog</a>
 
-* [Markdown blog](https://github.com/bartzalewski/bartzalewski.com-v2/tree/md-blog)
+- [Markdown blog](https://github.com/bartzalewski/bartzalewski.com-v2/tree/md-blog)
 
-* [No blog](https://github.com/bartzalewski/bartzalewski.com-v2/tree/no-blog)
+- [No blog](https://github.com/bartzalewski/bartzalewski.com-v2/tree/no-blog)
 
 <h2 id="contentful">
-  1️⃣ Contentful Blog Installation
+  1️⃣ Contentful blog Installation
 </h2>
 
 1. Create [Contentful](http://contentful.com) account.
@@ -52,7 +52,7 @@ To be able to use this properly, you need to choose between the three versions o
    CONTENTFUL_SPACE_ID=YOUR_CONTENTFUL_SPACE_ID
    CONTENTFUL_ACCESS_TOKEN=YOUR_CONTENTFUL_ACCESS_TOKEN
    ```
-   
+
 5. Paste your IDs and re-run the development server.
 
 <h2 id="markdown">
@@ -82,13 +82,13 @@ No configuration at all. Just install.
    ```
    npm install
    ```
-   
+
 5. Start the development server
 
    ```
    npm start
    ```
-   
+
 ## 📝 How to make the Contact Form work?
 
 [Click here](https://github.com/bartzalewski/bartzalewski.com-v2-mail)
