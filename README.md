@@ -24,7 +24,7 @@ To be able to use this properly, you need to choose between the three versions o
 
 ### Choose your version:
 
-- <a href="#contentful">Contentful blog</a>
+- <a href="#contentful">Contentful Blog</a>
 
 - [Markdown blog](https://github.com/bartzalewski/bartzalewski.com-v2/tree/md-blog)
 
