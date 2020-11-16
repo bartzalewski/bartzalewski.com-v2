@@ -108,7 +108,7 @@ const BlogSection = styled.div`
   }
 `
 
-const Blog = (props) => {
+const Blog = ({ data }) => {
   const options = {
     renderNode: {
       "embedded-asset-block": (node) => {
@@ -118,12 +118,7 @@ const Blog = (props) => {
       },
     },
   }
-  const {
-    title,
-    publishedDate,
-    background,
-    body,
-  } = props.data.contentfulBlogPost
+  const { title, publishedDate, background, body } = data.contentfulBlogPost
   return (
     <Layout>
       <Head title={title} />
