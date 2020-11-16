@@ -3,8 +3,8 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
-import Layout from "../components/layout"
-import Head from "../components/head"
+import Layout from "../components/defaults/layout"
+import Head from "../components/defaults/head"
 import Header from "../components/header"
 
 export const query = graphql`
@@ -18,13 +18,22 @@ export const query = graphql`
         }
       }
       body {
-        json
+        raw
+        references {
+          ... on ContentfulAsset {
+            contentful_id
+            __typename
+            file {
+              url
+            }
+          }
+        }
       }
     }
   }
 `
 
-const StyledBlog = styled.div`
+const BlogSection = styled.div`
   margin: 100px auto auto;
 
   h2,
@@ -39,11 +48,11 @@ const StyledBlog = styled.div`
 
   h3 {
     font-size: 32px;
-    font-family: "JetBrains Mono Bold";
+    font-family: "JetBrains Mono";
   }
 
   h4 {
-    font-family: "JetBrains Mono Bold";
+    font-family: "JetBrains Mono";
     font-size: 26px;
   }
 
@@ -99,10 +108,10 @@ const StyledBlog = styled.div`
   }
 `
 
-const Blog = props => {
+const Blog = (props) => {
   const options = {
     renderNode: {
-      "embedded-asset-block": node => {
+      "embedded-asset-block": (node) => {
         const alt = node.data.target.fields.title["en-US"]
         const url = node.data.target.fields.file["en-US"].url
         return <img alt={alt} src={url} loading="lazy" />
@@ -119,7 +128,7 @@ const Blog = props => {
     <Layout>
       <Head title={title} />
       <Header />
-      <StyledBlog className="container container--secondary">
+      <BlogSection className="container container--secondary">
         <div className="container container--primary container__blog">
           <h2 className="post__title">{title}</h2>
           <span>{publishedDate}</span>
@@ -130,10 +139,10 @@ const Blog = props => {
             loading="lazy"
           />
           <div className="blog__content">
-            {documentToReactComponents(body.json, options)}
+            {documentToReactComponents(JSON.parse(body.raw), options)}
           </div>
         </div>
-      </StyledBlog>
+      </BlogSection>
     </Layout>
   )
 }

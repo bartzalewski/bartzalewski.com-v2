@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Scrollspy from "react-scrollspy"
 import Resume from "./resume"
 
-const StyledHeader = styled.header`
+const HeaderWrapper = styled.header`
   height: 100px;
   display: flex;
   justify-content: center;
@@ -13,40 +13,41 @@ const StyledHeader = styled.header`
   width: 100%;
   transition: 0.4s;
   position: absolute;
-  .navbar {
-    &__container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 10;
-    }
-    &__logo {
-      font-family: "Grand Hotel";
-      font-size: 36px;
-      color: white;
+`
+const Navbar = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+
+  .navbar__logo {
+    font-family: "Grand Hotel";
+    font-size: 36px;
+    color: white;
+    transition: 0.2s ease;
+    text-shadow: 0px 0px 10px black;
+    &:hover {
+      color: #02d463;
       transition: 0.2s ease;
-      text-shadow: 0px 0px 10px black;
-      &:hover {
-        color: #02d463;
-        transition: 0.2s ease;
-      }
     }
-    &__link {
-      margin-left: 20px;
-      transition: 0.2s;
-      text-shadow: 0px 0px 10px black;
-      &:hover:not(.navbar__resume) {
-        color: #02d463;
-        transition: 0.2s;
-      }
-    }
+  }
+`
+const LinkItem = styled(Link)`
+  margin-right: 20px;
+  transition: 0.2s;
+  text-shadow: 0px 0px 10px black;
+
+  &:hover:not(.navbar__resume) {
+    color: #02d463;
+    transition: 0.2s;
   }
 `
 
 const Header = () => {
   const [condition, setCondition] = useState(false)
+
   return (
-    <StyledHeader id="nav">
+    <HeaderWrapper id="nav">
       <Scrollspy
         id="sidenav"
         className={condition ? "sidenav sidenav--open" : "sidenav"}
@@ -54,27 +55,31 @@ const Header = () => {
         items={["home", "about", "projects", "blog", "contact"]}
         currentClassName="colored"
       >
-        <Link to="/#home" className="navbar__link" style={{ display: "none" }}>
+        <LinkItem
+          to="/#home"
+          className="navbar__link"
+          style={{ display: "none" }}
+        >
           Home
-        </Link>
-        <Link to="/#about" onClick={() => setCondition(!condition)}>
+        </LinkItem>
+        <LinkItem to="/#about" onClick={() => setCondition(!condition)}>
           About
-        </Link>
-        <Link to="/#projects" onClick={() => setCondition(!condition)}>
+        </LinkItem>
+        <LinkItem to="/#projects" onClick={() => setCondition(!condition)}>
           Projects
-        </Link>
-        <Link to="/#blog" onClick={() => setCondition(!condition)}>
+        </LinkItem>
+        <LinkItem to="/#blog" onClick={() => setCondition(!condition)}>
           Blog
-        </Link>
-        <Link to="/#contact" onClick={() => setCondition(!condition)}>
+        </LinkItem>
+        <LinkItem to="/#contact" onClick={() => setCondition(!condition)}>
           Contact
-        </Link>
+        </LinkItem>
         <Resume />
       </Scrollspy>
-      <nav id="navbar" className="navbar__container container--secondary">
-        <Link to="/#" className="navbar__logo">
+      <Navbar id="navbar" className="navbar__container container--secondary">
+        <LinkItem to="/#" className="navbar__logo">
           Bart
-        </Link>
+        </LinkItem>
         <div className="hamburger__container">
           <button
             aria-label="menu"
@@ -100,29 +105,29 @@ const Header = () => {
           items={["home", "about", "projects", "blog", "contact"]}
           currentClassName="colored"
         >
-          <Link
+          <LinkItem
             to="/#home"
             className="navbar__link"
             style={{ display: "none" }}
           >
             Home
-          </Link>
-          <Link to="/#about" className="navbar__link">
+          </LinkItem>
+          <LinkItem to="/#about" className="navbar__link">
             About
-          </Link>
-          <Link to="/#projects" className="navbar__link">
+          </LinkItem>
+          <LinkItem to="/#projects" className="navbar__link">
             Projects
-          </Link>
-          <Link to="/#blog" className="navbar__link">
+          </LinkItem>
+          <LinkItem to="/#blog" className="navbar__link">
             Blog
-          </Link>
-          <Link to="/#contact" className="navbar__link">
+          </LinkItem>
+          <LinkItem to="/#contact" className="navbar__link">
             Contact
-          </Link>
+          </LinkItem>
           <Resume />
         </Scrollspy>
-      </nav>
-    </StyledHeader>
+      </Navbar>
+    </HeaderWrapper>
   )
 }
 

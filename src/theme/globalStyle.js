@@ -17,24 +17,14 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local('Grand Hotel'), local('GrandHotel-Regular'), url(https://fonts.gstatic.com/s/grandhotel/v7/7Au7p_IgjDKdCRWuR1azplQKGFw.woff2) format('woff2');
+    src: local('Grand Hotel'), local('GrandHotel-Regular'), url('https://fonts.gstatic.com/s/grandhotel/v7/7Au7p_IgjDKdCRWuR1azplQKGFw.woff2') format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
   @font-face {
-    font-family: "JetBrains Mono Regular";
-    src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff/JetBrainsMono-Regular.woff")
-  }
-  @font-face {
-    font-family: "JetBrains Mono Medium";
-    src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff/JetBrainsMono-Medium.woff")
-  }
-  @font-face {
-    font-family: "JetBrains Mono Bold";
-    src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff/JetBrainsMono-Bold.woff")
-  }
-  @font-face {
-    font-family: "JetBrains Mono ExtraBold";
-    src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff/JetBrainsMono-ExtraBold.woff")
+	  font-family: 'JetBrains Mono';
+	  src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.eot') format('embedded-opentype'), url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'), url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff') format('woff'), url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+	  font-weight: normal;
+	  font-style: normal;
   }
   *, *::before, *::after {
     box-sizing: border-box;
@@ -52,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     color: white;
     background: #1a1a1a;
-    font-family: 'JetBrains Mono Regular';
+    font-family: 'JetBrains Mono';
   }
   body::-webkit-scrollbar {
     width: 0.5em;
@@ -76,11 +66,11 @@ const GlobalStyle = createGlobalStyle`
   }
   h1 {
     font-size: 64px;
-    font-family: 'JetBrains Mono Bold'
+    font-family: 'JetBrains Mono';
   }
   h2 {
     font-size: 36px;
-    font-family: 'JetBrains Mono Bold'
+    font-family: 'JetBrains Mono';
   }
   h1, h2 {
     text-shadow: 0px 0px 10px black;

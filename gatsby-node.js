@@ -15,7 +15,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  res.data.allContentfulBlogPost.edges.forEach(edge => {
+  res.data.allContentfulBlogPost.edges.forEach((edge) => {
     createPage({
       component: blogTemplate,
       path: `/blog/${edge.node.slug}`,
@@ -24,4 +24,16 @@ module.exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+}
+
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  if (stage.startsWith("develop")) {
+    actions.setWebpackConfig({
+      resolve: {
+        alias: {
+          "react-dom": "@hot-loader/react-dom",
+        },
+      },
+    })
+  }
 }
