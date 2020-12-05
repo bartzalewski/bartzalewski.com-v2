@@ -1,8 +1,8 @@
-import React, { useState } from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
-import Scrollspy from "react-scrollspy"
-import Resume from "./resume"
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import { Link } from 'gatsby'
+import Scrollspy from 'react-scrollspy'
+import Resume from './resume'
 
 const HeaderWrapper = styled.header`
   height: 100px;
@@ -21,7 +21,7 @@ const Navbar = styled.nav`
   z-index: 10;
 
   .navbar__logo {
-    font-family: "Grand Hotel";
+    font-family: 'Grand Hotel';
     font-size: 36px;
     color: white;
     transition: 0.2s ease;
@@ -50,15 +50,15 @@ const Header = () => {
     <HeaderWrapper id="nav">
       <Scrollspy
         id="sidenav"
-        className={condition ? "sidenav sidenav--open" : "sidenav"}
+        className={condition ? 'sidenav sidenav--open' : 'sidenav'}
         style={{ padding: 0 }}
-        items={["home", "about", "projects", "blog", "contact"]}
+        items={['home', 'about', 'projects', 'blog', 'contact']}
         currentClassName="colored"
       >
         <LinkItem
           to="/#home"
           className="navbar__link"
-          style={{ display: "none" }}
+          style={{ display: 'none' }}
         >
           Home
         </LinkItem>
@@ -90,8 +90,8 @@ const Header = () => {
             <div
               className={
                 condition
-                  ? "hamburger__wrapper icon close"
-                  : "hamburger__wrapper icon"
+                  ? 'hamburger__wrapper icon close'
+                  : 'hamburger__wrapper icon'
               }
             >
               <span className="hamburger--line top"></span>
@@ -102,13 +102,13 @@ const Header = () => {
         </div>
         <Scrollspy
           className="navbar__links"
-          items={["home", "about", "projects", "blog", "contact"]}
+          items={['home', 'about', 'projects', 'blog', 'contact']}
           currentClassName="colored"
         >
           <LinkItem
             to="/#home"
             className="navbar__link"
-            style={{ display: "none" }}
+            style={{ display: 'none' }}
           >
             Home
           </LinkItem>

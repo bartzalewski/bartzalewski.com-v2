@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
-import Head from "../components/defaults/head"
-import Layout from "../components/defaults/layout"
-import Header from "../components/header"
+import Head from '../components/defaults/head'
+import Layout from '../components/defaults/layout'
+import Header from '../components/header'
 
 const Container = styled.div`
   margin: 100px auto auto;

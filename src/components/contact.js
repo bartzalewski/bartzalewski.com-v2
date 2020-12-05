@@ -1,6 +1,6 @@
-import React, { useEffect } from "react"
-import styled from "styled-components"
-import axios from "axios"
+import React, { useEffect } from 'react'
+import styled from 'styled-components'
+import axios from 'axios'
 
 const ContactSection = styled.section`
   display: flex;
@@ -28,8 +28,8 @@ const Form = styled.form`
     margin-top: 2rem;
   }
 
-  input[type="submit"] {
-    font-family: "JetBrains Mono";
+  input[type='submit'] {
+    font-family: 'JetBrains Mono';
     cursor: pointer;
     font-size: inherit;
     background: #02d463 !important;
@@ -79,7 +79,7 @@ const Input = styled.input`
   border: 2px solid #1a1a1a;
   height: 60px;
   width: 100%;
-  font-family: "JetBrains Mono";
+  font-family: 'JetBrains Mono';
   background: transparent;
   color: #02d463;
   transition: 0.2s;
@@ -97,7 +97,7 @@ const Textarea = styled.textarea`
   border-radius: 4px;
   border: 2px solid #1a1a1a;
   width: 100%;
-  font-family: "JetBrains Mono";
+  font-family: 'JetBrains Mono';
   background: transparent;
   color: #02d463;
   transition: 0.2s;
@@ -116,46 +116,46 @@ const Textarea = styled.textarea`
 `
 
 export default function Contact() {
-  const resetForm = () => document.getElementById("contact-form").reset()
+  const resetForm = () => document.getElementById('contact-form').reset()
   const handleSubmit = (e) => {
     e.preventDefault()
-    const name = document.getElementById("name").value
-    const email = document.getElementById("email").value
-    const message = document.getElementById("message").value
-    const success = document.getElementById("success")
-    const failure = document.getElementById("failure")
+    const name = document.getElementById('name').value
+    const email = document.getElementById('email').value
+    const message = document.getElementById('message').value
+    const success = document.getElementById('success')
+    const failure = document.getElementById('failure')
     axios({
-      method: "POST",
-      url: "https://bartzalewski-v2-api.herokuapp.com/send",
+      method: 'POST',
+      url: 'https://bartzalewski-v2-api.herokuapp.com/send',
       data: {
         name: name,
         email: email,
         message: message,
       },
     }).then((response) => {
-      if (response.data.msg === "success") {
-        success.style.display = "block"
+      if (response.data.msg === 'success') {
+        success.style.display = 'block'
         resetForm()
-      } else if (response.data.msg === "fail") {
-        failure.style.display = "block"
+      } else if (response.data.msg === 'fail') {
+        failure.style.display = 'block'
       }
     })
   }
   useEffect(() => {
-    const inputs = document.querySelectorAll(".input__field-input")
+    const inputs = document.querySelectorAll('.input__field-input')
     function addcl() {
       let parent = this.parentNode
-      parent.classList.add("focus")
+      parent.classList.add('focus')
     }
     function remcl() {
       let parent = this.parentNode
-      if (this.value === "") {
-        parent.classList.remove("focus")
+      if (this.value === '') {
+        parent.classList.remove('focus')
       }
     }
     inputs.forEach((input) => {
-      input.addEventListener("focus", addcl)
-      input.addEventListener("blur", remcl)
+      input.addEventListener('focus', addcl)
+      input.addEventListener('blur', remcl)
     })
   }, [])
   return (
@@ -166,10 +166,10 @@ export default function Contact() {
           <Description className="contact__desc section__desc">
             Contact me!
           </Description>
-          <Success id="success" className="colored" style={{ display: "none" }}>
+          <Success id="success" className="colored" style={{ display: 'none' }}>
             Message sent!
           </Success>
-          <Failure id="failure" style={{ color: "#FF5252", display: "none" }}>
+          <Failure id="failure" style={{ color: '#FF5252', display: 'none' }}>
             Message failed to sent!
           </Failure>
           <Form

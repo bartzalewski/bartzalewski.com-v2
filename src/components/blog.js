@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import React from 'react'
+import styled from 'styled-components'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 
 const BlogSection = styled.section`
   display: flex;
@@ -49,7 +49,7 @@ const Image = styled.img`
   object-fit: cover;
 `
 const PostTitle = styled.p`
-  font-family: "JetBrains Mono";
+  font-family: 'JetBrains Mono';
   direction: ltr;
   margin: 10px 0 5px;
 `

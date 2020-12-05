@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import bart from "../images/bart.jpg"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import React from 'react'
+import styled from 'styled-components'
+import bart from '../images/bart.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const AboutSection = styled.section`
   display: flex;
@@ -98,42 +98,42 @@ export default function About() {
             <List>
               <Item>
                 <FontAwesomeIcon
-                  icon={["fab", "react"]}
+                  icon={['fab', 'react']}
                   className="skill__icon"
                 />
                 <ItemText>React</ItemText>
               </Item>
               <Item>
                 <FontAwesomeIcon
-                  icon={["fab", "node-js"]}
+                  icon={['fab', 'node-js']}
                   className="skill__icon"
                 />
                 <ItemText>Node.js</ItemText>
               </Item>
               <Item>
                 <FontAwesomeIcon
-                  icon={["fab", "js-square"]}
+                  icon={['fab', 'js-square']}
                   className="skill__icon"
                 />
                 <ItemText>JavaScript</ItemText>
               </Item>
               <Item>
                 <FontAwesomeIcon
-                  icon={["fab", "php"]}
+                  icon={['fab', 'php']}
                   className="skill__icon"
                 />
                 <ItemText>PHP</ItemText>
               </Item>
               <Item>
                 <FontAwesomeIcon
-                  icon={["fab", "html5"]}
+                  icon={['fab', 'html5']}
                   className="skill__icon"
                 />
                 <ItemText>HTML</ItemText>
               </Item>
               <Item>
                 <FontAwesomeIcon
-                  icon={["fab", "sass"]}
+                  icon={['fab', 'sass']}
                   className="skill__icon"
                 />
                 <ItemText>S(CSS)</ItemText>
@@ -144,14 +144,14 @@ export default function About() {
               </Item>
               <Item>
                 <FontAwesomeIcon
-                  icon={["fab", "bootstrap"]}
+                  icon={['fab', 'bootstrap']}
                   className="skill__icon"
                 />
                 <ItemText>Bootstrap</ItemText>
               </Item>
               <Item>
                 <FontAwesomeIcon
-                  icon={["fab", "figma"]}
+                  icon={['fab', 'figma']}
                   className="skill__icon"
                 />
                 <ItemText>Figma</ItemText>

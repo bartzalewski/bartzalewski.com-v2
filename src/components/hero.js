@@ -1,14 +1,14 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import styled from "styled-components"
-import bg from "../images/bg.jpg"
-import Header from "./header"
-import Board from "./board/board"
-import { trackCustomEvent } from "gatsby-plugin-google-analytics"
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import styled from 'styled-components'
+import bg from '../images/bg.jpg'
+import Header from './header'
+import Board from './board/board'
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
-import cross from "../images/decorations/cross.svg"
-import tick from "../images/decorations/tick.svg"
-import circle from "../images/decorations/circle.svg"
+import cross from '../images/decorations/cross.svg'
+import tick from '../images/decorations/tick.svg'
+import circle from '../images/decorations/circle.svg'
 
 const HeroSection = styled.section`
   background-image: url(${bg});
@@ -139,9 +139,9 @@ export default function Hero() {
                 onClick={(e) => {
                   e.preventDefault()
                   trackCustomEvent({
-                    category: "See my work Button",
-                    action: "Click",
-                    label: "Gatsby Google Analytics See my work Button",
+                    category: 'See my work Button',
+                    action: 'Click',
+                    label: 'Gatsby Google Analytics See my work Button',
                   })
                 }}
               >

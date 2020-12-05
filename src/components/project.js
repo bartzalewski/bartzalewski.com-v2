@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import React from 'react'
+import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Box = styled.div`
   &:hover {
@@ -68,7 +68,7 @@ const Project = ({ title, bgwebm, github, external }) => (
           rel="noopener noreferrer"
           title="GitHub"
         >
-          <FontAwesomeIcon icon={["fab", "github"]} className="about__icon" />
+          <FontAwesomeIcon icon={['fab', 'github']} className="about__icon" />
         </Link>
         <Link
           href={external}

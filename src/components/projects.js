@@ -1,17 +1,17 @@
-import React from "react"
-import styled from "styled-components"
-import Project from "./project"
+import React from 'react'
+import styled from 'styled-components'
+import Project from './project'
 
-import hoppWebM from "../images/projects/hopp.webm"
-import grammarlyWebM from "../images/projects/grammarlydark.webm"
-import pagetifyWebM from "../images/projects/pagetify.webm"
-import schoolifyWebM from "../images/projects/schoolify.webm"
-import dojrzewajWebM from "../images/projects/dojrzewaj.webm"
-import centrummotoWebM from "../images/projects/centrummoto.webm"
-import cz5pWebM from "../images/projects/cz5p.webm"
-import teleanWebM from "../images/projects/telean.webm"
-import darkpaypalWebM from "../images/projects/darkpaypal.webm"
-import bartzalewskiV1WebM from "../images/projects/bartzalewski-v1.webm"
+import hoppWebM from '../images/projects/hopp.webm'
+import grammarlyWebM from '../images/projects/grammarlydark.webm'
+import pagetifyWebM from '../images/projects/pagetify.webm'
+import schoolifyWebM from '../images/projects/schoolify.webm'
+import dojrzewajWebM from '../images/projects/dojrzewaj.webm'
+import centrummotoWebM from '../images/projects/centrummoto.webm'
+import cz5pWebM from '../images/projects/cz5p.webm'
+import teleanWebM from '../images/projects/telean.webm'
+import darkpaypalWebM from '../images/projects/darkpaypal.webm'
+import bartzalewskiV1WebM from '../images/projects/bartzalewski-v1.webm'
 
 const ProjectsWrapper = styled.section`
   display: flex;

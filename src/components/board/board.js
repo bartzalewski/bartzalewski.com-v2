@@ -1,11 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import BoardBox from "./boardBox"
+import React from 'react'
+import styled from 'styled-components'
+import BoardBox from './boardBox'
 
-import pagetifyWebM from "../../images/projects/pagetify.webm"
-import schoolifyWebM from "../../images/projects/schoolify.webm"
-import grammarlyWebM from "../../images/projects/grammarlydark.webm"
-import hoppWebM from "../../images/projects/hopp.webm"
+import pagetifyWebM from '../../images/projects/pagetify.webm'
+import schoolifyWebM from '../../images/projects/schoolify.webm'
+import grammarlyWebM from '../../images/projects/grammarlydark.webm'
+import hoppWebM from '../../images/projects/hopp.webm'
 
 const BoardWrapper = styled.div`
   width: 100%;

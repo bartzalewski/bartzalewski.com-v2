@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import React from 'react'
+import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const FooterWrapper = styled.footer`
   height: 100px;
@@ -60,7 +60,7 @@ const Footer = () => {
               title="Instagram"
             >
               <FontAwesomeIcon
-                icon={["fab", "instagram"]}
+                icon={['fab', 'instagram']}
                 className="about__icon"
               />
             </OutboundLink>
@@ -72,7 +72,7 @@ const Footer = () => {
               title="GitHub"
             >
               <FontAwesomeIcon
-                icon={["fab", "github"]}
+                icon={['fab', 'github']}
                 className="about__icon"
               />
             </OutboundLink>
@@ -84,7 +84,7 @@ const Footer = () => {
               title="LinkedIn"
             >
               <FontAwesomeIcon
-                icon={["fab", "linkedin"]}
+                icon={['fab', 'linkedin']}
                 className="about__icon"
               />
             </OutboundLink>
@@ -110,7 +110,7 @@ const Footer = () => {
               Copyright {new Date().getFullYear()} &copy; Bart Zalewski
             </Description>
             <Description className="footer__credit">
-              Created by{" "}
+              Created by{' '}
               <a
                 href="https://github.com/bartzalewski/bartzalewski.com-v2"
                 target="_blank"

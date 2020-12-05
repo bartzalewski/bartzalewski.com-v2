@@ -1,13 +1,13 @@
-import { createGlobalStyle } from "styled-components"
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab } from "@fortawesome/free-brands-svg-icons"
+import { createGlobalStyle } from 'styled-components'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 import {
   faEnvelope,
   faPaperclip,
   faExternalLinkAlt,
   faFire,
   faCross,
-} from "@fortawesome/free-solid-svg-icons"
+} from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, faEnvelope, faPaperclip, faExternalLinkAlt, faFire, faCross)
 

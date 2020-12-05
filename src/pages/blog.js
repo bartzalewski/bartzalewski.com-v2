@@ -1,10 +1,10 @@
-import React from "react"
-import styled from "styled-components"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import React from 'react'
+import styled from 'styled-components'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 
-import Head from "../components/defaults/head"
-import Layout from "../components/defaults/layout"
-import Header from "../components/header"
+import Head from '../components/defaults/head'
+import Layout from '../components/defaults/layout'
+import Header from '../components/header'
 
 const Container = styled.div`
   margin: 100px auto auto;
@@ -54,7 +54,7 @@ const Container = styled.div`
       object-fit: cover;
     }
     &__title {
-      font-family: "JetBrains Mono";
+      font-family: 'JetBrains Mono';
       direction: ltr;
       margin: 10px 0 5px;
     }

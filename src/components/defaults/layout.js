@@ -1,7 +1,7 @@
-import React, { useEffect } from "react"
-import GlobalStyle from "../../theme/globalStyle"
-import styled from "styled-components"
-import Footer from "../footer"
+import React, { useEffect } from 'react'
+import GlobalStyle from '../../theme/globalStyle'
+import styled from 'styled-components'
+import Footer from '../footer'
 
 const LayoutWrapper = styled.div`
   display: flex;
@@ -14,13 +14,13 @@ const LayoutWrapper = styled.div`
 const Main = styled.main``
 
 const Layout = ({ children }) => {
-  if (typeof window !== "undefined") require("smooth-scroll")('a[href*="#"]')
+  if (typeof window !== 'undefined') require('smooth-scroll')('a[href*="#"]')
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       const isTop = window.scrollY > 200
-      const nav = document.getElementById("nav")
+      const nav = document.getElementById('nav')
       if (nav)
-        isTop ? nav.classList.add("scrolled") : nav.classList.remove("scrolled")
+        isTop ? nav.classList.add('scrolled') : nav.classList.remove('scrolled')
     })
   }, [])
   return (

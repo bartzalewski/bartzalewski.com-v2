@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import styled from "styled-components"
-import { useSpring, animated as a } from "react-spring"
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import { useSpring, animated as a } from 'react-spring'
 
 const Container = styled.div`
   width: 100%;

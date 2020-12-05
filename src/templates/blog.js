@@ -1,11 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import { graphql } from "gatsby"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import React from 'react'
+import styled from 'styled-components'
+import { graphql } from 'gatsby'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
-import Layout from "../components/defaults/layout"
-import Head from "../components/defaults/head"
-import Header from "../components/header"
+import Layout from '../components/defaults/layout'
+import Head from '../components/defaults/head'
+import Header from '../components/header'
 
 export const query = graphql`
   query($slug: String!) {
@@ -39,11 +39,11 @@ const BlogSection = styled.div`
 
   h3 {
     font-size: 32px;
-    font-family: "JetBrains Mono";
+    font-family: 'JetBrains Mono';
   }
 
   h4 {
-    font-family: "JetBrains Mono";
+    font-family: 'JetBrains Mono';
     font-size: 26px;
   }
 
@@ -102,9 +102,9 @@ const BlogSection = styled.div`
 const Blog = ({ data }) => {
   const options = {
     renderNode: {
-      "embedded-asset-block": (node) => {
-        const alt = node.data.target.fields.title["en-US"]
-        const url = node.data.target.fields.file["en-US"].url
+      'embedded-asset-block': (node) => {
+        const alt = node.data.target.fields.title['en-US']
+        const url = node.data.target.fields.file['en-US'].url
         return <img alt={alt} src={url} loading="lazy" />
       },
     },

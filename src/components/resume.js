@@ -1,5 +1,5 @@
-import React from "react"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const Resume = () => (
   <OutboundLink
