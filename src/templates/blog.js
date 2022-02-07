@@ -8,7 +8,7 @@ import Head from '../components/defaults/head'
 import Header from '../components/header'
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       publishedDate(formatString: "MMMM Do, YYYY")

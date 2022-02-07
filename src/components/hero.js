@@ -1,11 +1,13 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
-import bg from '../images/bg.jpg'
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
+import { Link } from 'gatsby'
+
 import Header from './header'
 import Board from './board/board'
-import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
+import bg from '../images/bg.jpg'
 import cross from '../images/decorations/cross.svg'
 import tick from '../images/decorations/tick.svg'
 import circle from '../images/decorations/circle.svg'
@@ -60,7 +62,6 @@ const Description = styled.p`
   color: #bdbdbd;
   text-align: left;
 `
-const Button = styled.a``
 const Right = styled.div`
   width: 50%;
   z-index: 1;
@@ -133,7 +134,7 @@ export default function Hero() {
                 I specialize in designing, building, shipping, and scaling
                 beautiful, usable products with blazing-fast efficiency.
               </Description>
-              <Button
+              <Link
                 href="#projects"
                 className="btn btn--primary"
                 onClick={(e) => {
@@ -146,7 +147,7 @@ export default function Hero() {
                 }}
               >
                 See my work
-              </Button>
+              </Link>
             </Left>
             <Right className="hero__right">
               <Board />

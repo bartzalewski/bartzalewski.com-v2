@@ -21,7 +21,7 @@ const Head = ({ title }) => {
           : `${data.site.siteMetadata.title}`
       }
     >
-      <meta name="description" content="Bart Zalewski | Front-End Developer" />
+      <meta name="description" content="Bart Zalewski | Full-Stack Developer" />
     </Helmet>
   )
 }

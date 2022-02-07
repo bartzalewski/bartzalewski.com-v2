@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import bart from '../images/bart.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import bart from '../images/bart.jpg'
 
 const AboutSection = styled.section`
   display: flex;
@@ -81,11 +82,11 @@ const Image = styled.img`
 export default function About() {
   return (
     <AboutSection id="about">
-      <div className="container--secondary container">
+      <div className="container container--secondary">
         <Container className="container container--primary about__container">
           <Wrapper className="about__wrapper">
             <Title>About me</Title>
-            <Description className="section__desc">
+            <Description className="about__desc section__desc">
               I started coding in December 2018, and I am a self-taught
               developer. I have a passion for modern looking websites with a few
               animations. I love what I am doing, and I am highly motivated to

@@ -1,8 +1,8 @@
-const path = require("path")
+const path = require('path')
 
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const blogTemplate = path.resolve("./src/templates/blog.js")
+  const blogTemplate = path.resolve('./src/templates/blog.js')
   const res = await graphql(`
     query {
       allContentfulBlogPost {
@@ -27,11 +27,11 @@ module.exports.createPages = async ({ graphql, actions }) => {
 }
 
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
-  if (stage.startsWith("develop")) {
+  if (stage.startsWith('develop')) {
     actions.setWebpackConfig({
       resolve: {
         alias: {
-          "react-dom": "@hot-loader/react-dom",
+          'react-dom': '@hot-loader/react-dom',
         },
       },
     })

@@ -172,12 +172,14 @@ const GlobalStyle = createGlobalStyle`
     text-shadow: 0px 0px 10px black;
   }
   .scrolled {
-    position: fixed;
-    transition: .4s;
-    z-index: 5;
-    background: #1a1a1a;
-    box-shadow: 0px 0px 20px rgba(0,0,0,.5);
-    height: 60px;
+    &&& {
+      position: fixed;
+      transition: .4s;
+      z-index: 5;
+      background: #1a1a1a;
+      box-shadow: 0px 0px 20px rgba(0,0,0,.5);
+      height: 60px;
+    }
   }
 
   /* SIDENAV */

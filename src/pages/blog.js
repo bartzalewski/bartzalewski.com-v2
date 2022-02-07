@@ -86,6 +86,7 @@ const BlogPage = () => {
       }
     }
   `)
+
   const output = data.allContentfulBlogPost.edges.map((element) => {
     const { id, slug, background, title, publishedDate } = element.node
     return (
@@ -103,6 +104,7 @@ const BlogPage = () => {
       </li>
     )
   })
+
   return (
     <Layout>
       <Head title="All posts" />

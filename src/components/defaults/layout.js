@@ -15,6 +15,7 @@ const Main = styled.main``
 
 const Layout = ({ children }) => {
   if (typeof window !== 'undefined') require('smooth-scroll')('a[href*="#"]')
+
   useEffect(() => {
     window.addEventListener('scroll', () => {
       const isTop = window.scrollY > 200
@@ -23,6 +24,7 @@ const Layout = ({ children }) => {
         isTop ? nav.classList.add('scrolled') : nav.classList.remove('scrolled')
     })
   }, [])
+
   return (
     <LayoutWrapper>
       <GlobalStyle />

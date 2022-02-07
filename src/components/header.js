@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Scrollspy from 'react-scrollspy'
+
 import Resume from './resume'
 
 const HeaderWrapper = styled.header`
@@ -44,52 +45,53 @@ const LinkItem = styled(Link)`
 `
 
 const Header = () => {
-  const [condition, setCondition] = useState(false)
+  const [sidenavOpened, setSidenavOpened] = useState(false)
 
   return (
     <HeaderWrapper id="nav">
       <Scrollspy
         id="sidenav"
-        className={condition ? 'sidenav sidenav--open' : 'sidenav'}
+        className={sidenavOpened ? 'sidenav sidenav--open' : 'sidenav'}
         style={{ padding: 0 }}
         items={['home', 'about', 'projects', 'blog', 'contact']}
         currentClassName="colored"
+        offset={-60}
       >
         <LinkItem
-          to="/#home"
+          href="/#home"
           className="navbar__link"
           style={{ display: 'none' }}
         >
           Home
         </LinkItem>
-        <LinkItem to="/#about" onClick={() => setCondition(!condition)}>
-          About
-        </LinkItem>
-        <LinkItem to="/#projects" onClick={() => setCondition(!condition)}>
-          Projects
-        </LinkItem>
-        <LinkItem to="/#blog" onClick={() => setCondition(!condition)}>
-          Blog
-        </LinkItem>
-        <LinkItem to="/#contact" onClick={() => setCondition(!condition)}>
-          Contact
-        </LinkItem>
+        <div role="button" onClick={() => setSidenavOpened(!sidenavOpened)}>
+          <LinkItem href="/#about">About</LinkItem>
+        </div>
+        <div role="button" onClick={() => setSidenavOpened(!sidenavOpened)}>
+          <LinkItem href="/#projects">Projects</LinkItem>
+        </div>
+        <div role="button" onClick={() => setSidenavOpened(!sidenavOpened)}>
+          <LinkItem href="/#blog">Blog</LinkItem>
+        </div>
+        <div role="button" onClick={() => setSidenavOpened(!sidenavOpened)}>
+          <LinkItem href="/#contact">Contact</LinkItem>
+        </div>
         <Resume />
       </Scrollspy>
       <Navbar id="navbar" className="navbar__container container--secondary">
-        <LinkItem to="/#" className="navbar__logo">
+        <LinkItem href="/#" className="navbar__logo">
           Bart
         </LinkItem>
         <div className="hamburger__container">
           <button
             aria-label="menu"
             className="hamburger"
-            onClick={() => setCondition(!condition)}
-            onKeyDown={() => setCondition(!condition)}
+            onClick={() => setSidenavOpened(!sidenavOpened)}
+            onKeyDown={() => setSidenavOpened(!sidenavOpened)}
           >
             <div
               className={
-                condition
+                sidenavOpened
                   ? 'hamburger__wrapper icon close'
                   : 'hamburger__wrapper icon'
               }
@@ -104,24 +106,25 @@ const Header = () => {
           className="navbar__links"
           items={['home', 'about', 'projects', 'blog', 'contact']}
           currentClassName="colored"
+          offset={-60}
         >
           <LinkItem
-            to="/#home"
+            href="/#home"
             className="navbar__link"
             style={{ display: 'none' }}
           >
             Home
           </LinkItem>
-          <LinkItem to="/#about" className="navbar__link">
+          <LinkItem href="/#about" className="navbar__link">
             About
           </LinkItem>
-          <LinkItem to="/#projects" className="navbar__link">
+          <LinkItem href="/#projects" className="navbar__link">
             Projects
           </LinkItem>
-          <LinkItem to="/#blog" className="navbar__link">
+          <LinkItem href="/#blog" className="navbar__link">
             Blog
           </LinkItem>
-          <LinkItem to="/#contact" className="navbar__link">
+          <LinkItem href="/#contact" className="navbar__link">
             Contact
           </LinkItem>
           <Resume />

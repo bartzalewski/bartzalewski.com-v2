@@ -115,7 +115,7 @@ const Footer = () => {
                 href="https://github.com/bartzalewski/bartzalewski.com-v2"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Bart Zalewski | Front-End Developer"
+                title="Bart Zalewski | Full-Stack Developer"
               >
                 Bart Zalewski
               </a>

@@ -49,10 +49,12 @@ const Form = styled.form`
 const InputField = styled.div`
   display: flex;
   flex-direction: column;
+
   &.focus input,
   &.focus textarea {
     border-color: #02d463;
   }
+
   &.focus label {
     color: #02d463;
     transition: 0.2s;
@@ -67,6 +69,16 @@ const InputFieldGrid = styled.div`
 const InputFieldTextarea = styled.div`
   margin-top: 1rem;
   width: 50%;
+
+  &.focus input,
+  &.focus textarea {
+    border-color: #02d463;
+  }
+
+  &.focus label {
+    color: #02d463;
+    transition: 0.2s;
+  }
 `
 const Label = styled.label`
   color: #333;
@@ -88,6 +100,7 @@ const Input = styled.input`
   padding: 15px;
   background: #1a1a1a;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
   &:focus {
     border-color: #02d463;
     transition: 0.2s;
@@ -109,6 +122,7 @@ const Textarea = styled.textarea`
   height: 200px;
   resize: none;
   margin-top: 6px;
+
   &:focus {
     border-color: #02d463;
     transition: 0.2s;
@@ -117,13 +131,16 @@ const Textarea = styled.textarea`
 
 export default function Contact() {
   const resetForm = () => document.getElementById('contact-form').reset()
+
   const handleSubmit = (e) => {
     e.preventDefault()
+
     const name = document.getElementById('name').value
     const email = document.getElementById('email').value
     const message = document.getElementById('message').value
     const success = document.getElementById('success')
     const failure = document.getElementById('failure')
+
     axios({
       method: 'POST',
       url: 'https://bartzalewski-v2-api.herokuapp.com/send',
@@ -135,29 +152,35 @@ export default function Contact() {
     }).then((response) => {
       if (response.data.msg === 'success') {
         success.style.display = 'block'
+
         resetForm()
       } else if (response.data.msg === 'fail') {
         failure.style.display = 'block'
       }
     })
   }
+
   useEffect(() => {
     const inputs = document.querySelectorAll('.input__field-input')
+
     function addcl() {
       let parent = this.parentNode
       parent.classList.add('focus')
     }
+
     function remcl() {
       let parent = this.parentNode
       if (this.value === '') {
         parent.classList.remove('focus')
       }
     }
+
     inputs.forEach((input) => {
       input.addEventListener('focus', addcl)
       input.addEventListener('blur', remcl)
     })
   }, [])
+
   return (
     <ContactSection id="contact">
       <div className="container container--secondary">
