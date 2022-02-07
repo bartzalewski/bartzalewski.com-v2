@@ -12,6 +12,8 @@ import {
 library.add(fab, faEnvelope, faPaperclip, faExternalLinkAlt, faFire, faCross)
 
 const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
   @font-face {
     font-family: 'Grand Hotel';
     font-style: normal;
@@ -19,12 +21,6 @@ const GlobalStyle = createGlobalStyle`
     font-display: swap;
     src: local('Grand Hotel'), local('GrandHotel-Regular'), url('https://fonts.gstatic.com/s/grandhotel/v7/7Au7p_IgjDKdCRWuR1azplQKGFw.woff2') format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  @font-face {
-	  font-family: 'JetBrains Mono';
-	  src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.eot') format('embedded-opentype'), url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'), url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff') format('woff'), url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
-	  font-weight: normal;
-	  font-style: normal;
   }
   *, *::before, *::after {
     box-sizing: border-box;
