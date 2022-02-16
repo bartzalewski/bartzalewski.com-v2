@@ -13,6 +13,8 @@ import cz5pWebM from '../images/projects/cz5p.webm'
 import teleanWebM from '../images/projects/telean.webm'
 import darkpaypalWebM from '../images/projects/darkpaypal.webm'
 import bartzalewskiV1WebM from '../images/projects/bartzalewski-v1.webm'
+import joindevsWebM from '../images/projects/joindevs.webm'
+import bartzalewskiV2WebM from '../images/projects/bartzalewski-v2.webm'
 
 const ProjectsWrapper = styled.section`
   display: flex;
@@ -36,13 +38,15 @@ const Description = styled.p`
 const Animation = styled.div`
   &:nth-of-type(2),
   &:nth-of-type(5),
-  &:nth-of-type(8) {
+  &:nth-of-type(8),
+  &:nth-of-type(11) {
     margin-top: 50px;
   }
 
   &:nth-of-type(3),
   &:nth-of-type(6),
-  &:nth-of-type(9) {
+  &:nth-of-type(9),
+  &:nth-of-type(12) {
     margin-top: 100px;
   }
 `
@@ -59,6 +63,14 @@ export default function Projects() {
           <WorkWrapper className="work__wrapper">
             <Animation className="work--animation">
               <Project
+                title="JoinDevs"
+                bgwebm={joindevsWebM}
+                github="#!"
+                external="https://joindevs.com/"
+              />
+            </Animation>
+            <Animation className="work--animation">
+              <Project
                 title="HOPP"
                 bgwebm={hoppWebM}
                 github="#!"
@@ -71,6 +83,14 @@ export default function Projects() {
                 bgwebm={grammarlyWebM}
                 github="https://github.com/bartzalewski/grammarly-dark"
                 external="https://www.producthunt.com/posts/grammarly-dark"
+              />
+            </Animation>
+            <Animation className="work--animation">
+              <Project
+                title="My second portfolio"
+                bgwebm={bartzalewskiV2WebM}
+                github="https://github.com/bartzalewski/bartzalewski.com-v2"
+                external="https://bartzalewski.com/"
               />
             </Animation>
             <Animation className="work--animation">

@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import BoardBox from './boardBox'
 
-import pagetifyWebM from '../../images/projects/pagetify.webm'
-import schoolifyWebM from '../../images/projects/schoolify.webm'
 import grammarlyWebM from '../../images/projects/grammarlydark.webm'
 import hoppWebM from '../../images/projects/hopp.webm'
+import joindevsWebM from '../../images/projects/joindevs.webm'
+import bartzalewskiV2WebM from '../../images/projects/bartzalewski-v2.webm'
 
 const BoardWrapper = styled.div`
   width: 100%;
@@ -33,6 +33,11 @@ const Board = () => {
   return (
     <BoardWrapper className="board__container">
       <Grid className="board__grid">
+        <BoardBox
+          bgwebm={joindevsWebM}
+          title="JoinDevs"
+          url="https://joindevs.com/"
+        />
         <BoardBox bgwebm={hoppWebM} title="HOPP" url="https://hopp.pl/" />
         <BoardBox
           bgwebm={grammarlyWebM}
@@ -40,14 +45,9 @@ const Board = () => {
           url="https://chrome.google.com/webstore/detail/grammarly-dark/noojmhngiheennhgaffkfboanjpbkpep"
         />
         <BoardBox
-          bgwebm={pagetifyWebM}
-          title="Pagetify"
-          url="https://pagetify.com/"
-        />
-        <BoardBox
-          bgwebm={schoolifyWebM}
-          title="Schoolify"
-          url="https://schoolify.app/"
+          bgwebm={bartzalewskiV2WebM}
+          title="Bart Zalewski v2"
+          url="https://bartzalewski.com/"
         />
       </Grid>
     </BoardWrapper>
