@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Bart Zalewski | Full-Stack Developer`,
+    title: `Bart Zalewski | Front-end Developer`,
     author: `Bart Zalewski`,
-    role: `Full-Stack Developer`,
+    role: `Front-end Developer`,
   },
   plugins: [
     {
@@ -34,7 +34,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Bart Zalewski | Full-Stack Developer`,
+        name: `Bart Zalewski | Front-end Developer`,
         short_name: `Bart Zalewski`,
         start_url: `/`,
         background_color: `#02D463`,

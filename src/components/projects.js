@@ -56,7 +56,7 @@ export default function Projects() {
     <ProjectsWrapper id="projects">
       <div className="container container--secondary">
         <div className="container container--primary">
-          <Title>My projects</Title>
+          <Title>My side projects</Title>
           <Description className="work__desc section__desc">
             Check out my portfolio!
           </Description>
