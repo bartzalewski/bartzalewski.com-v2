@@ -53,7 +53,7 @@ const Footer = () => {
         <Container className="footer__container container--primary">
           <Links className="footer__links">
             <OutboundLink
-              href="https://www.instagram.com/bart.code/"
+              href="https://www.instagram.com/bartzalewskidev/"
               target="_blank"
               rel="noopener noreferrer"
               className="footer__link"
